@@ -1,0 +1,29 @@
+/*====================================================================================
+[1. Layout]
+====================================================================================*/
+/* -----------------------------------------------
+/* 1-1.  .l-wrapper
+-------------------------------------------------- */
+.l-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------
+/* 1-7.  .l-container
+-------------------------------------------------- */
+.l-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.l-container--fluid {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    position: relative;
+}
