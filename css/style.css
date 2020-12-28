@@ -306,7 +306,7 @@ a[data-lightbox=lb]::after {
   a[data-lightbox=lb] {
     pointer-events: auto;
   }
-
+  
   a[data-lightbox=lb]::after {
     display: inline-block;
   }
@@ -1732,47 +1732,47 @@ _utillity.scss
   .ta-sm-l {
     text-align: left !important;
   }
-
+  
   .ta-sm-c {
     text-align: center !important;
   }
-
+  
   .ta-sm-r {
     text-align: right !important;
   }
-
+  
   .ta-sm-j {
     text-align: justify !important;
   }
-
+  
   .va-sm-sup {
     vertical-align: super !important;
   }
-
+  
   .va-sm-t {
     vertical-align: top !important;
   }
-
+  
   .va-sm-tt {
     vertical-align: text-top !important;
   }
-
+  
   .va-sm-m {
     vertical-align: middle !important;
   }
-
+  
   .va-sm-bl {
     vertical-align: baseline !important;
   }
-
+  
   .va-sm-tb {
     vertical-align: text-bottom !important;
   }
-
+  
   .va-sm-b {
     vertical-align: bottom !important;
   }
-
+  
   .va-sm-sub {
     vertical-align: sub !important;
   }
@@ -1783,47 +1783,47 @@ _utillity.scss
   .ta-md-l {
     text-align: left !important;
   }
-
+  
   .ta-md-c {
     text-align: center !important;
   }
-
+  
   .ta-md-r {
     text-align: right !important;
   }
-
+  
   .ta-md-j {
     text-align: justify !important;
   }
-
+  
   .va-md-sup {
     vertical-align: super !important;
   }
-
+  
   .va-md-t {
     vertical-align: top !important;
   }
-
+  
   .va-md-tt {
     vertical-align: text-top !important;
   }
-
+  
   .va-md-m {
     vertical-align: middle !important;
   }
-
+  
   .va-md-bl {
     vertical-align: baseline !important;
   }
-
+  
   .va-md-tb {
     vertical-align: text-bottom !important;
   }
-
+  
   .va-md-b {
     vertical-align: bottom !important;
   }
-
+  
   .va-md-sub {
     vertical-align: sub !important;
   }
@@ -1834,47 +1834,47 @@ _utillity.scss
   .ta-lg-l {
     text-align: left !important;
   }
-
+  
   .ta-lg-c {
     text-align: center !important;
   }
-
+  
   .ta-lg-r {
     text-align: right !important;
   }
-
+  
   .ta-lg-j {
     text-align: justify !important;
   }
-
+  
   .va-lg-sup {
     vertical-align: super !important;
   }
-
+  
   .va-lg-t {
     vertical-align: top !important;
   }
-
+  
   .va-lg-tt {
     vertical-align: text-top !important;
   }
-
+  
   .va-lg-m {
     vertical-align: middle !important;
   }
-
+  
   .va-lg-bl {
     vertical-align: baseline !important;
   }
-
+  
   .va-lg-tb {
     vertical-align: text-bottom !important;
   }
-
+  
   .va-lg-b {
     vertical-align: bottom !important;
   }
-
+  
   .va-lg-sub {
     vertical-align: sub !important;
   }
@@ -1885,47 +1885,47 @@ _utillity.scss
   .ta-xl-l {
     text-align: left !important;
   }
-
+  
   .ta-xl-c {
     text-align: center !important;
   }
-
+  
   .ta-xl-r {
     text-align: right !important;
   }
-
+  
   .ta-xl-j {
     text-align: justify !important;
   }
-
+  
   .va-xl-sup {
     vertical-align: super !important;
   }
-
+  
   .va-xl-t {
     vertical-align: top !important;
   }
-
+  
   .va-xl-tt {
     vertical-align: text-top !important;
   }
-
+  
   .va-xl-m {
     vertical-align: middle !important;
   }
-
+  
   .va-xl-bl {
     vertical-align: baseline !important;
   }
-
+  
   .va-xl-tb {
     vertical-align: text-bottom !important;
   }
-
+  
   .va-xl-b {
     vertical-align: bottom !important;
   }
-
+  
   .va-xl-sub {
     vertical-align: sub !important;
   }
@@ -2385,62 +2385,62 @@ _components.scss
 }
 
 /* @media (max-width: 767px) {
-    [class*="prg-"] .richtext p br {
-        display: none;
-    }
+  [class*="prg-"] .richtext p br {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
-    [class*="prg-"] {
-        padding-top: 15px;
-        line-height: 2.0;
-    }
-    [class*="prg-"] p + p {
-        margin-top: 15px;
-    }
-    .prg-xl {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    .prg-l {
-        font-size: 1.6rem;
-        line-height: 1.5;
-    }
-    .prg-m {
-        font-size: 1.4rem;
-        line-height: 1.8;
-    }
-    .prg-s {
-        font-size: 1.3rem;
-        line-height: 1.8;
-    }
-    .prg-xs {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
+  [class*="prg-"] {
+    padding-top: 15px;
+    line-height: 2.0;
+  }
+  [class*="prg-"] p + p {
+    margin-top: 15px;
+  }
+  .prg-xl {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .prg-l {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .prg-m {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+  .prg-s {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+  .prg-xs {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
 }
 
 @media (min-width: 992px) {
-    .prg-xl {
-        font-size: 2.4rem;
-    }
-    .prg-l {
-        font-size: 1.8rem;
-    }
-    .prg-m {
-        font-size: 1.6rem;
-    }
-    .prg-s {
-        font-size: 1.4rem;
-    }
-    .prg-xs {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
+  .prg-xl {
+    font-size: 2.4rem;
+  }
+  .prg-l {
+    font-size: 1.8rem;
+  }
+  .prg-m {
+    font-size: 1.6rem;
+  }
+  .prg-s {
+    font-size: 1.4rem;
+  }
+  .prg-xs {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
 }
 
 [class*="prg-"] .richtext p a {
-    text-decoration: underline;
+  text-decoration: underline;
 } */
 /* -----------------------------------------------
 /* 2-1. Component
@@ -2544,7 +2544,7 @@ _components.scss
   .ttl-langSub::after {
     letter-spacing: 1em;
   }
-
+  
   .ttl-langSub::before {
     letter-spacing: 1em;
   }
@@ -2631,75 +2631,75 @@ _components.scss
   .hdg-0 {
     font-size: 4.8rem;
   }
-
+  
   .hdg-1 {
     font-size: 3.6rem;
   }
-
+  
   .hdg-2 {
     font-size: 3.2rem;
   }
-
+  
   .hdg-3 {
     font-size: 2.4rem;
   }
-
+  
   .hdg-4 {
     font-size: 2rem;
   }
-
+  
   .hdg-5 {
     font-size: 1.8rem;
   }
-
+  
   .hdg-6 {
     font-size: 1.6rem;
   }
-
+  
   .hdg-1w {
     font-size: 1.8rem;
   }
-
+  
   .hdg-1w::before {
     font-size: 3.6rem;
   }
-
+  
   .hdg-2w {
     font-size: 1.6rem;
   }
-
+  
   .hdg-2w::before {
     font-size: 3.2rem;
   }
-
+  
   .hdg-3w {
     font-size: 1.2rem;
   }
-
+  
   .hdg-3w::before {
     font-size: 2.4rem;
   }
-
+  
   .hdg-4w {
     font-size: 1.5rem;
   }
-
+  
   .hdg-4w::before {
     font-size: 2rem;
   }
-
+  
   .hdg-5w {
     font-size: 1.35rem;
   }
-
+  
   .hdg-5w::before {
     font-size: 1.8rem;
   }
-
+  
   .hdg-6w {
     font-size: 1.2rem;
   }
-
+  
   .hdg-6w::before {
     font-size: 1.6rem;
   }
@@ -2708,75 +2708,75 @@ _components.scss
   .hdg-0 {
     font-size: 6rem;
   }
-
+  
   .hdg-1 {
     font-size: 4.8rem;
   }
-
+  
   .hdg-2 {
     font-size: 3.6rem;
   }
-
+  
   .hdg-3 {
     font-size: 3.2rem;
   }
-
+  
   .hdg-4 {
     font-size: 2.4rem;
   }
-
+  
   .hdg-5 {
     font-size: 2rem;
   }
-
+  
   .hdg-6 {
     font-size: 1.8rem;
   }
-
+  
   .hdg-1w {
     font-size: 2.4rem;
   }
-
+  
   .hdg-1w::before {
     font-size: 4.8rem;
   }
-
+  
   .hdg-2w {
     font-size: 1.8rem;
   }
-
+  
   .hdg-2w::before {
     font-size: 3.6rem;
   }
-
+  
   .hdg-3w {
     font-size: 1.6rem;
   }
-
+  
   .hdg-3w::before {
     font-size: 3.2rem;
   }
-
+  
   .hdg-4w {
     font-size: 1.2rem;
   }
-
+  
   .hdg-4w::before {
     font-size: 2.4rem;
   }
-
+  
   .hdg-5w {
     font-size: 1rem;
   }
-
+  
   .hdg-5w::before {
     font-size: 2rem;
   }
-
+  
   .hdg-6w {
     font-size: 1.35rem;
   }
-
+  
   .hdg-6w::before {
     font-size: 1.8rem;
   }
@@ -2931,7 +2931,7 @@ _components.scss
     -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
     transition: background 0.3s, color 0.3s, border 0.3s;
   }
-
+  
   .btn-type::before, .btn-type--wht::before, .btn-type--t1::before, .btn-type--t1_2::before, .btn-type--t1_3::before {
     opacity: 0;
     width: 0;
@@ -2941,11 +2941,11 @@ _components.scss
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
-
+  
   .btn-type.is-hover, .is-hover.btn-type--wht, .is-hover.btn-type--t1, .is-hover.btn-type--t1_2, .is-hover.btn-type--t1_3 {
     color: #fff !important;
   }
-
+  
   .btn-type.is-hover::before, .is-hover.btn-type--wht::before, .is-hover.btn-type--t1::before, .is-hover.btn-type--t1_2::before, .is-hover.btn-type--t1_3::before {
     opacity: 1;
     width: 100%;
@@ -2965,7 +2965,7 @@ _components.scss
   .btn-type--wht {
     color: #fff !important;
   }
-
+  
   .btn-type--wht.is-hover {
     color: #111 !important;
   }
@@ -2983,7 +2983,7 @@ _components.scss
   .btn-type--t1 {
     color: #ff550a !important;
   }
-
+  
   .btn-type--t1.is-hover {
     color: #fff !important;
   }
@@ -3001,7 +3001,7 @@ _components.scss
   .btn-type--t1_2 {
     color: #fd6301 !important;
   }
-
+  
   .btn-type--t1_2.is-hover {
     color: #fff !important;
   }
@@ -3019,7 +3019,7 @@ _components.scss
   .btn-type--t1_3 {
     color: #ff9c3b !important;
   }
-
+  
   .btn-type--t1_3.is-hover {
     color: #fff !important;
   }
@@ -3028,19 +3028,19 @@ _components.scss
   .is-hover.addCover--blk, .is-hover.addCover--t1, .is-hover.addCover--t1_2, .is-hover.addCover--t1_3 {
     background-color: transparent !important;
   }
-
+  
   .addCover--blk {
     background-color: rgba(17, 17, 17, 0.5);
   }
-
+  
   .addCover--t1 {
     background-color: rgba(56, 17, 0, 0.5);
   }
-
+  
   .addCover--t1_2 {
     background-color: rgba(45, 18, 0, 0.5);
   }
-
+  
   .addCover--t1_3 {
     background-color: rgba(105, 52, 0, 0.5);
   }
@@ -3083,18 +3083,18 @@ _components.scss
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-
+  
   .lnk-tel {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     pointer-events: none;
   }
-
+  
   .js-lnkBox.is-active .lnk-txt, .lnk-txt:hover {
     color: #fd6301;
   }
-
+  
   .lnk-bdr:hover {
     border-bottom: none;
   }
@@ -3166,7 +3166,7 @@ _components.scss
 }
 
 /*.crd__lnk {
-    margin-top: auto;
+  margin-top: auto;
 }*/
 @media (min-width: 576px) {
   .crd__img {
@@ -3185,7 +3185,7 @@ _components.scss
     /*padding-top: 200%;*/
     /* 1:2 */
   }
-
+  
   .crd__ttl {
     margin-bottom: 15px;
     font-size: 1.8rem;
@@ -3196,7 +3196,7 @@ _components.scss
     height: 100%;
     margin-bottom: 0;
   }
-
+  
   .crd__content {
     padding: 30px;
   }
@@ -3219,7 +3219,7 @@ _components.scss
 
 @media (min-width: 576px) {
   .crd-pdtm,
-.crd-pdts {
+  .crd-pdts {
     height: calc(100% - 30px);
     margin-top: 30px;
   }
@@ -3301,7 +3301,7 @@ _components.scss
 
 @media (min-width: 576px) {
   .crd-pdtm__txt,
-.crd-pdts__txt {
+  .crd-pdts__txt {
     font-size: 1.3rem;
     line-height: 1.23;
   }
@@ -3377,60 +3377,60 @@ _components.scss
 -------------------------------------------------- */
 /* 記述の参考として */
 /* .l-loader {
-    z-index: 2001;
+  z-index: 2001;
 }
 
 .g-header {
-    z-index: 2000;
+  z-index: 2000;
 }
 
 .l-header {
-    z-index: 2001;
+  z-index: 2001;
 }
 
 .logo {
-    z-index: 2002;
+  z-index: 2002;
 }
 
 .l-mark {
-    z-index: 5000;
+  z-index: 5000;
 }
 
 .g-nav, .l-nav {
-    z-index: 4000;
+  z-index: 4000;
 }
 
 .globalNav__bg {
-    z-index: 4001;
+  z-index: 4001;
 }
 
 .globalNav__content {
-    z-index: 4002;
+  z-index: 4002;
 }
 
 .subNav {
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .g-footer {
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .l-footer {
-    z-index: 1001;
+  z-index: 1001;
 }
 
 .g-main,
 .l-main {
-    z-index: 100;
+  z-index: 100;
 }
 
 .l-content {
-    z-index: 102;
+  z-index: 102;
 }
 
 .mainImgWrap {
-    z-index: 101;
+  z-index: 101;
 } */
 .styleTest {
   color: green;
