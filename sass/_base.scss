@@ -31,6 +31,12 @@ common css 共通クラス
 /* -----------------------------------------------
 /* 0-1. Base
 -------------------------------------------------- */
+$bp-xl: 75em;     // 1200px
+$bp-ll: 68.75em;    // 1100px
+$bp-md: 56.25em;   // 900px
+$bp-sm: 37.5em;     // 600px
+$bp-ss: 31.25em; // 500px
+
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
 html{
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
