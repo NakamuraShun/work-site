@@ -101,19 +101,19 @@ _components.scss
 -------------------------------------------------- */
 /* 2-1-4.  Title     [ttl-***]
 -------------------------------------------------- */
-.ttl-2Lang {
+.ttl {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
     color: #666;
 }
 
-.ttl-2Lang > * {
+.ttl > * {
     font-weight: 500;
     line-height: 1.1;
 }
 
-.ttl-2Lang > *::before {
+.ttl > *::before {
     content: "";
     display: block;
     margin-bottom: 1rem;
@@ -124,7 +124,7 @@ _components.scss
     color: #ff550a;
 }
 
-.ttl-2Lang__side [class*="hdg-"] {
+.ttl__side [class*="hdg-"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -137,7 +137,7 @@ _components.scss
 }
 
 @media (min-width: 768px) {
-    .ttl-2Lang__side [class*="hdg-"] {
+    .ttl__side [class*="hdg-"] {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -151,7 +151,7 @@ _components.scss
     }
 }
 
-.ttl-2Lang__side [class*="hdg-"]::before {
+.ttl__side [class*="hdg-"]::before {
     content: "";
     font-weight: 400;
     line-height: 1.1;
@@ -159,12 +159,12 @@ _components.scss
     color: #ff550a;
 }
 
-.ttl-2Lang__after [class*="hdg-"] {
+.ttl__after [class*="hdg-"] {
     font-weight: 500;
     line-height: 1.1;
 }
 
-.ttl-2Lang__after [class*="hdg-"]::after {
+.ttl__after [class*="hdg-"]::after {
     content: "";
     display: block;
     font-size: 50%;
@@ -175,18 +175,18 @@ _components.scss
     color: #ff550a;
 }
 
-.ttl-langSub {
+.ttl-sub {
     text-align: center;
 }
 
-.ttl-langSub::after {
+.ttl-sub::after {
     display: block;
     font-size: 50%;
     text-transform: uppercase;
     color: #ff550a;
     letter-spacing: .25em;
 }
-.ttl-langSub::before {
+.ttl-sub::before {
     display: block;
     font-size: 50%;
     text-transform: uppercase;
@@ -195,10 +195,10 @@ _components.scss
 }
 
 @media (min-width: 768px) {
-    .ttl-langSub::after {
+    .ttl-sub::after {
         letter-spacing: 1em;
     }  
-    .ttl-langSub::before {
+    .ttl-sub::before {
         letter-spacing: 1em;
     }
 }
@@ -422,8 +422,54 @@ _components.scss
 
 /* 2-1-9.  Button    [btn-***]
 -------------------------------------------------- */
+/*hoverで真中から広がるエフェクト
+**********************************************/
+.restBtn{
+    cursor: pointer;
+    width: 17rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 3px solid black;
+    color: black;
+    
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition: all .1s;
+    transition: all .1s;
+    position: relative;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        background: black;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all .1s;
+        transition: all .1s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    
+    &:hover{
+        color:white;
+        
+        &::before{
+            transform: scale(1);
+        }
+    }
+    
+}
 
-/* btnのlayout */
+/* btnのlayout 本来はここから */
 
 .wrap-btn {
     display: -webkit-box;

@@ -139,11 +139,15 @@ common css 共通クラス
 /* -----------------------------------------------
 /* 0-1. Base
 -------------------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #fff;
   color: #111111;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   width: 100%;
   font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -160,16 +164,22 @@ body.is-fix {
   height: 100%;
 }
 
+/*
 @media (min-width: 768px) {
-  body {
-    font-size: 1.4rem;
-  }
+    body {
+        font-size: 50%;
+    }
 }
-@media (min-width: 1025px) {
-  body.is-fix {
-    position: static;
-  }
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 1.4rem;
+    }
+    body.is-fix {
+        position: static;
+    }
 }
+*/
 body *,
 body *::before,
 body *::after {
@@ -1774,19 +1784,19 @@ _components.scss
 -------------------------------------------------- */
 /* 2-1-4.  Title     [ttl-***]
 -------------------------------------------------- */
-.ttl-2Lang {
+.ttl {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
   color: #666;
 }
 
-.ttl-2Lang > * {
+.ttl > * {
   font-weight: 500;
   line-height: 1.1;
 }
 
-.ttl-2Lang > *::before {
+.ttl > *::before {
   content: "";
   display: block;
   margin-bottom: 1rem;
@@ -1797,7 +1807,7 @@ _components.scss
   color: #ff550a;
 }
 
-.ttl-2Lang__side [class*=hdg-] {
+.ttl__side [class*=hdg-] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1810,7 +1820,7 @@ _components.scss
 }
 
 @media (min-width: 768px) {
-  .ttl-2Lang__side [class*=hdg-] {
+  .ttl__side [class*=hdg-] {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -1823,7 +1833,7 @@ _components.scss
     align-items: center;
   }
 }
-.ttl-2Lang__side [class*=hdg-]::before {
+.ttl__side [class*=hdg-]::before {
   content: "";
   font-weight: 400;
   line-height: 1.1;
@@ -1831,12 +1841,12 @@ _components.scss
   color: #ff550a;
 }
 
-.ttl-2Lang__after [class*=hdg-] {
+.ttl__after [class*=hdg-] {
   font-weight: 500;
   line-height: 1.1;
 }
 
-.ttl-2Lang__after [class*=hdg-]::after {
+.ttl__after [class*=hdg-]::after {
   content: "";
   display: block;
   font-size: 50%;
@@ -1847,11 +1857,11 @@ _components.scss
   color: #ff550a;
 }
 
-.ttl-langSub {
+.ttl-sub {
   text-align: center;
 }
 
-.ttl-langSub::after {
+.ttl-sub::after {
   display: block;
   font-size: 50%;
   text-transform: uppercase;
@@ -1859,7 +1869,7 @@ _components.scss
   letter-spacing: 0.25em;
 }
 
-.ttl-langSub::before {
+.ttl-sub::before {
   display: block;
   font-size: 50%;
   text-transform: uppercase;
@@ -1868,11 +1878,11 @@ _components.scss
 }
 
 @media (min-width: 768px) {
-  .ttl-langSub::after {
+  .ttl-sub::after {
     letter-spacing: 1em;
   }
 
-  .ttl-langSub::before {
+  .ttl-sub::before {
     letter-spacing: 1em;
   }
 }
@@ -2125,7 +2135,47 @@ _components.scss
 }
 /* 2-1-9.  Button    [btn-***]
 -------------------------------------------------- */
-/* btnのlayout */
+/*hoverで真中から広がるエフェクト
+**********************************************/
+.restBtn {
+  cursor: pointer;
+  width: 17rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  color: black;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  position: relative;
+}
+.restBtn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.restBtn:hover {
+  color: white;
+}
+.restBtn:hover::before {
+  transform: scale(1);
+}
+
+/* btnのlayout 本来はここから */
 .wrap-btn {
   display: -webkit-box;
   display: -ms-flexbox;
