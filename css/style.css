@@ -333,6 +333,7 @@ utillity css
 * col
 * margin
 * padding
+* text-align
 -------------------------------------------------- */
 /*!
 * display
@@ -1731,6 +1732,250 @@ utillity css
   padding: 60px !important;
 }
 
+.u-ta-l {
+  text-align: left !important;
+}
+
+.u-ta-c {
+  text-align: center !important;
+}
+
+.u-ta-r {
+  text-align: right !important;
+}
+
+.u-ta-j {
+  text-align: justify !important;
+}
+
+.u-va-sup {
+  vertical-align: super !important;
+}
+
+.u-va-t {
+  vertical-align: top !important;
+}
+
+.u-va-tt {
+  vertical-align: text-top !important;
+}
+
+.u-va-m {
+  vertical-align: middle !important;
+}
+
+.u-va-bl {
+  vertical-align: baseline !important;
+}
+
+.u-va-tb {
+  vertical-align: text-bottom !important;
+}
+
+.u-va-b {
+  vertical-align: bottom !important;
+}
+
+.u-va-sub {
+  vertical-align: sub !important;
+}
+
+@media (min-width: 576px) {
+  .ta-sm-l {
+    text-align: left !important;
+  }
+
+  .ta-sm-c {
+    text-align: center !important;
+  }
+
+  .ta-sm-r {
+    text-align: right !important;
+  }
+
+  .ta-sm-j {
+    text-align: justify !important;
+  }
+
+  .va-sm-sup {
+    vertical-align: super !important;
+  }
+
+  .va-sm-t {
+    vertical-align: top !important;
+  }
+
+  .va-sm-tt {
+    vertical-align: text-top !important;
+  }
+
+  .va-sm-m {
+    vertical-align: middle !important;
+  }
+
+  .va-sm-bl {
+    vertical-align: baseline !important;
+  }
+
+  .va-sm-tb {
+    vertical-align: text-bottom !important;
+  }
+
+  .va-sm-b {
+    vertical-align: bottom !important;
+  }
+
+  .va-sm-sub {
+    vertical-align: sub !important;
+  }
+}
+@media (min-width: 768px) {
+  .ta-md-l {
+    text-align: left !important;
+  }
+
+  .ta-md-c {
+    text-align: center !important;
+  }
+
+  .ta-md-r {
+    text-align: right !important;
+  }
+
+  .ta-md-j {
+    text-align: justify !important;
+  }
+
+  .va-md-sup {
+    vertical-align: super !important;
+  }
+
+  .va-md-t {
+    vertical-align: top !important;
+  }
+
+  .va-md-tt {
+    vertical-align: text-top !important;
+  }
+
+  .va-md-m {
+    vertical-align: middle !important;
+  }
+
+  .va-md-bl {
+    vertical-align: baseline !important;
+  }
+
+  .va-md-tb {
+    vertical-align: text-bottom !important;
+  }
+
+  .va-md-b {
+    vertical-align: bottom !important;
+  }
+
+  .va-md-sub {
+    vertical-align: sub !important;
+  }
+}
+@media (min-width: 992px) {
+  .ta-lg-l {
+    text-align: left !important;
+  }
+
+  .ta-lg-c {
+    text-align: center !important;
+  }
+
+  .ta-lg-r {
+    text-align: right !important;
+  }
+
+  .ta-lg-j {
+    text-align: justify !important;
+  }
+
+  .va-lg-sup {
+    vertical-align: super !important;
+  }
+
+  .va-lg-t {
+    vertical-align: top !important;
+  }
+
+  .va-lg-tt {
+    vertical-align: text-top !important;
+  }
+
+  .va-lg-m {
+    vertical-align: middle !important;
+  }
+
+  .va-lg-bl {
+    vertical-align: baseline !important;
+  }
+
+  .va-lg-tb {
+    vertical-align: text-bottom !important;
+  }
+
+  .va-lg-b {
+    vertical-align: bottom !important;
+  }
+
+  .va-lg-sub {
+    vertical-align: sub !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ta-xl-l {
+    text-align: left !important;
+  }
+
+  .ta-xl-c {
+    text-align: center !important;
+  }
+
+  .ta-xl-r {
+    text-align: right !important;
+  }
+
+  .ta-xl-j {
+    text-align: justify !important;
+  }
+
+  .va-xl-sup {
+    vertical-align: super !important;
+  }
+
+  .va-xl-t {
+    vertical-align: top !important;
+  }
+
+  .va-xl-tt {
+    vertical-align: text-top !important;
+  }
+
+  .va-xl-m {
+    vertical-align: middle !important;
+  }
+
+  .va-xl-bl {
+    vertical-align: baseline !important;
+  }
+
+  .va-xl-tb {
+    vertical-align: text-bottom !important;
+  }
+
+  .va-xl-b {
+    vertical-align: bottom !important;
+  }
+
+  .va-xl-sub {
+    vertical-align: sub !important;
+  }
+}
 /*
 _layout.scss
 *******************************************************************************************************************/
@@ -1775,7 +2020,6 @@ _components.scss
 -------------------------------------------------- */
 /* 2-1-1.  Wrap      [***Wrap]
 -------------------------------------------------- */
-/* ***Wrap 共通で上下に余白設定 */
 [class*=Wrap] {
   padding-top: 45px;
   padding-bottom: 45px;
@@ -2149,7 +2393,10 @@ _components.scss
   transition-timing-function: ease-out;
 }
 .btn--prim:hover {
-  color: white;
+  color: #fff;
+}
+.btn--prim:hover > span {
+  color: #fff;
 }
 .btn--prim:hover::before {
   transform: scale(1);

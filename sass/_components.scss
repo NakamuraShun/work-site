@@ -10,8 +10,6 @@ _components.scss
 /* 2-1-1.  Wrap      [***Wrap]
 -------------------------------------------------- */
 
-/* ***Wrap 共通で上下に余白設定 */
-
 [class*="Wrap"] {
     padding-top: 45px;
     padding-bottom: 45px;
@@ -308,7 +306,8 @@ _components.scss
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
-    &:hover{color:white;}
+    &:hover{color:#fff;}
+    &:hover > span{color:#fff;}
     &:hover::before{transform: scale(1);}
 }
 
