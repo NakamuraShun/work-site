@@ -19,8 +19,8 @@ _layout.scss
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: $container-p;
+    padding-left: $container-p;
     position: relative;
 }
 

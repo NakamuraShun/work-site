@@ -2,8 +2,6 @@
 _base.scss
 *******************************************************************************************************************/
 /* -----------------------------------------------
-common css 共通クラス
---------------------------------------------------
 0. Foundation
 0-1. Base
 0-2-1. font family
@@ -28,15 +26,18 @@ common css 共通クラス
 /*====================================================================================
 [0. Foundation]
 ====================================================================================*/
-/* -----------------------------------------------
-/* 0-1. Base
--------------------------------------------------- */
+//BlakePoint
 $bp-xl: 75em;     // 1200px
-$bp-ll: 68.75em;    // 1100px
+$bp-lg: 68.75em;    // 1100px
 $bp-md: 56.25em;   // 900px
 $bp-sm: 37.5em;     // 600px
 $bp-ss: 31.25em; // 500px
 
+//Container Padding
+$container-p:15px;
+/* -----------------------------------------------
+/* 0-1. Base
+-------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
 html{
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
@@ -152,60 +153,64 @@ li img, li a, li a img {
 }
 
 /* 見出しのみ書体変更 */
-.u-ff-oswald, .ttl-2Lang > *::before, .ttl-2Lang__side [class*="hdg-"]::before, .ttl-2Lang__after [class*="hdg-"]::after {
+.u-ff-oswald, 
+.ttl > *::before, 
+.ttl-2Lang__side [class*="hdg-"]::before, 
+.ttl-2Lang__after [class*="hdg-"]::after {
     font-family: "Oswald",sans-serif;
 }
 
 /* 0-2-2.  color management
 -------------------------------------------------- */
 /* base-color */
-/* サイトによって変更する */
-.color-b1 {color: #111111;}
-.color-b2 {color: #444444;}
-.color-b3 {color: #666666;}
-.color-g1 {color: #bdbdbd;}
+/* サイトによって調整 */
+$color-b1 : #111111;
+$color-b2 : #444444;
+$color-b3 : #666666;
+$color-g1 : #bdbdbd;
 
 /* thema-color */
-.color-t1 {color: #ff550a;}
-.color-t1_2 {color: #fd6301;}
-.color-t1_3 {color: #ff9c3b;}
+$color-t1 : #ff550a;
+$color-t1_2 : #fd6301;
+$color-t1_3 : #ff9c3b;
 
 
 /* 0-2-3.  lightbox
 -------------------------------------------------- */
 /* fontAwesomeの使い方 */
-a[data-lightbox="lb"] {
-    position: relative;
-    text-decoration: none !important;
-    pointer-events: none;
-}
-
-a[data-lightbox="lb"]::after {
-    display: none;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-family: 'fontAwesome';
-    -webkit-font-smoothing: antialiased;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: bold;
-    text-rendering: auto;
-    line-height: 1;
-    content: "\f002";
-    color: #fff;
-    text-decoration: none !important;
-}
-
-@media (min-width: 768px) {
-    a[data-lightbox="lb"] {
-        pointer-events: auto;
-    }
-    a[data-lightbox="lb"]::after {
-        display: inline-block;
-    }
-}
-
-
+// a[data-lightbox="lb"] {
+    //     position: relative;
+    //     text-decoration: none !important;
+    //     pointer-events: none;
+    // }
+    
+    // a[data-lightbox="lb"]::after {
+        //     display: none;
+        //     position: absolute;
+        //     bottom: 5px;
+        //     right: 5px;
+        //     padding: 5px 10px;
+        //     background-color: rgba(0, 0, 0, 0.5);
+        //     font-family: 'fontAwesome';
+        //     -webkit-font-smoothing: antialiased;
+        //     font-style: normal;
+        //     font-variant: normal;
+        //     font-weight: bold;
+        //     text-rendering: auto;
+        //     line-height: 1;
+        //     content: "\f002";
+        //     color: #fff;
+        //     text-decoration: none !important;
+        // }
+        
+        // @media (min-width: 768px) {
+            //     a[data-lightbox="lb"] {
+                //         pointer-events: auto;
+                //     }
+                //     a[data-lightbox="lb"]::after {
+                    //         display: inline-block;
+                    //     }
+                    // }
+                    
+                    
+                    
