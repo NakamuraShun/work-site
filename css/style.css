@@ -1958,14 +1958,17 @@ _components.scss
 /* 2-1-1.  Wrap      [***Wrap]
 -------------------------------------------------- */
 [class*=Wrap] {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding: 20px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 56.25em) {
   [class*=Wrap] {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 45px 0;
+  }
+}
+@media (min-width: 68.75em) {
+  [class*=Wrap] {
+    padding: 75px 0;
   }
 }
 /* 2-1-6.  Paragraph [prg-***]

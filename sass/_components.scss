@@ -10,17 +10,10 @@ _components.scss
 /* 2-1-1.  Wrap      [***Wrap]
 -------------------------------------------------- */
 
-[class*="Wrap"] {
-    padding-top: 45px;
-    padding-bottom: 45px;
-}
+[class*="Wrap"] {padding: $wrap-sm-ptb;}
 
-@media (min-width: 768px) {
-    [class*="Wrap"] {
-        padding-top: 90px;
-        padding-bottom: 90px;
-    }
-}
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: $wrap-md-ptb;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: $wrap-lg-ptb;}}
 
 /* 2-1-6.  Paragraph [prg-***]
 -------------------------------------------------- */

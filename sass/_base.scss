@@ -27,14 +27,19 @@ _base.scss
 [0. Foundation]
 ====================================================================================*/
 //BlakePoint
-$bp-xl: 75em;     // 1200px
-$bp-lg: 68.75em;    // 1100px
+$bp-ss: 31.25em;   // 500px
+$bp-sm: 37.5em;    // 600px
 $bp-md: 56.25em;   // 900px
-$bp-sm: 37.5em;     // 600px
-$bp-ss: 31.25em; // 500px
+$bp-lg: 68.75em;   // 1100px
+$bp-xl: 75em;      // 1200px
 
 //Container Padding
 $container-p:15px;
+
+//***Wrap Padding
+$wrap-sm-ptb:20px 0;
+$wrap-md-ptb:45px 0;
+$wrap-lg-ptb:75px 0;
 /* -----------------------------------------------
 /* 0-1. Base
 -------------------------------------------------- */
