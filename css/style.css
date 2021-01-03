@@ -260,6 +260,40 @@ li img, li a, li a img {
 /* 0-2-3.  lightbox
 -------------------------------------------------- */
 /* fontAwesomeの使い方 */
+/*a[data-lightbox="lb"] {
+    position: relative;
+    text-decoration: none !important;
+    pointer-events: none;
+}
+
+a[data-lightbox="lb"]::after {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'fontAwesome';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    text-rendering: auto;
+    line-height: 1;
+    content: "\f002";
+    color: #fff;
+    text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+    a[data-lightbox="lb"] {
+        pointer-events: auto;
+    }
+    a[data-lightbox="lb"]::after {
+        display: inline-block;
+    }
+}
+*/
 /*
 _utillity.scss
 *******************************************************************************************************************/
@@ -427,6 +461,7 @@ _utillity.scss
 }
 
 /*!
+
 
 * row (l-containerのpadding相殺)
 */
@@ -1914,7 +1949,7 @@ _utillity.scss
   }
 }
 /*
-_layout.scss
+_components.scss
 *******************************************************************************************************************/
 /*====================================================================================
 [1. Layout]
@@ -1946,9 +1981,6 @@ _layout.scss
   position: relative;
 }
 
-/*
-_components.scss
-*******************************************************************************************************************/
 /*====================================================================================
 [2. Object]
 ====================================================================================*/

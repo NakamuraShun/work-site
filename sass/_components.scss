@@ -2,6 +2,36 @@
 _components.scss
 *******************************************************************************************************************/
 /*====================================================================================
+[1. Layout]
+====================================================================================*/
+/* -----------------------------------------------
+/* 1-1.  .l-wrapper
+-------------------------------------------------- */
+.l-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* -----------------------------------------------
+/* 1-7.  .l-container
+-------------------------------------------------- */
+.l-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-right: $container-p;
+    padding-left: $container-p;
+    position: relative;
+}
+
+.l-container--fluid {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    position: relative;
+}
+
+/*====================================================================================
 [2. Object]
 ====================================================================================*/
 /* -----------------------------------------------
@@ -10,10 +40,10 @@ _components.scss
 /* 2-1-1.  Wrap      [***Wrap]
 -------------------------------------------------- */
 
-[class*="Wrap"] {padding: $wrap-sm-ptb;}
+[class*="Wrap"] {padding: 20px 0;}
 
-@media (min-width: $bp-md) {[class*="Wrap"] {padding: $wrap-md-ptb;}}
-@media (min-width: $bp-lg) {[class*="Wrap"] {padding: $wrap-lg-ptb;}}
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: 45px 0;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 75px 0;}}
 
 /* 2-1-6.  Paragraph [prg-***]
 -------------------------------------------------- */
