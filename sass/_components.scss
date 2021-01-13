@@ -122,107 +122,100 @@ _components.scss
 -------------------------------------------------- */
 /* 2-1-4.  Title     [ttl-***]
 -------------------------------------------------- */
+/*
+デザインは以下サイトからコピペ
+https://jajaaan.co.jp/css/css-headline/
+*/
+
+/* 構文 */
+
 .ttl {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    color: #333;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
+}
+
+
+/* --double */
+
+.ttl--double {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
     color: #666;
-}
-
-.ttl > * {
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-.ttl > *::before {
-    content: "";
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 400;
-    line-height: 1.1;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ff550a;
-}
-
-.ttl__side [class*="hdg-"] {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-@media (min-width: 768px) {
-    .ttl__side [class*="hdg-"] {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
+    
+    & > *::before {
+        content: "";
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: #ff550a;
     }
 }
 
-.ttl__side [class*="hdg-"]::before {
-    content: "";
-    font-weight: 400;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: #ff550a;
+// section単位でcontentのみ上書
+#b-ttlSam .ttl--double> *::before{content: "test";}
+
+
+
+/* --border */
+
+.ttl--border {
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    border-left: 5px solid #000;
+    background: #f4f4f4;
 }
 
-.ttl__after [class*="hdg-"] {
-    font-weight: 500;
-    line-height: 1.1;
-}
+/* --tag */
 
-.ttl__after [class*="hdg-"]::after {
-    content: "";
-    display: block;
-    font-size: 50%;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: .25em;
-    text-transform: uppercase;
-    color: #ff550a;
-}
-
-.ttl-sub {
-    text-align: center;
-}
-
-.ttl-sub::after {
-    display: block;
-    font-size: 50%;
-    text-transform: uppercase;
-    color: #ff550a;
-    letter-spacing: .25em;
-}
-.ttl-sub::before {
-    display: block;
-    font-size: 50%;
-    text-transform: uppercase;
-    color: #ff550a;
-    letter-spacing: .25em;
-}
-
-@media (min-width: 768px) {
-    .ttl-sub::after {
-        letter-spacing: 1em;
-    }  
-    .ttl-sub::before {
-        letter-spacing: 1em;
+.ttl--tag {
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    height: 64px;
+    margin-left: 30px;
+    padding: 1rem 2rem 1rem 3rem;
+    color: #fff;
+    background: #fa4141;
+    
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        content: '';
+        border-width: 32px 30px 32px 0;
+        border-style: solid;
+        border-color: transparent #fa4141 transparent transparent;
+    }
+    
+    &:after {
+        position: absolute;
+        top: calc(50% - 7px);
+        left: -10px;
+        width: 14px;
+        height: 14px;
+        content: '';
+        border-radius: 50%;
+        background: #fff;
     }
 }
+
+
 
 /* 2-1-5.  Headings  [hdg-***]
 -------------------------------------------------- */
