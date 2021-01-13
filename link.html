@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<!-- jQuery -->
+<script src="js/jquery-3.5.1.min.js"></script>
+
+<body>
+<div id="btnPage" class="l-wrapper">
+
+<section id="b-lnkSam">
+<div class="b-lnkSamWrap">
+<div class="l-container">
+    <div class="ttl"><h1 class="hdg-3">link</h1></div>
+    <hr>
+    <ul>
+        <li>aタグの親要素(lnk-txt)： 文字部分のみリンク範囲にするため、display: inline-block</li>
+        <li>lnk-txt > a を右寄せする場合は、ヘルパークラス(u-ta-r)で要素を囲って制御 </li>
+        <li>aタグ：width:100%を設定しリンク範囲を親要素幅いっぱいにすることもあるので、常に display:block </li>
+    </ul>
+    <hr>
+    <!-- ノーマル -->
+    <div class="ttl"><h2 class="hdg-4">lnk-txt</h1></div>
+
+    <div class="lnk-txt">
+        <a href="#">詳しく見る
+            <span class="ti-angle-right"></span>
+        </a>
+    </div>
+
+    <!-- ノーマル(右寄せ) -->
+    <div class="ttl"><h2 class="hdg-4">u-ta-r > lnk-txt</h1></div>
+
+    <div class="u-ta-r">
+        <div class="lnk-txt">
+            <a href="#">詳しく見る
+                <span class="ti-angle-right"></span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- width100%で、下線あり -->
+    <div class="ttl"><h2 class="hdg-4">lnk-txt--bdr</h1></div>
+
+    <div class="lnk-txt lnk-txt--bdr">
+        <a href="#">詳しく見る
+            <span class="ti-angle-right"></span>
+        </a>
+    </div>
+
+</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>

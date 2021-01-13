@@ -338,54 +338,29 @@ _components.scss
 
 /* 2-1-10. Link      [lnk-***]
 -------------------------------------------------- */
-.lnk-none {
-    text-decoration: none !important;
-    color: inherit !important;
-}
 
-.lnk-tel {
-    pointer-events: auto;
-    text-decoration: none !important;
-}
-
-.lnk-fax {
-    pointer-events: none;
-}
-
-.lnk-bdr {
-    border-bottom: 1px solid #ff550a;
-    color: #ff550a;
-}
-
+/* textLink + > icon  */
 .lnk-txt {
-    display: inline;
-    color: #ff550a;
-    -webkit-transition: .3s;
-    transition: .3s;
+    display: inline-block;
+    color: #cf1800;
+    
+    & > a {
+        display: block;
+        color: inherit;
+    }
+    
+    & [class*="ti-"] {
+        margin-left: 5px;
+        font-size: 1.1rem;
+        color: inherit;
+    }
 }
 
-.lnk-txt [class*="ti-"] {
-    margin-left: 5px;
-    font-size: 1.1rem;
-}
-
-@media (min-width: 768px) {
-    [class*="lnk-"] {
-        -webkit-transition: .3s;
-        transition: .3s;
-    }
-    .lnk-tel {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        pointer-events: none;
-    }
-    .js-lnkBox.is-active .lnk-txt, .lnk-txt:hover {
-        color: #fd6301;
-    }
-    .lnk-bdr:hover {
-        border-bottom: none;
-    }
+/* --border-bottom */
+.lnk-txt--bdr{
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid #7c0aff;
 }
 
 
