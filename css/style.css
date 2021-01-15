@@ -261,7 +261,6 @@ li img, li a, li a img {
 /* 0-2-2.  color management
 -------------------------------------------------- */
 /* base-color */
-/* サイトによって調整 */
 /* thema-color */
 /* 0-2-3.  lightbox
 -------------------------------------------------- */
@@ -303,15 +302,6 @@ a[data-lightbox="lb"]::after {
 /*
 _utillity.scss
 *******************************************************************************************************************/
-/* -----------------------------------------------
-* display
-* flex
-* row 
-* col
-* margin
-* padding
-* text-align
--------------------------------------------------- */
 /*!
 * display
 */
@@ -2529,7 +2519,7 @@ https://jajaaan.co.jp/css/css-headline/
 /* 2-3. Headr []
 -------------------------------------------------- */
 .l-header {
-  z-index: 100;
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -2537,7 +2527,9 @@ https://jajaaan.co.jp/css/css-headline/
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: rgba(45, 37, 27, 0.88);
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .l-header .header__content {
   height: 100%;
@@ -2546,12 +2538,14 @@ https://jajaaan.co.jp/css/css-headline/
   padding-left: 15px;
   display: flex;
   justify-content: space-between;
+  /* 
+  .logo, nav, .l-mark
+  */
 }
 
 /* Logo */
 .logo {
   height: 100%;
-  line-height: 1;
   display: flex;
   align-items: center;
 }
@@ -2563,10 +2557,10 @@ https://jajaaan.co.jp/css/css-headline/
 /* Navigation */
 .l-nav {
   position: fixed;
-  right: 0;
   top: 60px;
-  width: 100%;
+  right: 0;
   bottom: 0;
+  width: 100%;
 }
 
 /* globalNav */
@@ -2582,7 +2576,7 @@ https://jajaaan.co.jp/css/css-headline/
 .globalNav__content {
   opacity: 0;
   visibility: hidden;
-  z-index: 200;
+  z-index: 100;
   max-width: 400px;
   -webkit-perspective: 500px;
   perspective: 500px;
@@ -2590,8 +2584,8 @@ https://jajaaan.co.jp/css/css-headline/
   transform: translateX(100px);
   -webkit-transform-origin: right;
   transform-origin: right;
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -2608,7 +2602,6 @@ https://jajaaan.co.jp/css/css-headline/
   transition-duration: 0.4s;
 }
 
-/* case: body.is-fix */
 body.is-fix .globalNav__content {
   opacity: 1;
   visibility: visible;
@@ -2616,54 +2609,59 @@ body.is-fix .globalNav__content {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
-
 body.is-fix .globalNav__bg {
   opacity: 1;
   cursor: pointer;
 }
 
-/* gNav (メインナビ) */
+@media (min-width: 56.25em) {
+  .l-nav {
+    position: static;
+  }
+
+  .globalNav {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .globalNav__content {
+    opacity: 1;
+    visibility: visible;
+    max-width: 100%;
+    height: 100%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .globalNav__bg {
+    opacity: 0;
+  }
+
+  body.is-fix .globalNav__bg {
+    opacity: 0;
+  }
+}
+/* gNav */
 .gNav {
   width: 100%;
   height: 100%;
-  padding: 30px;
   background-color: #fff;
-  /* sub */
-  /* item */
 }
 .gNav__sub {
-  order: 1;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 15px;
+}
+.gNav__item--sub {
+  width: 50%;
 }
 .gNav__item {
   position: relative;
   border-top: 1px solid #e5e6e6;
 }
-.gNav__item--sub {
-  width: 50%;
-}
-
-/* sNav (トグル内ナビ) */
-.sNav {
-  background-color: #f5f5f5;
-}
-.sNav__item {
-  border-top: 1px dashed #bdbdbd;
-}
-
-/* *Nav common (aタグの共通スタイル) */
-.gNav__lnk--main,
-.gNav__lnk--sub,
-.sNav__lnk {
+.gNav__lnk--main, .gNav__lnk--sub {
   display: flex;
   align-items: center;
   height: 45px;
   padding-left: 15px;
 }
-
-/* トグル */
 .gNav__lnk--toggle::before {
   position: absolute;
   top: 0;
@@ -2678,13 +2676,67 @@ body.is-fix .globalNav__bg {
   width: 45px;
   background-color: #bdbdbd;
 }
-
-/* case: .gNav__lnk--toggle.is-active */
 .gNav__lnk--toggle.is-active::before {
   content: "";
   background: #eee;
 }
 
+/* sNav */
+.sNav {
+  background-color: #f5f5f5;
+}
+.sNav__item {
+  border-top: 1px dashed #bdbdbd;
+}
+.sNav__lnk {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding-left: 15px;
+}
+
+@media (min-width: 56.25em) {
+  .gNav {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    height: auto;
+    background-color: transparent;
+  }
+  .gNav__main {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  .gNav__sub {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 250px;
+    margin-top: 5px;
+  }
+  .gNav__item {
+    border-top: none;
+  }
+  .gNav__item--sub {
+    width: auto;
+  }
+
+  .gNav__lnk--main {
+    height: auto;
+    padding-left: 0;
+    font-size: 1.6rem;
+  }
+
+  .gNav__lnk--sub {
+    height: auto;
+    padding-left: 0;
+    font-size: 1.2rem;
+  }
+
+  .gNav__lnk--toggle::before {
+    display: none;
+  }
+}
 /* l-mark */
 .l-mark {
   z-index: 200;
@@ -2722,40 +2774,42 @@ body.is-fix .globalNav__bg {
   margin-left: -12px;
   width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: #333;
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
 }
 
-/* case: body.is-fix */
 .markMenu__top {
   margin-top: -9px;
-}
-
-.mark.is-active .markMenu__top {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .markMenu__middle {
   margin-top: -2px;
 }
 
+.markMenu__bottom {
+  margin-top: 5px;
+}
+
+.mark.is-active .markMenu__top {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px);
+}
 .mark.is-active .markMenu__middle {
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
   opacity: 0;
 }
-
-.markMenu__bottom {
-  margin-top: 5px;
-}
-
 .mark.is-active .markMenu__bottom {
   -webkit-transform: rotate(-45deg) translate(5px, -5px);
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+@media (min-width: 56.25em) {
+  .l-mark {
+    display: none;
+  }
+}
 .styleTest {
   color: red;
 }

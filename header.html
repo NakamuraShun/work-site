@@ -8,13 +8,10 @@
 
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
-<!-- jQuery -->
-<script src="./js/lib/jquery-3.5.1.min.js"></script>
-<!-- <script src="./js/common/common.js"></script> -->
-<script src="./js/common/script.js"></script>
+
 </head>
 
-<body class="flgSp" style="top: 0px;">
+<body class="flg**" style="top: 0px;">
 <div id="headerPage" class="l-wrapper">
 <header class="g-header">
     <div class="l-header">
@@ -54,6 +51,7 @@
                         </div>
 
                         <div class="globalNav__bg"></div>
+                        
                     </div>
                 </div>
             </nav>
@@ -78,7 +76,11 @@
     <div class="ttl"><h1 class="hdg-1">ヘッダー (header)</h1></div>
     <hr>
     <ul>
-        <li>説明</li>
+        <li>@media (min-width)で書くためにSPファーストで記述</li>
+        <li>ハンバーガーメニュー(l-mark)クリックでbodyに「.is-fix」classがつき、現在位置で背景固定になる</li>
+        <li>bodyに「.is-fix」が条件 ＝>「.globalNav__content」「.globalNav__bg」が表示され「.markMenu__**」の線が変形</li>
+        <li>globalNav [__content] [__bg] の兄弟要素が2つ</li>
+        <li> ┗ globalNav__content 内は [gNav] だけ</li>
     </ul>
     <hr>
 
@@ -88,7 +90,7 @@
 </div>
 </section>
 
-<section class="sampleA" style="background-color: darkgray; height: 500px;"></section>
+<section class="sampleA" style="background-color: lightyellow; height: 500px;"></section>
 <section class="sampleB" style="background-color: lightcyan; height: 500px;"></section>
 <section class="sampleC" style="background-color: lightpink; height: 500px;"></section>
 
@@ -96,6 +98,8 @@
 </div>
 
 
-
+<!-- jQuery -->
+<script src="./js/lib/jquery-3.5.1.min.js"></script>
+<script src="./js/common/script.js"></script>
 </body>
 </html>
