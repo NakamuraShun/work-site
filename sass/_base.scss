@@ -89,6 +89,12 @@ body *::after {
     box-sizing: border-box;
 }
 
+body .is-fix {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 a {
     word-break: break-all;
     background-color: transparent;
