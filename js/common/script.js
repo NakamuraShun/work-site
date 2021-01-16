@@ -1,6 +1,17 @@
 $(function ()
 {
 
+/* slick.js
+-------------------------------------------------------------------- */
+    $(".mvSlide").slick({
+        arrows: false, //左右の矢印
+        dots: true,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000, //1枚の画像の表示時間 (2秒後にスライド開始)
+        speed: 1000, //次のスライドに切り替わるまでの秒数 (短いと必然的にスライド速度が上がる)
+    });
+
     /* humberger menu
 -------------------------------------------------------------------- */
     function addFixed()
@@ -89,6 +100,17 @@ $(function ()
 //         $('.js-subNavTrigger').next().removeAttr('style');
 //         $('.js-subNavTrigger').removeClass('is-active');
     
+
+
+/* ScrollTop
+-------------------------------------------------------------------- */
+    $('.js-scrollTopTrigger').on('click', function ()
+    {
+        $('body, html').animate({ scrollTop: 0 }, 400);
+        return false;
+    });
+
+
 
 
 });
