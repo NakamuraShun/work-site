@@ -1,0 +1,110 @@
+/*
+_layout.scss
+*******************************************************************************************************************/
+
+/* -----------------------------------------------
+/*  Common
+-------------------------------------------------- */
+
+/*  .l-wrapper
+-------------------------------------------------- */
+.l-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/*  ***Wrap
+-------------------------------------------------- */
+[class*="Wrap"] {padding: 30px 0;}
+
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: 45px 0;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 75px 0;}}
+
+/*  .l-container
+-------------------------------------------------- */
+.l-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-right: $container-p;
+    padding-left: $container-p;
+    position: relative;
+}
+
+.l-container--fluid {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    position: relative;
+}
+
+/* l-header
+-------------------------------------------------- */
+.l-header{
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.50);
+    box-shadow: 0 0 15px rgba(0,0,0,0.50);
+    
+    .header__content{
+        height: 100%;
+        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        
+        /* 
+        .logo, nav, .l-mark
+        */
+    }
+}
+
+.l-nav {
+    position: fixed;
+    top: 60px; // sp:l-headerのheight分下降
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: $bp-md){
+    .l-nav {
+        position: static;
+    }
+}
+
+
+/* footer
+-------------------------------------------------- */
+
+
+
+
+/* -----------------------------------------------
+/* topPage     [h-***]
+-------------------------------------------------- */
+
+/* #h-CONSEPT
+-------------------------------------------------- */
+#h-CONSEPT .h-conseptWrap{
+    background-color: rgb(64, 6, 78); 
+    color: #fff;
+}
+
+/* #h-ABOUT
+-------------------------------------------------- */
+#h-ABOUT .h-aboutWrap{
+    background-color: rgb(64, 6, 78); 
+    color: #fff;
+}
+
+
+

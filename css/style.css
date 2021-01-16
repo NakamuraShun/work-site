@@ -264,7 +264,6 @@ li img, li a, li a img {
 /* thema-color */
 /* 0-2-3.  lightbox
 -------------------------------------------------- */
-/* fontAwesomeの使い方 */
 /*a[data-lightbox="lb"] {
     position: relative;
     text-decoration: none !important;
@@ -1945,21 +1944,35 @@ _utillity.scss
   }
 }
 /*
-_components.scss
+_layout.scss
 *******************************************************************************************************************/
-/*====================================================================================
-[1. Layout]
-====================================================================================*/
 /* -----------------------------------------------
-/* 1-1.  .l-wrapper
+/*  Common
+-------------------------------------------------- */
+/*  .l-wrapper
 -------------------------------------------------- */
 .l-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-/* -----------------------------------------------
-/* 1-7.  .l-container
+/*  ***Wrap
+-------------------------------------------------- */
+[class*=Wrap] {
+  padding: 30px 0;
+}
+
+@media (min-width: 56.25em) {
+  [class*=Wrap] {
+    padding: 45px 0;
+  }
+}
+@media (min-width: 68.75em) {
+  [class*=Wrap] {
+    padding: 75px 0;
+  }
+}
+/*  .l-container
 -------------------------------------------------- */
 .l-container {
   margin-right: auto;
@@ -1977,8 +1990,7 @@ _components.scss
   position: relative;
 }
 
-/* -----------------------------------------------
-/* 2-3. l-header
+/* l-header
 -------------------------------------------------- */
 .l-header {
   z-index: 200;
@@ -2005,6 +2017,45 @@ _components.scss
   */
 }
 
+.l-nav {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 56.25em) {
+  .l-nav {
+    position: static;
+  }
+}
+/* footer
+-------------------------------------------------- */
+/* -----------------------------------------------
+/* topPage     [h-***]
+-------------------------------------------------- */
+/* #h-CONSEPT
+-------------------------------------------------- */
+#h-CONSEPT .h-conseptWrap {
+  background-color: #40064e;
+  color: #fff;
+}
+
+/* #h-ABOUT
+-------------------------------------------------- */
+#h-ABOUT .h-aboutWrap {
+  background-color: #40064e;
+  color: #fff;
+}
+
+/*
+_components.scss
+*******************************************************************************************************************/
+/* -----------------------------------------------
+/* 2-3. header
+-------------------------------------------------- */
+/* logo */
 .logo {
   height: 100%;
   display: flex;
@@ -2013,14 +2064,6 @@ _components.scss
 .logo > a > img {
   width: auto;
   height: 40px;
-}
-
-.l-nav {
-  position: fixed;
-  top: 60px;
-  right: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 /* globalNav */
@@ -2075,10 +2118,6 @@ body.is-fix .globalNav__bg {
 }
 
 @media (min-width: 56.25em) {
-  .l-nav {
-    position: static;
-  }
-
   .globalNav {
     padding-right: 15px;
     padding-left: 15px;
@@ -2371,29 +2410,7 @@ body.is-fix .globalNav__bg {
   background-color: #07a707;
 }
 
-/*====================================================================================
-[2. Object]
-====================================================================================*/
-/* -----------------------------------------------
-/* 2-1. Component
--------------------------------------------------- */
-/* 2-1-1.  Wrap      [***Wrap]
--------------------------------------------------- */
-[class*=Wrap] {
-  padding: 30px 0;
-}
-
-@media (min-width: 56.25em) {
-  [class*=Wrap] {
-    padding: 45px 0;
-  }
-}
-@media (min-width: 68.75em) {
-  [class*=Wrap] {
-    padding: 75px 0;
-  }
-}
-/* 2-1-6.  Paragraph [prg-***]
+/* Paragraph [prg-***]
 -------------------------------------------------- */
 [class*=prg-] {
   padding-top: 7.5px;
@@ -2495,10 +2512,7 @@ body.is-fix .globalNav__bg {
   text-decoration: underline;
 }
 
-/* -----------------------------------------------
-/* 2-1. Component
--------------------------------------------------- */
-/* 2-1-4.  Title     [ttl-***]
+/* Title     [ttl-***]
 -------------------------------------------------- */
 /*
 デザインは以下サイトからコピペ
@@ -2543,7 +2557,7 @@ https://jajaaan.co.jp/css/css-headline/
 }
 
 #b-ttlSam .ttl--double > *::before {
-  content: "test";
+  content: "company";
 }
 
 /* --border */
@@ -2585,7 +2599,7 @@ https://jajaaan.co.jp/css/css-headline/
   background: #fff;
 }
 
-/* 2-1-5.  Headings  [hdg-***]
+/*  Headings  [hdg-***]
 -------------------------------------------------- */
 .hdg-0 {
   font-size: 3.6rem;
@@ -2673,7 +2687,7 @@ https://jajaaan.co.jp/css/css-headline/
     font-size: 1.4rem;
   }
 }
-/* 2-1-9.  Button    [btn-***]
+/*  Button    [btn-***]
 -------------------------------------------------- */
 .wrap-btn {
   display: -webkit-box;
@@ -2761,7 +2775,7 @@ https://jajaaan.co.jp/css/css-headline/
   transform: scale(1);
 }
 
-/* 2-1-10. Link      [lnk-***]
+/* Link      [lnk-***]
 -------------------------------------------------- */
 /* textLink + > icon  */
 .lnk-txt {
@@ -2785,9 +2799,9 @@ https://jajaaan.co.jp/css/css-headline/
   border-bottom: 1px solid currentColor;
 }
 
-/* 2-1-15. Card      [crd-***]
+/*  Card      [crd-***]
 -------------------------------------------------- */
-.crdTypeA {
+.crd-TypeA {
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2802,7 +2816,7 @@ https://jajaaan.co.jp/css/css-headline/
   background-color: #fff;
   border: 3px solid #f1f1f1;
 }
-.crdTypeA__img {
+.crd-TypeA__img {
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -2810,7 +2824,7 @@ https://jajaaan.co.jp/css/css-headline/
   background-position: center center;
   background-color: #000;
 }
-.crdTypeA__content {
+.crd-TypeA__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2821,7 +2835,7 @@ https://jajaaan.co.jp/css/css-headline/
   height: 100%;
   padding: 1.5rem;
 }
-.crdTypeA__img {
+.crd-TypeA__img {
   /*padding-top: 33.3333%;*/
   /* 3:1 */
   padding-top: 40%;
@@ -2837,15 +2851,15 @@ https://jajaaan.co.jp/css/css-headline/
   /*padding-top: 200%;*/
   /* 1:2 */
 }
-.crdTypeA__ttl {
+.crd-TypeA__ttl {
   margin-bottom: 0.8rem;
 }
-.crdTypeA__txt {
+.crd-TypeA__txt {
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 56.25em) {
-  .crdTypeA__img {
+  .crd-TypeA__img {
     /*padding-top: 33.3333%;*/
     /* 3:1 */
     /*padding-top: 40%;*/
@@ -2862,7 +2876,7 @@ https://jajaaan.co.jp/css/css-headline/
     /* 1:2 */
   }
 }
-.crdTypeB {
+.crd-TypeB {
   height: 110px;
   overflow: hidden;
   display: -webkit-box;
@@ -2878,7 +2892,7 @@ https://jajaaan.co.jp/css/css-headline/
   background-color: #fff;
   border: 3px solid #f1f1f1;
 }
-.crdTypeB__img {
+.crd-TypeB__img {
   width: 40%;
   height: 100%;
   position: relative;
@@ -2888,7 +2902,7 @@ https://jajaaan.co.jp/css/css-headline/
   background-position: center center;
   background-color: #000;
 }
-.crdTypeB__content {
+.crd-TypeB__content {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2900,16 +2914,16 @@ https://jajaaan.co.jp/css/css-headline/
   height: 100%;
   padding: 0.8rem;
 }
-.crdTypeB__ttl {
+.crd-TypeB__ttl {
   margin-bottom: 0.2rem;
 }
-.crdTypeB__txt {
+.crd-TypeB__txt {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 37.5em) {
-  .crdTypeB {
+  .crd-TypeB {
     height: 100%;
     height: calc(100% - 15px);
     -webkit-box-orient: vertical;
@@ -2917,14 +2931,14 @@ https://jajaaan.co.jp/css/css-headline/
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .crdTypeB__img {
+  .crd-TypeB__img {
     width: 100%;
   }
-  .crdTypeB__content {
+  .crd-TypeB__content {
     width: 100%;
     padding: 1.5rem;
   }
-  .crdTypeB__img {
+  .crd-TypeB__img {
     /*padding-top: 33.3333%;*/
     /* 3:1 */
     /*padding-top: 40%;*/
@@ -2940,10 +2954,10 @@ https://jajaaan.co.jp/css/css-headline/
     /*padding-top: 200%;*/
     /* 1:2 */
   }
-  .crdTypeB__ttl {
+  .crd-TypeB__ttl {
     margin-bottom: 0.8rem;
   }
-  .crdTypeB__txt {
+  .crd-TypeB__txt {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
   }
