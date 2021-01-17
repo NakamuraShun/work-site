@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* base/ */
 /*
 _reset.scss
 *******************************************************************************************************************/
@@ -111,31 +112,10 @@ input, select, textarea {
 /*
 _base.scss
 *******************************************************************************************************************/
-/* -----------------------------------------------
-0. Foundation
-0-1. Base
-0-2-1. font family
-0-2-2. color management
-0-2-3. lightbox
-1. Layout
-1-1.  .l-wrapper
-1-2.  .l-container
-2. Object
-2-1. Component
-2-1-1.  Wrap      [***Wrap]
-2-1-4.  Title     [ttl-***]
-2-1-5.  Headings  [hdg-***]
-2-1-6.  Paragraph [prg-***]
-2-1-9.  Button    [btn-***]
-2-1-10. Link      [lnk-***]
-2-1-15. Card      [crd-***]
-2-3. OverLayerConfig [z-index]
+/*  BlakePoint
 -------------------------------------------------- */
-/*====================================================================================
-[0. Foundation]
-====================================================================================*/
 /* -----------------------------------------------
-/* 0-1. Base
+/* Base
 -------------------------------------------------- */
 html {
   font-size: 62.5%;
@@ -224,7 +204,7 @@ li img, li a, li a img {
   vertical-align: bottom;
 }
 
-/* 0-2-1.  font family
+/*  font family
 -------------------------------------------------- */
 @font-face {
   font-family: "Noto Sans Japanese";
@@ -258,11 +238,11 @@ li img, li a, li a img {
   font-family: "Oswald", sans-serif;
 }
 
-/* 0-2-2.  color management
+/*  color management
 -------------------------------------------------- */
 /* base-color */
 /* thema-color */
-/* 0-2-3.  lightbox
+/*  lightbox
 -------------------------------------------------- */
 /*a[data-lightbox="lb"] {
     position: relative;
@@ -1943,12 +1923,10 @@ _utillity.scss
     vertical-align: sub !important;
   }
 }
+/* common/ */
 /*
 _layout.scss
 *******************************************************************************************************************/
-/* -----------------------------------------------
-/*  Common
--------------------------------------------------- */
 /*  .l-wrapper
 -------------------------------------------------- */
 .l-wrapper {
@@ -1990,6 +1968,33 @@ _layout.scss
   position: relative;
 }
 
+/* -----------------------------------------------
+/* topPage     [h-***]
+-------------------------------------------------- */
+/* #h-CONSEPT
+-------------------------------------------------- */
+#h-CONSEPT .h-conseptWrap {
+  background-color: #40064e;
+  color: #fff;
+}
+
+/* #h-ABOUT
+-------------------------------------------------- */
+#h-ABOUT .h-aboutWrap {
+  background-color: #40064e;
+  color: #fff;
+}
+
+/* #h-VOICE
+-------------------------------------------------- */
+#h-VOICE .h-voiceWrap {
+  background-color: #40064e;
+  color: #fff;
+}
+
+/*
+_header.scss
+*******************************************************************************************************************/
 /* l-header
 -------------------------------------------------- */
 .l-header {
@@ -2012,9 +2017,6 @@ _layout.scss
   padding-left: 15px;
   display: flex;
   justify-content: space-between;
-  /* 
-  .logo, nav, .l-mark
-  */
 }
 
 .l-nav {
@@ -2030,31 +2032,6 @@ _layout.scss
     position: static;
   }
 }
-/* footer
--------------------------------------------------- */
-/* -----------------------------------------------
-/* topPage     [h-***]
--------------------------------------------------- */
-/* #h-CONSEPT
--------------------------------------------------- */
-#h-CONSEPT .h-conseptWrap {
-  background-color: #40064e;
-  color: #fff;
-}
-
-/* #h-ABOUT
--------------------------------------------------- */
-#h-ABOUT .h-aboutWrap {
-  background-color: #40064e;
-  color: #fff;
-}
-
-/*
-_components.scss
-*******************************************************************************************************************/
-/* -----------------------------------------------
-/* 2-3. header
--------------------------------------------------- */
 /* logo */
 .logo {
   height: 100%;
@@ -2312,12 +2289,19 @@ body.is-fix .globalNav__bg {
 /* -----------------------------------------------
 /* 2-3. mv
 -------------------------------------------------- */
+/* #l-MV
+-------------------------------------------------- */
 .h-mvWrap {
   padding-top: 60px !important;
   padding-bottom: 0 !important;
 }
 
 /* SP */
+.mvSlide {
+  /* img spase */
+  /* dots */
+  /* prev & next buttons */
+}
 .mvSlide__itm {
   width: 100%;
   min-height: 400px;
@@ -2334,6 +2318,22 @@ body.is-fix .globalNav__bg {
 }
 .mvSlide__itm--03 {
   background-image: url(../images/mv--03.jpg);
+}
+.mvSlide .slick-slide img {
+  width: 100%;
+}
+.mvSlide .slick-dots li button:before {
+  font-size: 1.5rem;
+  opacity: 1;
+  color: grey;
+}
+.mvSlide .slick-dots li.slick-active button:before {
+  color: #40064E;
+}
+.mvSlide .slick-prev:before,
+.mvSlide .slick-next:before {
+  color: white;
+  background-color: grey;
 }
 
 /* TABLET & PC */
@@ -2356,31 +2356,9 @@ body.is-fix .globalNav__bg {
     background-image: url(../images/mv--03.jpg);
   }
 }
-/* img spase */
-.slick-slide img {
-  width: 100%;
-}
-
-/* dots */
-.slick-dots li button:before {
-  font-size: 1.5rem;
-  opacity: 1;
-  color: grey;
-}
-.slick-dots li.slick-active button:before {
-  color: #40064E;
-}
-
-/* prev & next buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: white;
-  background-color: grey;
-}
-
-/* -----------------------------------------------
-/* 2-3. footer
--------------------------------------------------- */
+/*
+_footer.scss
+*******************************************************************************************************************/
 /* gototop
 -------------------------------------------------- */
 .pagetop {
@@ -2410,6 +2388,10 @@ body.is-fix .globalNav__bg {
   background-color: #07a707;
 }
 
+/* components/ */
+/*
+_typography.scss
+*******************************************************************************************************************/
 /* Paragraph [prg-***]
 -------------------------------------------------- */
 [class*=prg-] {
@@ -2687,6 +2669,33 @@ https://jajaaan.co.jp/css/css-headline/
     font-size: 1.4rem;
   }
 }
+/*
+_link.scss
+*******************************************************************************************************************/
+/* Link      [lnk-***]
+-------------------------------------------------- */
+/* textLink + > icon  */
+.lnk-txt {
+  display: inline-block;
+  color: inherit;
+}
+.lnk-txt > a {
+  display: block;
+  color: inherit;
+}
+.lnk-txt [class*=ti-] {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  color: inherit;
+}
+
+/* --border-bottom */
+.lnk-txt--bdr {
+  width: 100%;
+  text-align: right;
+  border-bottom: 1px solid currentColor;
+}
+
 /*  Button    [btn-***]
 -------------------------------------------------- */
 .wrap-btn {
@@ -2775,30 +2784,9 @@ https://jajaaan.co.jp/css/css-headline/
   transform: scale(1);
 }
 
-/* Link      [lnk-***]
--------------------------------------------------- */
-/* textLink + > icon  */
-.lnk-txt {
-  display: inline-block;
-  color: inherit;
-}
-.lnk-txt > a {
-  display: block;
-  color: inherit;
-}
-.lnk-txt [class*=ti-] {
-  margin-left: 5px;
-  font-size: 1.1rem;
-  color: inherit;
-}
-
-/* --border-bottom */
-.lnk-txt--bdr {
-  width: 100%;
-  text-align: right;
-  border-bottom: 1px solid currentColor;
-}
-
+/*
+_card.scss
+*******************************************************************************************************************/
 /*  Card      [crd-***]
 -------------------------------------------------- */
 .crd-TypeA {
@@ -2922,7 +2910,7 @@ https://jajaaan.co.jp/css/css-headline/
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 56.25em) {
   .crd-TypeB {
     height: 100%;
     height: calc(100% - 15px);
@@ -2962,6 +2950,26 @@ https://jajaaan.co.jp/css/css-headline/
     margin-bottom: 1.5rem;
   }
 }
+/* -----------------------------------------------
+/* 2-3. sampleASlide
+-------------------------------------------------- */
+.sampleASlide {
+  /* dots */
+  /* prev & next buttons */
+}
+.sampleASlide .slick-dots li button:before {
+  font-size: 1rem;
+  opacity: 1;
+  color: #b2d125;
+}
+.sampleASlide .slick-dots li.slick-active button:before {
+  color: #1ad814;
+}
+.sampleASlide .slick-prev:before,
+.sampleASlide .slick-next:before {
+  color: #b2d125;
+}
+
 .styleTest {
   color: red;
 }

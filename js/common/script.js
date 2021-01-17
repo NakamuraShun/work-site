@@ -4,13 +4,50 @@ $(function ()
 /* slick.js
 -------------------------------------------------------------------- */
     $(".mvSlide").slick({
-        arrows: false, //左右の矢印
+        arrows: false,
         dots: true,
         fade: true,
         autoplay: true,
         autoplaySpeed: 2000, //1枚の画像の表示時間 (2秒後にスライド開始)
         speed: 1000, //次のスライドに切り替わるまでの秒数 (短いと必然的にスライド速度が上がる)
     });
+
+    $('.sampleASlide').slick({
+        dots: true,
+        infinite: true, //ループ
+        speed: 400,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
 
     /* humberger menu
 -------------------------------------------------------------------- */

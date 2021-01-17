@@ -1,5 +1,14 @@
-@import "reset";
-@import "base";
-@import "layout";
-@import "components";
+/* base/ */
+@import "base/reset";
+@import "base/base";
+@import "base/utillity";
+/* common/ */
+@import "common/layout";
+@import "common/header";
+@import "common/footer";
+/* components/ */
+@import "components/typography";
+@import "components/link";
+@import "components/card";
+
 @import "themify-icons";

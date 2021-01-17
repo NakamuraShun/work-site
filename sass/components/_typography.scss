@@ -1,0 +1,201 @@
+/*
+_typography.scss
+*******************************************************************************************************************/
+/* Paragraph [prg-***]
+-------------------------------------------------- */
+[class*="prg-"] {padding-top: 7.5px; line-height: 2.0;}
+[class*="prg-"] p + p { margin-top: 7.5px;}
+
+.prg-xl {font-size: 2.0rem; line-height: 1.2;}
+.prg-l  {font-size: 1.8rem; line-height: 1.2;}
+.prg-m  {font-size: 1.5rem; line-height: 1.8;}
+.prg-s  {font-size: 1.3rem; line-height: 1.8;}
+.prg-xs {font-size: 1.1rem; line-height: 1.5;}
+
+@media (max-width: 767px) {
+    [class*="prg-"] .richtext p br {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    [class*="prg-"] {
+        padding-top: 15px;
+        line-height: 2.0;
+    }
+    [class*="prg-"] p + p {
+        margin-top: 15px;
+    }
+    .prg-xl {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .prg-l {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    .prg-m {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+    .prg-s {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+    .prg-xs {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 992px) {
+    .prg-xl {
+        font-size: 2.4rem;
+    }
+    .prg-l {
+        font-size: 1.8rem;
+    }
+    .prg-m {
+        font-size: 1.6rem;
+    }
+    .prg-s {
+        font-size: 1.4rem;
+    }
+    .prg-xs {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+[class*="prg-"] .richtext p a {
+    text-decoration: underline;
+}
+
+/* Title     [ttl-***]
+-------------------------------------------------- */
+/*
+デザインは以下サイトからコピペ
+https://jajaaan.co.jp/css/css-headline/
+*/
+
+.ttl {
+    padding-top: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: $bp-sm) {
+    .ttl {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+/* --double */
+
+.ttl--double {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #666;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
+    
+    & > *::before {
+        content: "";
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.1;
+        text-transform: uppercase;
+        color: #ff550a;
+    }
+}
+
+// section単位でcontentオーバーライド
+#b-ttlSam .ttl--double > *::before{content: "company";}
+
+
+
+/* --border */
+.ttl--border {
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    border-left: 5px solid #000;
+    background: #f4f4f4;
+}
+
+
+/* --tag */
+.ttl--tag {
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    height: 64px;
+    margin-left: 30px;
+    padding: 1rem 2rem 1rem 3rem;
+    color: #fff;
+    background: #fa4141;
+    
+    &:before {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        content: '';
+        border-width: 32px 30px 32px 0;
+        border-style: solid;
+        border-color: transparent #fa4141 transparent transparent;
+    }
+    
+    &:after {
+        position: absolute;
+        top: calc(50% - 7px);
+        left: -10px;
+        width: 14px;
+        height: 14px;
+        content: '';
+        border-radius: 50%;
+        background: #fff;
+    }
+}
+
+
+/*  Headings  [hdg-***]
+-------------------------------------------------- */
+.hdg-0 {font-size: 3.6rem;}
+.hdg-1 {font-size: 3.2rem;}
+.hdg-2 {font-size: 2.4rem;}
+.hdg-3 {font-size: 2.0rem;}
+.hdg-4 {font-size: 1.8rem;}
+.hdg-5 {font-size: 1.6rem;}
+.hdg-6 {font-size: 1.4rem;}
+
+@media (min-width: 576px) {
+    .hdg-0 {font-size: 3.6rem;}
+    .hdg-1 {font-size: 3.2rem;}
+    .hdg-2 {font-size: 2.4rem;}
+    .hdg-3 {font-size: 2.0rem;}
+    .hdg-4 {font-size: 1.8rem;}
+    .hdg-5 {font-size: 1.6rem;}
+    .hdg-6 {font-size: 1.4rem;}
+}
+
+@media (min-width: 768px) {
+    .hdg-0 {font-size: 3.6rem;}
+    .hdg-1 {font-size: 3.2rem;}
+    .hdg-2 {font-size: 2.4rem;}
+    .hdg-3 {font-size: 2.0rem;}
+    .hdg-4 {font-size: 1.8rem;}
+    .hdg-5 {font-size: 1.6rem;}
+    .hdg-6 {font-size: 1.4rem;}
+}
+
