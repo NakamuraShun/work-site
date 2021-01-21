@@ -6,6 +6,7 @@ _header.scss
 -------------------------------------------------- */
 .l-header{
     z-index: 200;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +14,7 @@ _header.scss
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-color: #f5f5f5;
+    background-color: $color-w1;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.50);
     box-shadow: 0 0 15px rgba(0,0,0,0.50);
     
@@ -27,12 +28,17 @@ _header.scss
     }
 }
 
+.globalNav{
+    width: 100%;
+}
+
 .l-nav {
     position: fixed;
     top: 60px; // sp:l-headerのheight分下降
     right: 0;
     bottom: 0;
     width: 100%;
+    height: 100%;
 }
 
 @media (min-width: $bp-md){
@@ -41,20 +47,52 @@ _header.scss
     }
 }
 
-/* logo */
-.logo {
+/* logoSP
+-------------------------------------------------- */
+.logoSP {
     height: 100%;
     display: flex;
     align-items: center;
     
     & > a > img {
-        width: auto; 
         height: 40px;
+        width: auto; 
     }
 }
 
-/* globalNav */
-.globalNav{
+@media (min-width: $bp-md){ 
+    .logoSP {
+        display: none;
+    }
+}
+
+/* logoPC
+-------------------------------------------------- */
+.logoPC {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (min-width: $bp-md){ 
+    .logoPC {
+        opacity: 1;
+        visibility: visible;
+        
+        & > a > img {
+            height: 40px;
+            width: auto;
+            
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+
+/* globalNavSP
+-------------------------------------------------- */
+.globalNavSP{
     position: absolute;
     top: 0;
     right: 0;
@@ -67,7 +105,7 @@ _header.scss
         opacity: 0;
         visibility: hidden;
         z-index: 100;
-        max-width: 400px;
+        min-width: 350px;
         -webkit-perspective: 500px;
         perspective: 500px;
         -webkit-transform: translateX(100px);
@@ -95,7 +133,7 @@ _header.scss
 }
 
 body.is-fix {
-    & .globalNav__content {
+    & .globalNavSP__content {
         opacity: 1;
         visibility: visible;
         -webkit-overflow-scrolling: touch;
@@ -103,155 +141,157 @@ body.is-fix {
         transform: translateX(0);
     }
     
-    & .globalNav__bg {
+    & .globalNavSP__bg {
         opacity: 1;
         cursor: pointer;
     }
 }
 
 @media (min-width: $bp-md){ 
-    .globalNav {
-        padding-right: 15px;
-        padding-left: 15px;
-        
-        &__content{
-            opacity: 1;
-            visibility: visible;
-            max-width: 100%;
-            height: 100%;
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        
+    .globalNavSP {
         &__bg{
             opacity: 0;
+            display: none;
         }
     }
     
     body.is-fix 
-    .globalNav__bg {
+    .globalNavSP__bg {
         opacity: 0;
+        display: none;    
     }
 }
 
-
-/* gNav */
-.gNav {
+/* gNavSP
+-------------------------------------------------- */
+.gNavSP {
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    
-    &__sub {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    &__item--sub {
-        width: 50%;
-    } 
+    background-color: $color-w1;
     
     &__item {
         position: relative;
         border-top: 1px solid #e5e6e6;
     }
     
-    &__lnk--main,
-    &__lnk--sub
+    &__lnk--main
     {
         display: flex;
         align-items: center;
-        height: 45px;
+        height: 60px;
         padding-left: 15px;
-    }
-    
-    &__lnk--toggle::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        content: "\e61a";
-        font-family: 'themify';
-        font-size: 1.1rem;
-        height: 45px;
-        width: 45px;
-        background-color: #bdbdbd;
-    }
-    
-    &__lnk--toggle.is-active::before {
-        content: "\e622";
-        background: #eee;
-    }
-}
-
-/* sNav */
-.sNav {
-    background-color: #f5f5f5;
-    
-    &__item {
-        border-top: 1px dashed #bdbdbd;
-    }
-    
-    &__lnk{
-        display: flex;
-        align-items: center;
-        height: 45px;
-        padding-left: 15px;
+        color: $color-t1;
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 }
 
 
 @media (min-width: $bp-md){
-    .gNav {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column-reverse;
-        height: auto;
+    .gNavSP {
         background-color: transparent;
         
         &__main{
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
             justify-content: space-between;
-            width: 300px;
         }
-        
-        &__sub{
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            width: 250px;
-            margin-top: 5px;
-        } 
         
         &__item {
             border-top: none;
         }
         
-        &__item--sub {
-            width: auto;
-        } 
-    }
-    
-    .gNav__lnk--main{
-        height: auto;
-        padding-left: 0;
-        font-size: 1.6rem;
-        
-    }
-    
-    .gNav__lnk--sub{
-        height: auto;
-        padding-left: 0;
-        font-size: 1.2rem;
-    }
-    
-    .gNav__lnk--toggle::before{
-        display: none;
+        &__lnk--main
+        {
+            height: auto;
+            color: $color-b1;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding-left: 0;
+        }
     }
 }
 
 
-/* l-mark */
+/* globalNavPC
+-------------------------------------------------- */
+.globalNavPC{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (min-width: $bp-md){ 
+    .globalNavPC {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+        
+        &__content{
+            max-width: 1100px;
+            height: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: $container-p;
+            padding-left: $container-p;
+            position: relative;
+        }
+    }
+}
+
+/* gNavPC
+-------------------------------------------------- */
+@media (min-width: $bp-md){
+    .gNavPC {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        
+        &__main{
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        &__item {
+            height: 100%;
+            width: 12.5%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__lnk--main
+        {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 100%;
+            color: $color-b1;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            
+            &:hover {
+                color: $color-t1;
+            }
+        }
+    }
+}
+
+
+
+/* l-mark
+-------------------------------------------------- */
 .l-mark{
     z-index: 200;
     cursor: pointer;
@@ -289,8 +329,8 @@ body.is-fix {
         left: 50%;
         margin-left: -12px;
         width: 24px;
-        height: 2px;
-        background-color: #333;
+        height: 3px;
+        background-color: $color-t1;
         -webkit-transition-duration: .1s;
         transition-duration: .1s;
     }
@@ -318,7 +358,7 @@ body.is-fix {
 
 
 @media (min-width: $bp-md){
-    .l-mark{display: none; }
+    .l-mark{display: none;}
 }
 
 
@@ -328,15 +368,117 @@ body.is-fix {
 /* #l-MV
 -------------------------------------------------- */
 .h-mvWrap{
-    padding-top: 60px !important; //l-headerの高さに応じて変更
+    padding-top: 0 !important; //l-headerの高さに応じて変更
     padding-bottom: 0 !important; //l-headerの高さに応じて変更
 }
 
-/* SP */
+.mv-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+@media (min-width: $bp-lg){
+    .mv-container {        
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+/* mvHeader
+-------------------------------------------------- */
+.mvHeader{
+    height: 6rem;
+    padding-right: $container-p;
+    padding-left: $container-p;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.mvSlideMain{
+    position: relative;
+}
+
+.mvHeaderSns{
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    &__lnk{
+        display: inline-block;
+        height: 100%;
+        width: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: center;
+        -webkit-transition: all .1s;
+        transition: all .1s;
+        
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+        
+        &:hover{
+            opacity: .7;
+        }
+    }
+}
+
+.mvHeaderLang{
+    &__lnk{
+        width: 15rem;
+        height: 3rem;
+        padding: 0 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-t1;
+        color: $color-w1;
+        font-weight: bold;
+        letter-spacing: .15rem;
+        text-transform: uppercase;
+        -webkit-transition: all .1s;
+        transition: all .1s;
+        
+        &:hover{
+            opacity: .7;
+        }
+    }
+}
+
+
+@media (min-width: $bp-lg){
+    .mvHeader{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+/* mvSlide
+-------------------------------------------------- */
 .mvSlide{
     &__itm{
         width: 100%;
-        min-height: 400px;
+        min-height: 300px;
         height: 50vh;
         background-repeat: no-repeat;
         background-size: cover;
@@ -352,7 +494,6 @@ body.is-fix {
         width: 100%;
     }
     
-    /* dots */
     .slick-dots{
         & li button:before{
             font-size: 1.5rem; // size
@@ -361,11 +502,10 @@ body.is-fix {
         }
         
         & li.slick-active button:before{
-            color: #40064E;
+            color: $color-t1;
         }
     } 
     
-    /* prev & next buttons */
     .slick-prev:before,
     .slick-next:before {
         color: white;
@@ -373,16 +513,12 @@ body.is-fix {
     }
 }
 
-/* TABLET & PC */
 @media (min-width: $bp-sm){
     .mvSlide{
         &__itm{
             width: 100%;
             min-height: 550px;
             height: 75vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             
             &--01{background-image: url(../images/mv--01.jpg);}
             &--02{background-image: url(../images/mv--02.jpg);}
@@ -391,3 +527,50 @@ body.is-fix {
     }
 }
 
+/* mvCopy
+-------------------------------------------------- */
+.mvCopy{
+    position: absolute;
+    top:65%;
+    right:-5%;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    color: $color-w1;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #ffc0cb;
+    font-family: 'Noto Serif JP';
+}
+
+@media (min-width: $bp-sm){
+    .mvCopy{
+        top:50%;
+        right:-3%;
+        font-size: 3.0rem;
+    }
+}
+
+@media (min-width: $bp-md){
+    .mvCopy{
+        top:50%;
+        right:10%;
+        font-size: 3.5rem;
+    }
+}
+
+/* mvLogo
+-------------------------------------------------- */
+.mvLogo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.7);
+}
+
+@media (min-width: $bp-sm){
+    .mvLogo{
+        transform: translate(-50%,-50%) scale(1.0);
+    }
+}

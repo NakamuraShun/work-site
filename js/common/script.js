@@ -1,23 +1,48 @@
 $(function ()
 {
 
+/* scroll globalNav
+-------------------------------------------------------------------- */
+    var scrollPoint_pc = 300;
+    var scrollPoint_sp = 100;
+    var blakePoint_md = 900;
+
+    $(window).on('load resize', function ()
+    {
+        $(window).scroll(function ()
+        {
+            //PC
+            if ($(window).width() > blakePoint_md)
+            {
+                if ($(this).scrollTop() > scrollPoint_pc)
+                { $('.js-scrollNavPC').fadeIn(); } else { $('.js-scrollNavPC').fadeOut(); }
+            }
+            //SP
+            else
+            {
+                if ($(this).scrollTop() > scrollPoint_sp)
+                { $('.js-scrollNavSP').fadeIn(); } else { $('.js-scrollNavSP').fadeOut(); }
+            }
+        });
+    });
+
 /* slick.js
 -------------------------------------------------------------------- */
     $(".mvSlide").slick({
         arrows: false,
-        dots: true,
+        dots: false,
         fade: true,
         autoplay: true,
         autoplaySpeed: 2000, //1枚の画像の表示時間 (2秒後にスライド開始)
         speed: 1000, //次のスライドに切り替わるまでの秒数 (短いと必然的にスライド速度が上がる)
     });
 
-    $('.sampleASlide').slick({
+    $('.columnSlide').slick({
         dots: true,
         infinite: true, //ループ
-        speed: 400,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         responsive: [
             {
                 breakpoint: 1000,
@@ -85,7 +110,7 @@ $(function ()
     });
 
     // globalnav__bg click
-    $('.globalNav__bg').on('click', function ()
+    $('.globalNavSP__bg').on('click', function ()
     {
         $('.mark').removeClass('is-active');
         removeFixed();
@@ -94,7 +119,7 @@ $(function ()
 
 /* Navigation
 -------------------------------------------------------------------- */
-    
+  /*
     //sp
     $('.js-subNavTrigger').on('click', function ()
     {
@@ -104,6 +129,7 @@ $(function ()
         return false;
 
     });
+    */
 
 
     //pc

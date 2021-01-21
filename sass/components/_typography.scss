@@ -1,201 +1,121 @@
 /*
 _typography.scss
 *******************************************************************************************************************/
-/* Paragraph [prg-***]
+
+/* -----------------------------------------------
+/* Paragraph  [prg-***]
 -------------------------------------------------- */
-[class*="prg-"] {padding-top: 7.5px; line-height: 2.0;}
-[class*="prg-"] p + p { margin-top: 7.5px;}
-
-.prg-xl {font-size: 2.0rem; line-height: 1.2;}
-.prg-l  {font-size: 1.8rem; line-height: 1.2;}
-.prg-m  {font-size: 1.5rem; line-height: 1.8;}
-.prg-s  {font-size: 1.3rem; line-height: 1.8;}
-.prg-xs {font-size: 1.1rem; line-height: 1.5;}
-
-@media (max-width: 767px) {
-    [class*="prg-"] .richtext p br {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    [class*="prg-"] {
-        padding-top: 15px;
-        line-height: 2.0;
-    }
-    [class*="prg-"] p + p {
-        margin-top: 15px;
-    }
-    .prg-xl {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    .prg-l {
-        font-size: 1.6rem;
-        line-height: 1.5;
-    }
-    .prg-m {
-        font-size: 1.4rem;
-        line-height: 1.8;
-    }
-    .prg-s {
-        font-size: 1.3rem;
-        line-height: 1.8;
-    }
-    .prg-xs {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-}
-
-@media (min-width: 992px) {
-    .prg-xl {
-        font-size: 2.4rem;
-    }
-    .prg-l {
-        font-size: 1.8rem;
-    }
-    .prg-m {
-        font-size: 1.6rem;
-    }
-    .prg-s {
-        font-size: 1.4rem;
-    }
-    .prg-xs {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
-}
+[class*="prg-"] {padding-top: 0.75rem; line-height: 2.0;}
+[class*="prg-"] p + p { margin-top: 0.75rem;}
+.prg-xl {font-size: 1.8rem;line-height: 1.2;}
+.prg-l {font-size: 1.6rem;line-height: 1.5;}
+.prg-m {font-size: 1.4rem;line-height: 1.8;}
+.prg-s {font-size: 1.3rem;line-height: 1.8;}
+.prg-xs {font-size: 1.1rem;line-height: 1.5;}
 
 [class*="prg-"] .richtext p a {
     text-decoration: underline;
 }
 
-/* Title     [ttl-***]
--------------------------------------------------- */
-/*
-デザインは以下サイトからコピペ
-https://jajaaan.co.jp/css/css-headline/
-*/
+@media (min-width: $bp-md) {
+    [class*="prg-"] {padding-top: 1.5rem;line-height: 2.0;}
+    [class*="prg-"] p + p {margin-top: 1.5rem;}
+    .prg-xl {font-size: 2.0rem; line-height: 1.2;}
+    .prg-l  {font-size: 1.8rem; line-height: 1.2;}
+    .prg-m  {font-size: 1.5rem; line-height: 1.8;}
+    .prg-s  {font-size: 1.3rem; line-height: 1.8;}
+    .prg-xs {font-size: 1.1rem; line-height: 1.5;}
+}
 
-.ttl {
+@media (max-width: $bp-md) {
+    [class*="prg-"] .richtext p br {display: none;}
+}
+
+
+/* -----------------------------------------------
+/* Title    [ttl-***]
+-------------------------------------------------- */
+
+/* ttl-lvl2
+-------------------------------------------------- */
+.ttl-lvl2 {
     padding-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 2.0rem;
     text-align: center;
     
     & > [class*="hdg-"] {
-        font-weight:bold;
-        line-height: 1.1;
+        font-weight:900;
+        line-height: 1.4;
     }
 }
 
-@media (min-width: $bp-sm) {
-    .ttl {
-        padding-top: 35px;
-        padding-bottom: 35px;
+@media (min-width: $bp-md) {
+    .ttl-lvl2 {
+        padding-top: 4.0rem;
+        padding-bottom: 4.0rem;
     }
 }
 
-/* --double */
-
-.ttl--double {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: #666;
-    
-    & > [class*="hdg-"] {
-        font-weight:bold;
-        line-height: 1.1;
-    }
-    
-    & > *::before {
-        content: "";
-        display: block;
-        margin-bottom: 1rem;
-        font-size: 4rem;
-        font-weight: 400;
-        line-height: 1.1;
-        text-transform: uppercase;
-        color: #ff550a;
-    }
-}
-
-// section単位でcontentオーバーライド
-#b-ttlSam .ttl--double > *::before{content: "company";}
-
-
-
-/* --border */
-.ttl--border {
-    margin-bottom: 3rem;
-    padding: 1rem 2rem;
-    border-left: 5px solid #000;
-    background: #f4f4f4;
-}
-
-
-/* --tag */
-.ttl--tag {
-    margin-bottom: 3rem;
-    position: relative;
-    display: inline-block;
-    height: 64px;
-    margin-left: 30px;
-    padding: 1rem 2rem 1rem 3rem;
-    color: #fff;
-    background: #fa4141;
-    
-    &:before {
-        position: absolute;
-        top: 0;
-        left: -30px;
-        content: '';
-        border-width: 32px 30px 32px 0;
-        border-style: solid;
-        border-color: transparent #fa4141 transparent transparent;
-    }
-    
-    &:after {
-        position: absolute;
-        top: calc(50% - 7px);
-        left: -10px;
-        width: 14px;
-        height: 14px;
-        content: '';
-        border-radius: 50%;
-        background: #fff;
-    }
-}
-
-
-/*  Headings  [hdg-***]
+/* ttl-lvl3
 -------------------------------------------------- */
-.hdg-0 {font-size: 3.6rem;}
-.hdg-1 {font-size: 3.2rem;}
-.hdg-2 {font-size: 2.4rem;}
-.hdg-3 {font-size: 2.0rem;}
-.hdg-4 {font-size: 1.8rem;}
-.hdg-5 {font-size: 1.6rem;}
-.hdg-6 {font-size: 1.4rem;}
-
-@media (min-width: 576px) {
-    .hdg-0 {font-size: 3.6rem;}
-    .hdg-1 {font-size: 3.2rem;}
-    .hdg-2 {font-size: 2.4rem;}
-    .hdg-3 {font-size: 2.0rem;}
-    .hdg-4 {font-size: 1.8rem;}
-    .hdg-5 {font-size: 1.6rem;}
-    .hdg-6 {font-size: 1.4rem;}
+.ttl-lvl3 {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    text-align: left;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
 }
 
-@media (min-width: 768px) {
-    .hdg-0 {font-size: 3.6rem;}
-    .hdg-1 {font-size: 3.2rem;}
-    .hdg-2 {font-size: 2.4rem;}
-    .hdg-3 {font-size: 2.0rem;}
-    .hdg-4 {font-size: 1.8rem;}
-    .hdg-5 {font-size: 1.6rem;}
-    .hdg-6 {font-size: 1.4rem;}
+@media (min-width: $bp-md) {
+    .ttl-lvl3 {
+        padding-bottom: 3.0rem;
+    }
 }
 
+/* ttl-lvl4
+-------------------------------------------------- */
+.ttl-lvl4 {
+    padding-top: 0;
+    padding-bottom: 1.0rem;
+    
+    & > [class*="hdg-"] {
+        font-weight:bold;
+        line-height: 1.1;
+    }
+    
+    /* --footer */
+    &--footer {
+        & > [class*="hdg-"] {
+            line-height: 2.5;
+            border-bottom: 4px dotted $color-g1;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: $bp-md) {
+    .ttl-lvl4 {
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+/* -----------------------------------------------
+/* Headings  [hdg-***]
+-------------------------------------------------- */
+.hdg-0 {font-size: 4.0rem;}
+.hdg-1 {font-size: 3.5rem;}
+.hdg-2 {font-size: 3.0rem;}
+.hdg-3 {font-size: 2.5rem;}
+.hdg-4 {font-size: 1.4rem;}
+
+@media (min-width: $bp-md) {
+    .hdg-0 {font-size: 4.5rem;}
+    .hdg-1 {font-size: 4.0rem;}
+    .hdg-2 {font-size: 3.5rem;}
+    .hdg-3 {font-size: 2.5rem;}
+    .hdg-4 {font-size: 1.6rem;}
+}

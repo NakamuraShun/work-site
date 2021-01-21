@@ -2,14 +2,6 @@
 _utillity.scss
 *******************************************************************************************************************/
 /*!
-* display
-*/ .u-d-n{display:none!important}
-.u-d-b{display:block!important}
-.u-d-f{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.u-d-if{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}
-.u-d-i{display:inline!important}
-.u-d-ib{display:inline-block!important}/*!
-
 * flex
 */.fxd-r{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .fxd-rr{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
@@ -32,12 +24,12 @@ _utillity.scss
 .ai-c{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .ai-b{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}/*!
 
-
+/*!
 * row (l-containerのpadding相殺)
 */.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-$container-p;margin-left:-$container-p;}/*!
 
 * col
-*/.row>[class*=col-]{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px} //col同士は余白ないので、内側のpaddingで余白調整
+*/.row>[class*=col-]{position:relative;width:100%;min-height:1px;padding-right:1rem;padding-left:1rem} //col同士は余白ないので、内側のpaddingで余白調整
 .col{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .col-auto{-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
 .col-1{-webkit-box-flex:0;-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}

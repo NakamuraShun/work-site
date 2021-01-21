@@ -1,13 +1,17 @@
 /*
 _link.scss
 *******************************************************************************************************************/
-/* Link      [lnk-***]
+/* -----------------------------------------------
+/* Link      [lnk-***] 
 -------------------------------------------------- */
 
-/* textLink + > icon  */
+/* .lnk-txt
+-------------------------------------------------- */
 .lnk-txt {
     display: inline-block;
     color: inherit;
+    -webkit-transition: all .1s;
+    transition: all .1s;
     
     & > a {
         display: block;
@@ -17,19 +21,42 @@ _link.scss
     & [class*="ti-"] {
         margin-left: 5px;
         font-size: 1.1rem;
-        color: inherit;
+    }
+    
+    /* --color */
+    &--lightblue{color: $color-t1;}
+    &--white{color: $color-w1;}
+    
+    /* --border-bottom */
+    &--bdr{
+        text-align: right;
+        border-bottom: 1px solid currentColor;
+    }
+    
+    /* --border-footer */
+    &--footer{
+        display: block;
+        
+        & span {
+            margin-right: .5rem;
+            color: $color-t1;
+            font-weight: bold;
+        }
+    }  
+    
+    
+    &:hover {
+        -webkit-transform:translateX(.2rem);
+        transform:translateX(.2rem);
     }
 }
 
-/* --border-bottom */
-.lnk-txt--bdr{
-    width: 100%;
-    text-align: right;
-    border-bottom: 1px solid currentColor;
-}
 
 
-/*  Button    [btn-***]
+/* -----------------------------------------------
+/* Button    [btn-***]
+-------------------------------------------------- */
+/*  wrap-btn
 -------------------------------------------------- */
 .wrap-btn {
     display: -webkit-box;
@@ -44,8 +71,20 @@ _link.scss
     justify-content: center;
     width: 100%;
     margin-top: 30px;
+    
+    /* --color */
+    &--lightblue{color: $color-t1;}
+    &--white{color: $color-w1;}
 }
 
+@media (min-width: $bp-sm) {
+    .wrap-btn {
+        margin-top: 5rem;
+    }
+}
+
+/*  btn
+-------------------------------------------------- */
 .btn {
     position: relative;
     display: -webkit-inline-box;
@@ -60,21 +99,21 @@ _link.scss
     -webkit-user-select: none;
 }
 
-@media (min-width: $bp-sm) {
-    .wrap-btn {
-        margin-top: 50px;
-        
-    }
-}
-
-//btn--prim
-.btn--prim {
-    min-width: 20rem;
-    height: 5rem;
-    border: 2px solid #111;
-    color: #111;
+/*  btn-prim
+-------------------------------------------------- */
+.btn-prim {
+    color: currentColor;
+    min-width: 40rem;
+    height: 7.5rem;
+    border: 4px solid;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition: all .1s;
+    transition: all .1s;
     
-    //icon
+    /* icon */
     & > span {
         position: absolute;
         top: 0;
@@ -86,16 +125,10 @@ _link.scss
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
-}
-//btn--prim:hover
-.btn--prim {
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    -webkit-transition: all .1s;
-    transition: all .1s;
     
+    /* effect */
     &::before{
         content: "";
         position: absolute;
@@ -104,7 +137,7 @@ _link.scss
         left: 0;
         right: 0;
         bottom: 0;
-        background: black;
+        background: $color-w1;
         -webkit-transform: scale(0);
         transform: scale(0);
         -webkit-transition: all .1s;
@@ -112,8 +145,88 @@ _link.scss
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
-    &:hover{color:#fff;}
-    &:hover > span{color:#fff;}
-    &:hover::before{transform: scale(1);}
+    &:hover{
+        color: $color-w1;
+    }
+    &:hover > span{
+        color: $color-w1;
+    }
+    &:hover::before{
+        background: $color-t1;
+        transform: scale(1);
+    }    
 }
 
+/* -----------------------------------------------
+/* Tag    [tag-***]
+-------------------------------------------------- */
+/*  spotTags
+-------------------------------------------------- */
+.spotTags{
+    display: flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+    
+    &__itm{
+        width: 45%;         
+        margin: 1rem;
+    } 
+    
+    & a {
+        color: $color-b1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: $color-g2;   
+        border: 2px solid;
+        border-color: $color-g1;
+        border-radius: 5px;
+        -webkit-transition: all .1s;
+        transition: all .1s;
+        
+        &:hover{
+            background-color: #ffff00;   
+            border-color: #ffff00;
+        }
+    } 
+}
+
+@media (min-width: $bp-sm) {
+    .spotTags{   
+        &__itm{
+            width: 20%;
+        } 
+        & a{
+            padding: 0 3rem;
+        } 
+    }
+}
+
+/*  externalTag
+-------------------------------------------------- */
+.externalTag{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding:1rem 0;
+    padding-left: 2rem;
+    font-weight: bold;
+    background-color: $color-g2;
+    border-radius: 2px;
+    
+    & span {
+        font-size: 1.7rem;
+        margin-right: 1rem;
+    } 
+}

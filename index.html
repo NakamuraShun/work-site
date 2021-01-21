@@ -6,12 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>template</title>
+    <title>odawara-site</title>
     <meta name="keywords" content="" />
-    <meta name="description"
-        content="" />
+    <meta name="description" content="" />
     <meta name="format-detection" content="telephone=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+    <!-- ******************** css ******************** -->
+    <!-- fontawesome -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
 
     <!-- ******************** css ******************** -->
     <!-- slick -->
@@ -38,44 +42,48 @@
 
 <!-- ******************** .g-header ******************** -->
 <header class="g-header">
-    <div class="l-header">
+    <div class="l-header js-scrollNavSP js-scrollNavPC">
         <div class="header__content">
 
-            <div class="logo">
+            <div class="logoSP">
                 <a href="#"><img src="./images/logo.png" alt="logo"></a>
             </div>
 
-            <nav>
+            <nav class="globalNav">
                 <div class="l-nav">
-                    <div class="globalNav">
-
-                        <div class="globalNav__content">
-
-                            <div class="gNav">
-                                <ul class="gNav__main">
-                                    <li class="gNav__item">
-                                        <span class="gNav__lnk--main gNav__lnk--toggle js-subNavTrigger">サービス</span>
-                                        <div class="subNav" style="display: none;">
-                                            <ul class="sNav">
-                                                <li class="sNav__item"><a href="" class="sNav__lnk">Aプラン</a></li>
-                                                <li class="sNav__item"><a href="" class="sNav__lnk">Bプラン</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="gNav__item"><a href="" class="gNav__lnk--main">こだわり</a></li>
-                                    <li class="gNav__item"><a href="" class="gNav__lnk--main">他社との違い</a></li>
-                                </ul>
-                                <ul class="gNav__sub">
-                                    <li class="gNav__item--sub"><a href="" class="gNav__lnk--sub">会社案内</a></li>
-                                    <li class="gNav__item--sub"><a href="" class="gNav__lnk--sub">新着情報</a></li>
-                                    <li class="gNav__item--sub"><a href="" class="gNav__lnk--sub">よくある質問</a></li>
-                                    <li class="gNav__item--sub"><a href="" class="gNav__lnk--sub">お客様の声</a></li>
+                    <div class="globalNavSP">
+                        <div class="globalNavSP__content">
+                            <div class="gNavSP">
+                                <ul class="gNavSP__main">
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">小田原の魅力</a></li>
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">アクセス</a></li>
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">観光スポット</a></li>
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">お知らせ</a></li>
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">お役立ちコラム</a></li>
+                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">小田原の歴史</a></li>
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="globalNav__bg"></div>
-
+                        <div class="globalNavSP__bg"></div>
+                    </div>
+                    <div class="globalNavPC">
+                        <div class="globalNavPC__content">
+                            <div class="gNavPC">
+                                <ul class="gNavPC__main">
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">小田原の魅力</a></li>
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">アクセス</a></li>
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">観光スポット</a></li>
+                                    <li class="gNavPC__item logoPC">
+                                        <a href="" class="gNavPC__lnk--main">
+                                            <img src="./images/logo.png" alt="logo">
+                                        </a>
+                                    </li>
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">お知らせ</a></li>
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">お役立ちコラム</a></li>
+                                    <li class="gNavPC__item"><a href="" class="gNavPC__lnk--main">小田原の歴史</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -94,7 +102,6 @@
     </div>
 </header>
 
-
 <!-- ******************** .g-main ******************** -->
 <main class="g-main">
 <div class="l-main">
@@ -104,12 +111,36 @@
         <!-- sec: #h-MV -->
         <section id="h-MV">
             <div class="h-mvWrap">
-                <div class="l-container--fluid">
-                    <ul class="mvSlide">
-                        <li class="mvSlide__itm mvSlide__itm--01"></li>
-                        <li class="mvSlide__itm mvSlide__itm--02"></li>
-                        <li class="mvSlide__itm mvSlide__itm--03"></li>
-                    </ul>
+                <div class="mv-container">
+                    <div class="mvHeader">
+                        <div class="mvHeaderSns">
+                            <a href="#" class="mvHeaderSns__lnk"><img src="./images/twitter.png" alt=""></a>
+                            <a href="#" class="mvHeaderSns__lnk"><img src="./images/facebook.png" alt=""></a>
+                            <a href="#" class="mvHeaderSns__lnk"><img src="./images/Instagram.png" alt=""></a>
+                        </div>
+                        <div class="mvHeaderLang">
+                            <div class="mvHeaderLang__btn">
+                                <a href="" class="mvHeaderLang__lnk">
+                                    language<i class="far fa-caret-square-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mvSlideMain">
+                        <ul class="mvSlide">
+                            <li class="mvSlide__itm mvSlide__itm--01"></li>
+                            <li class="mvSlide__itm mvSlide__itm--02"></li>
+                            <li class="mvSlide__itm mvSlide__itm--03"></li>
+                        </ul>
+                        <div class="mvCopy">
+                            <p>特別じゃない日のご褒美に</p>
+                            <p>素敵なお出掛けを</p>
+                        </div>
+                        <div class="mvLogo">
+                            <img src="./images/logo--l.png" alt="">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -118,289 +149,552 @@
     <!-- -------- .l-mainContents --------  -->
     <div class="l-mainContents">
 
-        <section id="h-CONSEPT">
-            <div class="h-conseptWrap">
-                <div class="l-container">
-                    <div class="ttl">
-                        <h1 class="hdg-1">CONSEPT</h1>
+        <section id="h-FEATURE">
+            <div class="h-featureWrap">
+                    <div class="ttl-lvl2">
+                        <h1 class="hdg-2">小田原の魅力</h1>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- component: paragraph -->
-                            <div class="prg-l ta-md-c">
-                                <p>
-                                    下層ページの先頭にあるような数行のコンセプトや概要メッセージが入ります。<br>
-                                    下層ページの先頭にあるような数行のコンセプトや概要メッセージが入ります。<br>
-                                    下層ページの先頭にあるような数行のコンセプトや概要メッセージが入ります。<br>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="u-ta-c u-mt45">
-                                <div class="lnk-txt">
-                                    <a href="#">詳しく見る<span class="ti-angle-right"></span>
-                                    </a>
+
+                    <div class="introductionWrap">
+                        <div class="l-container">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="ttl-lvl3">
+                                        <h1 class="hdg-3">歩いて楽しい、食べて美味しい街。</h1>
+                                    </div>
+                                    <p>
+                                        小田原城をはじめ、歴史と文化が育んだ多くの観光スポットがあり今では年間500万人以上の観光客が訪れます。
+                                        山と海に面した自然豊かなロケーションで四季と美味しい食事を楽しめます。箱根細工などの伝統工芸品や可愛い和物のお土産もあり、
+                                        少し足を伸ばすと温泉地(箱根や湯河原)もあり、大人も若者も楽しめる街です☆
+                                    </p>
+                                    <div class="wrap-btn wrap-btn--white">
+                                        <a href="#" class="btn btn-prim">
+                                            小田原の魅力を見る
+                                            <span class="ti-angle-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="youtube">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kzox1ahJcgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                 </div>
                             </div>
+                            <img src="./images/kanagawa-Illust.png" alt="" class="kanagawaIllust" style="max-width: 100%;">
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="acsessWrap">
+                        <div class="l-container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="ttl-lvl3">
+                                    <h1 class="hdg-3">日帰り旅行も気軽に楽しめちゃう♪</h1>
+                                </div>
+                                <p class="u-mb20">
+                                  関東地方の南西端に位置し、神奈川県の西部にあります。
+                                </p>
+                                <div class="acsessBox">
+                                    <div class="acsessBox__icon">
+                                        <i class="fas fa-subway"></i>
+                                    </div>
+                                    <div class="acsessBox__txt">
+                                        <ul>
+                                            <li>・東京駅から<span>新幹線で約30分</span>!!</li>
+                                            <li>・新宿駅から<span>ロマンスカーで約1時間</span>!!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="acsessBox">
+                                    <div class="acsessBox__icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="acsessBox__txt">
+                                        <ul>
+                                            <li>東名高速道路と小田原厚木道路で<br><span>東京方面から約1時間程で到着</span>!!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="u-ta-r u-mt30">
+                                    <div class="lnk-txt lnk-txt--lightblue lnk-txt--bdr">
+                                        <a href="#">アクセス情報を見る
+                                            <span class="ti-angle-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 kanagawaMap">
+                                <img src="./images/kanagawa-map.png" alt="" style="max-width: 100%;">
+                                <img src="./images/girls.png" alt="" class="girlsIllust" style="max-width: 100%;">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
                 </div>
         </section>
 
-        <section id="h-SERVICE">
-            <div class="h-serviceWrap">
-                <div class="l-container">
-                    <!-- component: title  -->
-                    <div class="ttl">
-                        <h1 class="hdg-1">SERVICE</h1>
+        <section id="h-LOCATION">
+            <div class="h-locaitonWrap">
+                <div class="l-container--fluid">
+                    <div class="ttl-lvl2">
+                        <h1 class="hdg-2">観光スポット</h1>
                     </div>
-                    <!-- component: cardTypeA  -->
-                    <div class="row">
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- component: button  -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="wrap-btn">
-                                <a href="#" class="btn btn--prim">
-                                    詳しく見る
-                                    <span class="ti-angle-right"></span>
-                                </a>
+
+                    <div class="l-container--tag-cat">
+                        <div class="spotTags">
+                            <div class="spotTags__itm">
+                                <a href="">おすすめ</a>
+                            </div>
+                            <div class="spotTags__itm">
+                                <a href="">観光</a>
+                            </div>
+                            <div class="spotTags__itm">
+                                <a href="">宿泊</a>
+                            </div>
+                            <div class="spotTags__itm">
+                                <a href="">グルメ</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-3 col-sm-6">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                            <span class="ti-location-pin"></span>
+                                            小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">観光</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">観光</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">観光</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">観光</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="wrap-btn wrap-btn--lightblue">
+                        <a href="#" class="btn btn-prim">
+                            詳しく見る
+                            <span class="ti-angle-right"></span>
+                        </a>
+                    </div>
             </div>
         </section>
 
-        <section id="h-ABOUT">
-            <div class="h-aboutWrap">
+        <section id="h-NEWS">
+            <div class="h-newsWrap">
                 <div class="l-container">
-                    <div class="ttl">
-                        <h1 class="hdg-1">ABOUT</h1>
+                    <div class="ttl-lvl2">
+                        <h1 class="hdg-2">お知らせ</h1>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-6 u-mb30">
-                            <p>
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                            </p>
-                            <!-- component: link -->
-                            <div class="lnk-txt lnk-txt--bdr u-mt45">
-                                <a href="#">詳しく見る
-                                    <span class="ti-angle-right"></span>
-                                </a>
+                        <div class="col-12 col-md-4">
+                            <div class="news">
+                                <dt class="news__info">
+                                    <span class="news__info--cat">イベント</span>
+                                    <span class="news__info--day">2021/01/06</span>
+                                </dt>
+                                <dd class="news__txt">
+                                    <a href="#">2021年度 お城グランプリ出場決定!!(展示会場:名古屋ワールドサテライトビル 11F.12F)</a>
+                                </dd>
                             </div>
                          </div>
-                        <div class="col-12 col-md-6 u-ta-c">
-                            <img src="./images/photo--4.jpg" alt="" style="max-width: 100%;">
+                        <div class="col-12 col-md-4">
+                            <div class="news">
+                                <dt class="news__info">
+                                    <span class="news__info--cat">お知らせ</span>
+                                    <span class="news__info--day">2021/01/04</span>
+                                </dt>
+                                <dd class="news__txt">
+                                    <a href="#">初日の出イベント開催中!!新型コロナ対策に万全を期しています。</a>
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="news">
+                                <dt class="news__info">
+                                    <span class="news__info--cat">イベント</span>
+                                    <span class="news__info--day">2020/12/31</span>
+                                </dt>
+                                <dd class="news__txt">
+                                    <a href="#">小田原城リニューアルオープン!! 年末ライトアップタイムスケジュール</a>
+                                </dd>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-ta-r u-mt30">
+                        <div class="lnk-txt lnk-txt--lightblue lnk-txt--bdr">
+                            <a href="#">詳しく見る
+                                <span class="ti-angle-right"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="h-HISTORY">
+            <div class="h-historyWrap">
+                <div class="l-container">
+                    <div class="logoBg logoBg--hojo"></div>
+                    <div class="logoBg logoBg--odawarashi"></div>
+                    <div class="l-historyBnr">
+                        <a href="#" class="historyBnr row">
+                            <div class="historyBnr__contentWrap col-12 col-md-6">
+                                <div class="ttl-lvl2  historyBnr__ttl">
+                                    <h1 class="hdg-2">小田原の<br>“今まで” と “これから”</h1>
+                                </div>
+                                <div class="historyBnr__txt">
+                                    小田原は、戦国時代に後北条氏の「城下町」として発展し、
+                                    江戸時代には東海道屈指の「宿場町」として栄え、明治期には政財界人や文化人たちの
+                                    「別荘、居住地」として愛されてきた、神奈川県西地域の中心都市です。
+                                </div>
+                            </div>
+                            <div class="historyBnr__imgWrap col-12 col-md-6">
+                                <span class="historyBnr__icon"></span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
 
         <section id="h-COLUMN">
             <div class="h-columnWrap">
                 <div class="l-container">
-                    <div class="ttl">
-                        <h1 class="hdg-1">COLUMN</h1>
+                    <div class="ttl-lvl2">
+                        <h1 class="hdg-2">お役立ちコラム</h1>
                     </div>
-                    <!-- component: cardTypeB  -->
-                    <div class="row">
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeB">
-                                <div class="crd-TypeB__img" style="background-image: url(./images/photo--3.jpg);"></div>
-                                <div class="crd-TypeB__content">
-                                    <div class="crd-TypeB__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+
+                    <ul class="columnSlide">
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--onsen.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">小田原あるってこ</h3>
                                     </div>
-                                    <p class="crd-TypeB__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    <p class="crd-typeA__txt">冬には光り輝くイルミネーションも見ることができます。</p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeB">
-                                <div class="crd-TypeB__img" style="background-image: url(./images/photo--3.jpg);"></div>
-                                <div class="crd-TypeB__content">
-                                    <div class="crd-TypeB__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--wifi.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">無料Wi-Fiスポット案内</h3>
                                     </div>
-                                    <p class="crd-TypeB__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    <p class="crd-typeA__txt">小田原でWi-Fiが使えるスポットを紹介します。</p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeB">
-                                <div class="crd-TypeB__img" style="background-image: url(./images/photo--3.jpg);"></div>
-                                <div class="crd-TypeB__content">
-                                    <div class="crd-TypeB__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--tozantetsudou.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">小田原まちづくり応援団</h3>
                                     </div>
-                                    <p class="crd-TypeB__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    <p class="crd-typeA__txt">年間１００回以上、小田原のまち歩きをするガイドツアーです。</p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6">
-                            <a href="#" class="crd-TypeB">
-                                <div class="crd-TypeB__img" style="background-image: url(./images/photo--3.jpg);"></div>
-                                <div class="crd-TypeB__content">
-                                    <div class="crd-TypeB__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--illumination.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">小田原あるってこ</h3>
                                     </div>
-                                    <p class="crd-TypeB__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                    <p class="crd-typeA__txt">冬には光り輝くイルミネーションも見ることができます。</p>
                                 </div>
                             </a>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--Illustcontest.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">秋のイラストコンテスト</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--golf.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">近くのパークゴルフ案内</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--bike.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">レンタルサイクルについて</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--Instagram.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">インスタ映えスポット♪</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--rocker.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">コインロッカー案内</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--illumination.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">小田原あるってこ</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--accessory.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">貝殻アクセサリー作りませんか？</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="crd-typeA crd-typeA--column">
+                                <div class="crd-typeA__img" style="background-image: url(./images/column--kankouannai.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-5">観光案内所</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="wrap-btn wrap-btn--white">
+                        <a href="#" class="btn btn-prim">
+                            詳しく見る
+                            <span class="ti-angle-right"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="h-VOICE">
-            <div class="h-voiceWrap">
+        <section id="h-EXTERNAL">
+            <div class="h-externalWrap">
                 <div class="l-container">
-                    <div class="ttl">
-                        <h1 class="hdg-1">VOICE</h1>
+                    <div class="ttl-lvl2">
+                        <h1 class="hdg-2">関連サイト</h1>
                     </div>
-                    <ul class="sampleASlide">
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+                            <div class="externalEat">
+                                <div class="externalTag">
+                                    <span class="ti-face-smile"></span>
+                                    <p class="externalTag__itm">グルメ</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                                <div class="crd-external">
+                                    <div class="crd-external__img" style="background-image: url(./images/external--odawara-mart.jpg);"></div>
+                                    <div class="crd-external__content">
+                                        <div class="crd-external__info">
+                                            <div class="crd-external__ttl">
+                                                <h3 class="hdg-5">小田原マート</h3>
+                                                <span class="ti-layers"></span>
+                                            </div>
+                                            <p class="crd-external__txt">小田原こだわりの地域産品を扱うお取り寄せWEBサイト。</p>
+                                        </div>
+                                        <div class="crd-external__lnk u-ta-r">
+                                            <div class="lnk-txt lnk-txt--lightblue">
+                                                <a href="#">詳しく見る
+                                                    <span class="ti-angle-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                            </div>
+                            <div class="externalSightseeing">
+                                <div class="externalTag">
+                                    <span class="ti-map-alt"></span>
+                                    <p class="externalTag__itm">観光</p>
+                                </div>
+                                <div class="crd-external">
+                                    <div class="crd-external__img" style="background-image: url(./images/external--odawaratrip.jpg);"></div>
+                                    <div class="crd-external__content">
+                                        <div class="crd-external__info">
+                                            <div class="crd-external__ttl">
+                                                <h3 class="hdg-5">小田原トリップ</h3>
+                                                <span class="ti-layers"></span>
+                                            </div>
+                                            <p class="crd-external__txt">「まちあるき」や「体験」情報が集約されたWEBサイト。</p>
+                                        </div>
+                                        <div class="crd-external__lnk u-ta-r">
+                                            <div class="lnk-txt lnk-txt--lightblue">
+                                                <a href="#">詳しく見る
+                                                    <span class="ti-angle-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="externalPlace">
+                                <div class="externalTag">
+                                    <span class="ti-thumb-up"></span>
+                                    <p class="externalTag__itm">商業施設</p>
+                                </div>
+                                <div class="crd-external">
+                                    <div class="crd-external__img" style="background-image: url(./images/external--luska.jpg);"></div>
+                                    <div class="crd-external__content">
+                                        <div class="crd-external__info">
+                                            <div class="crd-external__ttl">
+                                                <h3 class="hdg-5">ラスカ小田原</h3>
+                                                <span class="ti-layers"></span>
+                                            </div>
+                                            <p class="crd-external__txt">小田原駅東口にある、湘南ステーションビルが運営する駅ビル。</p>
+                                        </div>
+                                        <div class="crd-external__lnk u-ta-r">
+                                            <div class="lnk-txt lnk-txt--lightblue">
+                                                <a href="#">詳しく見る
+                                                    <span class="ti-angle-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                                <div class="crd-external">
+                                    <div class="crd-external__img" style="background-image: url(./images/external--harune.jpg);"></div>
+                                    <div class="crd-external__content">
+                                        <div class="crd-external__info">
+                                            <div class="crd-external__ttl">
+                                                <h3 class="hdg-5">HaRuNe小田原</h3>
+                                                <span class="ti-layers"></span>
+                                            </div>
+                                            <p class="crd-external__txt">魅力的な小田原の「ヒト」「モノ」「コト」を発信し、市民や観光客が集う「にぎわいの場」を創出します。</p>
+                                        </div>
+                                        <div class="crd-external__lnk u-ta-r">
+                                            <div class="lnk-txt lnk-txt--lightblue">
+                                                <a href="#">詳しく見る
+                                                    <span class="ti-angle-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
+                                <div class="crd-external">
+                                    <div class="crd-external__img" style="background-image: url(./images/external--minaka.jpg);"></div>
+                                    <div class="crd-external__content">
+                                        <div class="crd-external__info">
+                                            <div class="crd-external__ttl">
+                                                <h3 class="hdg-5">ミナカ小田原</h3>
+                                                <span class="ti-layers"></span>
+                                            </div>
+                                            <p class="crd-external__txt">小田原・西湘エリアの地元人気飲食店が勢揃い。老若男女が、昼も夜も楽しめるようなゾーン構成となっています。</p>
+                                        </div>
+                                        <div class="crd-external__lnk u-ta-r">
+                                            <div class="lnk-txt lnk-txt--lightblue">
+                                                <a href="#">詳しく見る
+                                                    <span class="ti-angle-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                                 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-TypeA">
-                                <div class="crd-TypeA__img" style="background-image: url(./images/photo--1.jpg);"></div>
-                                <div class="crd-TypeA__content">
-                                    <div class="crd-TypeA__ttl">
-                                        <h3 class="hdg-5">カードタイトル</h3>
-                                    </div>
-                                    <p class="crd-TypeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -412,21 +706,85 @@
 
 <!-- ******************** .g-footer ******************** -->
 <footer class="g-footer">
-    <!-- gotoTop -->
+<div class="l-footer">
     <div class="pagetop">
         <a href="#" class="js-scrollTopTrigger">
             <i class="ti-angle-up"></i>
         </a>
     </div>
+    <div class="footerWrap">
+        <div class="footerContainer">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="ttl-lvl4 ttl-lvl4--footer">
+                        <div class="hdg-4">一般社団法人 小田原市観光協会</div>
+                    </div>
+                    <div class="footerInfo">
+                        <div class="footerInfo__adress u-mb20">
+                            <span class="ti-location-pin"></span><p>〒250-0042<br>小田原市荻窪350番地の1 小田原合同庁舎内2階</p>
+                        </div>
+                        <div class="footerInfo__tel">
+                            <span class="ti-mobile"></span><p>0465-20-4192</p>
+                        </div>
+                        <div class="footerInfo__fax">
+                            <span class="ti-file"></span><p>0465-20-4194</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="ttl-lvl4 ttl-lvl4--footer">
+                        <div class="hdg-4">サイトマップ</div>
+                    </div>
+                    <div class="footerSitemap">
+                        <div class="footerSitemap__content">
+                            <ul>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>トップページ</a>
+                                </li>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>小田原の魅力</a>
+                                </li>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>アクセス</a>
+                                </li>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>観光スポット</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footerSitemap__content">
+                            <ul>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>お知らせ</a>
+                                </li>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>お役立ちコラム</a>
+                                </li>
+                                <li class="lnk-txt lnk-txt--footer">
+                                    <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>小田原の歴史</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyWrap">
+        <div class="l-container">
+            <div class="copyBody">
+                <ul class="copyNav">
+                    <li class="copyNav__itm"><a href="#">お問い合わせ</a></li>
+                    <li class="copyNav__itm"><a href="#">個人情報保護方針</a></li>
+                </ul>
+                <p>（C）2021 LITTLE TRIP 小田原</p>
+            </div>
+        </div>
+    </div>
+
+</div>
 </footer>
-
-
-
-
-
-
-
-
 
 
 

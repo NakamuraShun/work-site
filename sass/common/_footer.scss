@@ -1,6 +1,18 @@
 /*
 _footer.scss
 *******************************************************************************************************************/
+.footerContainer{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    max-width: 1100px;
+    
+    & .row>[class*=col-]:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
 
 /* gototop
 -------------------------------------------------- */
@@ -28,7 +40,122 @@ _footer.scss
         
         &:hover {
             color: #fff;
-            background-color: rgb(7, 167, 7);
+            background-color: $color-t1;
         }
+    }
+}
+
+/* footerWrap
+-------------------------------------------------- */
+.footerWrap{
+    font-size: 1.4rem;
+    background-color: $color-g2;
+    
+    .footerInfo {
+        
+        & [class*="footerInfo__"] {
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            
+            & span {
+                margin-right: .5rem;
+                color: $color-t1;
+                font-weight: bold;
+            }
+        }
+        
+    }
+    
+    .footerSitemap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        
+        &__content{
+            & ul li {
+                margin-bottom: 1rem;
+            } 
+        }
+        
+        &__content:not(:last-child){
+            margin-right: 2rem;
+        }
+        
+        &__lnk > span {
+            margin-right: .5rem;
+            color: $color-t1;
+            font-weight: bold;
+        }
+        
+        
+    }
+}
+
+
+@media (min-width: $bp-md){
+    .footerWrap{
+        .footerContainer{
+            padding-right: $container-p;
+            padding-left: $container-p;
+            
+            & .row>[class*=col-]:not(:last-child){
+                margin-bottom: 0;
+            }
+        }
+        
+        .footerSitemap {
+            &__content:not(:last-child){
+                margin-right: 3rem;
+            }
+        } 
+    }
+}
+
+/* copyWrap
+-------------------------------------------------- */
+.copyWrap{
+    background-color: $color-t1; 
+    color: $color-w1;
+    padding:0;
+    font-size: 1.4rem;
+    
+    
+    .copyBody{
+        padding: 1rem 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .copyNav{
+        display: flex;
+        
+        &__itm > a {
+            padding:0 1rem;
+            color: $color-w1;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: $bp-md){
+    .copyWrap{
+        .copyBody{
+            -ms-flex-direction: row;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
     }
 }
