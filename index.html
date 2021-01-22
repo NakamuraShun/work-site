@@ -118,17 +118,20 @@
                             <a href="#" class="mvHeaderSns__lnk"><img src="./images/facebook.png" alt=""></a>
                             <a href="#" class="mvHeaderSns__lnk"><img src="./images/Instagram.png" alt=""></a>
                         </div>
+                        <div class="mvHeaderLogo">
+                            <a href="#"><img src="./images/logo.png" alt="logo"></a>
+                        </div>
                         <div class="mvHeaderLang">
                             <div class="mvHeaderLang__btn">
                                 <a href="" class="mvHeaderLang__lnk">
-                                    language<i class="far fa-caret-square-down"></i>
+                                    English
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="mvSlideMain">
                         <ul class="mvSlide">
-                            <li class="mvSlide__itm mvSlide__itm--01"></li>
+                            <!-- <li class="mvSlide__itm mvSlide__itm--01"></li> -->
                             <li class="mvSlide__itm mvSlide__itm--02"></li>
                             <li class="mvSlide__itm mvSlide__itm--03"></li>
                         </ul>
@@ -167,8 +170,8 @@
                                         山と海に面した自然豊かなロケーションで四季と美味しい食事を楽しめます。箱根細工などの伝統工芸品や可愛い和物のお土産もあり、
                                         少し足を伸ばすと温泉地(箱根や湯河原)もあり、大人も若者も楽しめる街です☆
                                     </p>
-                                    <div class="wrap-btn wrap-btn--white">
-                                        <a href="#" class="btn btn-prim">
+                                    <div class="wrap-btn">
+                                        <a href="#" class="btn-prim--thema">
                                             小田原の魅力を見る
                                             <span class="ti-angle-right"></span>
                                         </a>
@@ -216,7 +219,7 @@
                                     </div>
                                 </div>
                                 <div class="u-ta-r u-mt30">
-                                    <div class="lnk-txt lnk-txt--lightblue lnk-txt--bdr">
+                                    <div class="lnk-txt--thema">
                                         <a href="#">アクセス情報を見る
                                             <span class="ti-angle-right"></span>
                                         </a>
@@ -243,25 +246,25 @@
 
                     <div class="l-container--tag-cat">
                         <div class="spotTags">
-                            <div class="spotTags__itm">
+                            <div class="spotTags__itm js-spotFiltering spotTag-active" value="recommend">
                                 <a href="">おすすめ</a>
                             </div>
-                            <div class="spotTags__itm">
+                            <div class="spotTags__itm js-spotFiltering" value="sightseeing">
                                 <a href="">観光</a>
                             </div>
-                            <div class="spotTags__itm">
+                            <div class="spotTags__itm js-spotFiltering" value="hotel">
                                 <a href="">宿泊</a>
                             </div>
-                            <div class="spotTags__itm">
+                            <div class="spotTags__itm js-spotFiltering" value="food">
                                 <a href="">グルメ</a>
                             </div>
                         </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-12 col-md-3 col-sm-6">
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
                             <a href="#" class="crd-typeA">
-                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--kouyou.jpg);"></div>
                                 <div class="crd-typeA__content">
                                     <div class="crd-typeA__ttl">
                                         <h3 class="hdg-4">小田原城福祉公園</h3>
@@ -275,9 +278,25 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6">
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
                             <a href="#" class="crd-typeA">
-                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--kaisendon.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">グルメ</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--odawarajyou.jpg);"></div>
                                 <div class="crd-typeA__content">
                                     <div class="crd-typeA__ttl">
                                         <h3 class="hdg-4">小田原城福祉公園</h3>
@@ -291,9 +310,25 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6">
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget hotel">
                             <a href="#" class="crd-typeA">
-                                <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--ryokan.jpg)"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">宿泊</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--flower.jpg);"></div>
                                 <div class="crd-typeA__content">
                                     <div class="crd-typeA__ttl">
                                         <h3 class="hdg-4">小田原城福祉公園</h3>
@@ -307,7 +342,23 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6">
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget hotel">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--hotel.jpg);"></div>
+                                <div class="crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">宿泊</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -320,14 +371,30 @@
                                         小田原駅から徒歩15分
                                     </div>
                                 </div>
-                                <div class="crd-typeA__cat">観光</div>
+                                <div class="crd-typeA__cat">グルメ</div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
+                            <a href="#" class="crd-typeA">
+                                <div class="crd-typeA__img" style="background-image: url(./images/spot--taiken.jpg)"></div>
+                                                        <div class=" crd-typeA__content">
+                                    <div class="crd-typeA__ttl">
+                                        <h3 class="hdg-4">小田原城福祉公園</h3>
+                                    </div>
+                                    <p class="crd-typeA__txt">天守閣が立つ本丸を中心とした城址公園。小田原を代表する観光スポット。</p>
+                                    <div class="crd-typeA__icon">
+                                        <span class="ti-location-pin"></span>
+                                        小田原駅から徒歩15分
+                                    </div>
+                                </div>
+                                <div class="crd-typeA__cat">グルメ</div>
                             </a>
                         </div>
                     </div>
                     
 
-                    <div class="wrap-btn wrap-btn--lightblue">
-                        <a href="#" class="btn btn-prim">
+                    <div class="wrap-btn">
+                        <a href="#" class="btn-prim--white">
                             詳しく見る
                             <span class="ti-angle-right"></span>
                         </a>
@@ -377,8 +444,8 @@
                         </div>
                     </div>
                     <div class="u-ta-r u-mt30">
-                        <div class="lnk-txt lnk-txt--lightblue lnk-txt--bdr">
-                            <a href="#">詳しく見る
+                        <div class="lnk-txt--thema">
+                            <a href="#">お知らせ一覧へ
                                 <span class="ti-angle-right"></span>
                             </a>
                         </div>
@@ -557,8 +624,8 @@
                         </li>
                     </ul>
 
-                    <div class="wrap-btn wrap-btn--white">
-                        <a href="#" class="btn btn-prim">
+                    <div class="wrap-btn">
+                        <a href="#" class="btn-prim--thema">
                             詳しく見る
                             <span class="ti-angle-right"></span>
                         </a>
@@ -574,12 +641,10 @@
                         <h1 class="hdg-2">関連サイト</h1>
                     </div>
                     <div class="row">
-
                         <div class="col-12 col-md-6">
                             <div class="externalEat">
-                                <div class="externalTag">
-                                    <span class="ti-face-smile"></span>
-                                    <p class="externalTag__itm">グルメ</p>
+                                <div class="ttl-lvl4--external">
+                                    <span class="ti-face-smile"></span>グルメ
                                 </div>
                                 <div class="crd-external">
                                     <div class="crd-external__img" style="background-image: url(./images/external--odawara-mart.jpg);"></div>
@@ -592,7 +657,7 @@
                                             <p class="crd-external__txt">小田原こだわりの地域産品を扱うお取り寄せWEBサイト。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
-                                            <div class="lnk-txt lnk-txt--lightblue">
+                                            <div class="lnk-txt--thema">
                                                 <a href="#">詳しく見る
                                                     <span class="ti-angle-right"></span>
                                                 </a>
@@ -602,9 +667,8 @@
                                 </div>
                             </div>
                             <div class="externalSightseeing">
-                                <div class="externalTag">
-                                    <span class="ti-map-alt"></span>
-                                    <p class="externalTag__itm">観光</p>
+                                <div class="ttl-lvl4--external">
+                                    <span class="ti-map-alt"></span>観光
                                 </div>
                                 <div class="crd-external">
                                     <div class="crd-external__img" style="background-image: url(./images/external--odawaratrip.jpg);"></div>
@@ -617,7 +681,7 @@
                                             <p class="crd-external__txt">「まちあるき」や「体験」情報が集約されたWEBサイト。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
-                                            <div class="lnk-txt lnk-txt--lightblue">
+                                            <div class="lnk-txt--thema">
                                                 <a href="#">詳しく見る
                                                     <span class="ti-angle-right"></span>
                                                 </a>
@@ -630,9 +694,8 @@
 
                         <div class="col-12 col-md-6">
                             <div class="externalPlace">
-                                <div class="externalTag">
-                                    <span class="ti-thumb-up"></span>
-                                    <p class="externalTag__itm">商業施設</p>
+                                <div class="ttl-lvl4--external">
+                                    <span class="ti-thumb-up"></span>商業施設
                                 </div>
                                 <div class="crd-external">
                                     <div class="crd-external__img" style="background-image: url(./images/external--luska.jpg);"></div>
@@ -645,7 +708,7 @@
                                             <p class="crd-external__txt">小田原駅東口にある、湘南ステーションビルが運営する駅ビル。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
-                                            <div class="lnk-txt lnk-txt--lightblue">
+                                            <div class="lnk-txt--thema">
                                                 <a href="#">詳しく見る
                                                     <span class="ti-angle-right"></span>
                                                 </a>
@@ -664,7 +727,7 @@
                                             <p class="crd-external__txt">魅力的な小田原の「ヒト」「モノ」「コト」を発信し、市民や観光客が集う「にぎわいの場」を創出します。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
-                                            <div class="lnk-txt lnk-txt--lightblue">
+                                            <div class="lnk-txt--thema">
                                                 <a href="#">詳しく見る
                                                     <span class="ti-angle-right"></span>
                                                 </a>
@@ -683,7 +746,7 @@
                                             <p class="crd-external__txt">小田原・西湘エリアの地元人気飲食店が勢揃い。老若男女が、昼も夜も楽しめるようなゾーン構成となっています。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
-                                            <div class="lnk-txt lnk-txt--lightblue">
+                                            <div class="lnk-txt--thema">
                                                 <a href="#">詳しく見る
                                                     <span class="ti-angle-right"></span>
                                                 </a>
@@ -693,7 +756,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -716,7 +778,7 @@
         <div class="footerContainer">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="ttl-lvl4 ttl-lvl4--footer">
+                    <div class="ttl-lvl4--footer">
                         <div class="hdg-4">一般社団法人 小田原市観光協会</div>
                     </div>
                     <div class="footerInfo">
@@ -733,35 +795,35 @@
                 </div>
 
                 <div class="col-12 col-md-6">
-                    <div class="ttl-lvl4 ttl-lvl4--footer">
+                    <div class="ttl-lvl4--footer">
                         <div class="hdg-4">サイトマップ</div>
                     </div>
                     <div class="footerSitemap">
                         <div class="footerSitemap__content">
                             <ul>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>トップページ</a>
                                 </li>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>小田原の魅力</a>
                                 </li>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>アクセス</a>
                                 </li>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>観光スポット</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="footerSitemap__content">
                             <ul>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>お知らせ</a>
                                 </li>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>お役立ちコラム</a>
                                 </li>
-                                <li class="lnk-txt lnk-txt--footer">
+                                <li class="lnk-txt--footer">
                                     <a href="#" class="footerSitemap__lnk"><span class="ti-angle-right"></span>小田原の歴史</a>
                                 </li>
                             </ul>

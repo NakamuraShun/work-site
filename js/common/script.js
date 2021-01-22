@@ -4,7 +4,7 @@ $(function ()
 /* scroll globalNav
 -------------------------------------------------------------------- */
     var scrollPoint_pc = 300;
-    var scrollPoint_sp = 100;
+    var scrollPoint_sp = 80;
     var blakePoint_md = 900;
 
     $(window).on('load resize', function ()
@@ -164,6 +164,45 @@ $(function ()
 //         $('.js-subNavTrigger').removeClass('is-active');
     
 
+
+/* spot filtering
+-------------------------------------------------------------------- */
+    $(".js-spotFiltering").click(function ()
+    {
+
+        //tags
+        $(".js-spotFiltering").each(function ()
+        {
+            if ($(this).hasClass("spotTag-active"))
+            {
+                $(this).removeClass("spotTag-active");
+            }
+        });
+        $(this).addClass("spotTag-active");
+
+        //クリックしたtag取得
+        let searchTag = $(this).attr("value");
+
+        //各itemを非表示 → 条件判定 → 表示
+        $(".js-spotTarget").each(function ()
+        {
+            $(this).animate(
+                //① ゆっくり透過してから隠す
+                { "opacity": 0 }, 200, function ()
+                {
+                    $(this).hide();
+                    //② 判定してからゆっくり要素を表示
+                    if ($(this).hasClass(searchTag) || searchTag == "recommend")
+                    {
+                        $(this).show();
+                        $(this).animate({ "opacity": 1 }, 200);
+                    }
+                });
+        });
+
+        return false;
+
+    });
 
 /* ScrollTop
 -------------------------------------------------------------------- */
