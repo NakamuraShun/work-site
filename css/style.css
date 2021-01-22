@@ -2425,7 +2425,7 @@ body.is-fix .globalNavSP__bg {
   align-items: center;
   justify-content: center;
   background-color: #1fa6c3;
-  color: #fff;
+  color: #fff !important;
   font-weight: bold;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
@@ -2662,6 +2662,9 @@ _footer.scss
   padding: 0 1rem;
   color: #fff;
   text-decoration: underline;
+}
+.copyWrap .copyNav__itm > a:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 56.25em) {

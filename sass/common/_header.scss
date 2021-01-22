@@ -470,7 +470,7 @@ body.is-fix {
         align-items: center;
         justify-content: center;
         background-color: $color-t1;
-        color: $color-w1;
+        color: $color-w1 !important;
         font-weight: bold;
         letter-spacing: .15rem;
         text-transform: uppercase;

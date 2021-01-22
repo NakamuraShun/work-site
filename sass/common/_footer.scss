@@ -145,6 +145,10 @@ _footer.scss
             padding:0 1rem;
             color: $color-w1;
             text-decoration: underline;
+            
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
 }
