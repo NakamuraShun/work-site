@@ -63,7 +63,7 @@ _page.scss
         & span {
             color: $color-s1;
             font-size: 2.0rem;
-            font-weight: bold;
+            font-weight: 500;
         }
     }
 }
@@ -71,17 +71,7 @@ _page.scss
 /*  spotTags
 -------------------------------------------------- */
 .spotTags{
-    display: flex;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap;
-    justify-content: center;
     margin-bottom: 2rem;
-    
-    
-    &__itm{
-        width: 45%;         
-        margin: 1rem;
-    } 
     
     & a {
         color: $color-b1;
@@ -97,6 +87,7 @@ _page.scss
         border: 2px solid;
         border-color: $color-g1;
         border-radius: 5px;
+        margin-bottom: 1.5rem;
         -webkit-transition: all .1s;
         transition: all .1s;
         
@@ -108,21 +99,12 @@ _page.scss
 
 .spotTag-active{
     & a{
-        background-color: #ffff00;   
+        color: $color-w1;
+        background-color: #fe4a49;   
         border-color: $color-g1;
     }
 }
 
-@media (min-width: $bp-sm) {
-    .spotTags{   
-        &__itm{
-            width: 20%;
-        } 
-        & a{
-            padding: 0 3rem;
-        } 
-    }
-}
 
 /*  news
 -------------------------------------------------- */
@@ -138,11 +120,16 @@ _page.scss
     &__info {
         margin-top: 1.5rem;
         
-        &--cat {
-            padding: .3rem .7rem;
-            background-color: $color-b1;
+        &--catNews,
+        &--catEvent {
             color: $color-w1;
+            padding: .3rem .7rem;
+            border-radius: 2px;
         }
+        
+        &--catNews{background-color: #533E98;}
+        &--catEvent {background-color: #68A142;}
+        
         &--day {
             margin-left: 1rem;
             color: $color-g3;
@@ -230,8 +217,8 @@ _page.scss
         
         &__icon {
             background-image: url(../../images/hojo-logo.png);
-            -webkit-transition: all .4s;
-            transition: all .4s;
+            -webkit-transition: all .1s;
+            transition: all .1s;
         }
         
         &:hover &__icon{
@@ -251,6 +238,8 @@ _page.scss
 -------------------------------------------------- */
 .columnSlide{ 
     .slick-dots{
+        margin-bottom: 1rem;
+        
         & li button:before{
             margin-top: 1rem;
             font-size: 1.5rem;
@@ -261,9 +250,24 @@ _page.scss
         }
     } 
     
+    .slick-prev,
+    .slick-next {
+        z-index: 5;
+        -webkit-transform: scale(2.5);
+        transform: scale(2.5);
+        
+        &:hover{
+            opacity: .8;
+        }
+        
+    }
+    
+    .slick-prev {left: -15px;}
+    .slick-next {right: -15px;}
+    
     .slick-prev:before,
     .slick-next:before {
-        font-size: 3rem;
         color: $color-s1;
+        opacity: 1;
     }
 }

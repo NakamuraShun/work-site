@@ -64,7 +64,8 @@ _card.scss
     
     &__ttl {            
         & > [class*="hdg-"] {
-            font-weight:bold;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
     }
     
@@ -120,7 +121,7 @@ _card.scss
 -------------------------------------------------- */
 .crd-external {
     color: $color-b1;
-    min-width: 40rem;
+    min-width: 30rem;
     height: 16rem;
     overflow: hidden;
     display: -webkit-box;

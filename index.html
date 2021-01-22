@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>odawara-site</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <meta name="format-detection" content="telephone=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 
-    <!-- ******************** css ******************** -->
+    <!-- ******************** font/icon ******************** -->
     <!-- fontawesome -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- noto sans JP -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    <!-- themify icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
 
     <!-- ******************** css ******************** -->
     <!-- slick -->
     <link rel="stylesheet" href="css/slick/slick.css">
     <link rel="stylesheet" href="css/slick/slick-theme.css">
-    <!-- icon -->
-    <link rel="stylesheet" href="css/themify-icons.css">
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -164,7 +166,7 @@
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="ttl-lvl3">
-                                        <h1 class="hdg-3">歩いて楽しい、食べて美味しい街。</h1>
+                                        <h1 class="hdg-3">歩いて楽しい、<br>食べて美味しい街。</h1>
                                     </div>
                                     <p>
                                         小田原城をはじめ、歴史と文化が育んだ多くの観光スポットがあり今では年間500万人以上の観光客が訪れます。
@@ -193,7 +195,7 @@
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="ttl-lvl3">
-                                    <h1 class="hdg-3">日帰り旅行も気軽に楽しめちゃう♪</h1>
+                                    <h1 class="hdg-3">日帰り旅行も<br>気軽に楽しめちゃう♪</h1>
                                 </div>
                                 <p class="u-mb20">
                                   関東地方の南西端に位置し、神奈川県の西部にあります。
@@ -246,24 +248,32 @@
                     </div>
 
                     <div class="l-container--tag-cat">
-                        <div class="spotTags">
-                            <div class="spotTags__itm js-spotFiltering spotTag-active" value="recommend">
-                                <a href="">おすすめ</a>
+                        <div class="row spotTags">
+                            <div class="col-6 col-sm-3">
+                                <div class="spotTags__itm js-spotFiltering spotTag-active" value="recommend">
+                                    <a href="">おすすめ</a>
+                                </div>
                             </div>
-                            <div class="spotTags__itm js-spotFiltering" value="sightseeing">
-                                <a href="">観光</a>
+                            <div class="col-6 col-sm-3">
+                                <div class="spotTags__itm js-spotFiltering" value="sightseeing">
+                                    <a href="">観光</a>
+                                </div>
                             </div>
-                            <div class="spotTags__itm js-spotFiltering" value="hotel">
-                                <a href="">宿泊</a>
+                            <div class="col-6 col-sm-3">
+                                <div class="spotTags__itm js-spotFiltering" value="hotel">
+                                    <a href="">宿泊</a>
+                                </div>
                             </div>
-                            <div class="spotTags__itm js-spotFiltering" value="food">
-                                <a href="">グルメ</a>
+                            <div class="col-6 col-sm-3">
+                                <div class="spotTags__itm js-spotFiltering" value="food">
+                                    <a href="">グルメ</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget sightseeing">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--kouyou.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -279,7 +289,7 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget food">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--kaisendon.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -295,7 +305,7 @@
                                 <div class="crd-typeA__cat">グルメ</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget sightseeing">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--odawarajyou.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -311,7 +321,7 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget hotel">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget hotel">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--ryokan.jpg)"></div>
                                 <div class="crd-typeA__content">
@@ -327,7 +337,7 @@
                                 <div class="crd-typeA__cat">宿泊</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget sightseeing">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget sightseeing">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--flower.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -343,7 +353,7 @@
                                 <div class="crd-typeA__cat">観光</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget hotel">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget hotel">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--hotel.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -359,7 +369,7 @@
                                 <div class="crd-typeA__cat">宿泊</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget food">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--wagashi.jpg);"></div>
                                 <div class="crd-typeA__content">
@@ -375,7 +385,7 @@
                                 <div class="crd-typeA__cat">グルメ</div>
                             </a>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 js-spotTarget food">
+                        <div class="col-12 col-sm-6 col-md-3 js-spotTarget food">
                             <a href="#" class="crd-typeA">
                                 <div class="crd-typeA__img" style="background-image: url(./images/spot--taiken.jpg)"></div>
                                                         <div class=" crd-typeA__content">
@@ -413,7 +423,7 @@
                         <div class="col-12 col-md-4">
                             <div class="news">
                                 <dt class="news__info">
-                                    <span class="news__info--cat">イベント</span>
+                                    <span class="news__info--catEvent">イベント</span>
                                     <span class="news__info--day">2021/01/06</span>
                                 </dt>
                                 <dd class="news__txt">
@@ -424,7 +434,7 @@
                         <div class="col-12 col-md-4">
                             <div class="news">
                                 <dt class="news__info">
-                                    <span class="news__info--cat">お知らせ</span>
+                                    <span class="news__info--catNews">お知らせ</span>
                                     <span class="news__info--day">2021/01/04</span>
                                 </dt>
                                 <dd class="news__txt">
@@ -435,7 +445,7 @@
                         <div class="col-12 col-md-4">
                             <div class="news">
                                 <dt class="news__info">
-                                    <span class="news__info--cat">イベント</span>
+                                    <span class="news__info--catEvent">イベント</span>
                                     <span class="news__info--day">2020/12/31</span>
                                 </dt>
                                 <dd class="news__txt">
@@ -548,61 +558,6 @@
                         </li>
                         <li>
                             <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--golf.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">近くのパークゴルフ案内</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--bike.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">レンタルサイクルについて</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--Instagram.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">インスタ映えスポット♪</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--rocker.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">コインロッカー案内</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--illumination.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">小田原あるってこ</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
                                 <div class="crd-typeA__img" style="background-image: url(./images/column--accessory.jpg);"></div>
                                 <div class="crd-typeA__content">
                                     <div class="crd-typeA__ttl">
@@ -612,17 +567,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="crd-typeA crd-typeA--column">
-                                <div class="crd-typeA__img" style="background-image: url(./images/column--kankouannai.jpg);"></div>
-                                <div class="crd-typeA__content">
-                                    <div class="crd-typeA__ttl">
-                                        <h3 class="hdg-5">観光案内所</h3>
-                                    </div>
-                                    <p class="crd-typeA__txt">テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                                </div>
-                            </a>
-                        </li>
+ 
                     </ul>
 
                     <div class="wrap-btn">
@@ -725,7 +670,7 @@
                                                 <h3 class="hdg-5">HaRuNe小田原</h3>
                                                 <span class="ti-layers"></span>
                                             </div>
-                                            <p class="crd-external__txt">魅力的な小田原の「ヒト」「モノ」「コト」を発信し、市民や観光客が集う「にぎわいの場」を創出します。</p>
+                                            <p class="crd-external__txt">市民や観光客が集う「にぎわいの場」を創出します。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
                                             <div class="lnk-txt--thema">
@@ -744,7 +689,7 @@
                                                 <h3 class="hdg-5">ミナカ小田原</h3>
                                                 <span class="ti-layers"></span>
                                             </div>
-                                            <p class="crd-external__txt">小田原・西湘エリアの地元人気飲食店が勢揃い。老若男女が、昼も夜も楽しめるようなゾーン構成となっています。</p>
+                                            <p class="crd-external__txt">小田原・西湘エリアの地元人気飲食店が勢揃いしています。</p>
                                         </div>
                                         <div class="crd-external__lnk u-ta-r">
                                             <div class="lnk-txt--thema">

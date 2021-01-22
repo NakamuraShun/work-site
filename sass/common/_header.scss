@@ -33,12 +33,17 @@ _header.scss
 }
 
 .l-nav {
+    visibility: hidden;
     position: fixed;
     top: 60px; // sp:l-headerのheight分下降
     right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
+}
+
+body.is-fix .l-nav {
+    visibility: visible;
 }
 
 @media (min-width: $bp-md){
@@ -105,7 +110,7 @@ _header.scss
         opacity: 0;
         visibility: hidden;
         z-index: 100;
-        min-width: 350px;
+        min-width: 300px;
         -webkit-perspective: 500px;
         perspective: 500px;
         -webkit-transform: translateX(100px);
@@ -180,7 +185,7 @@ body.is-fix {
         align-items: center;
         height: 60px;
         padding-left: 15px;
-        color: $color-t1;
+        color: $color-t1 !important;
         font-size: 1.8rem;
         font-weight: bold;
         letter-spacing: 1px;
@@ -278,7 +283,7 @@ body.is-fix {
             height: 100%;
             color: $color-b1;
             font-size: 1.8rem;
-            font-weight: bold;
+            font-weight: 500;
             letter-spacing: 1px;
             
             &:hover {
@@ -406,8 +411,24 @@ body.is-fix {
     position: relative;
 }
 
+.mvHeaderLogo{
+    &>a{
+        display: inline-block;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        
+        & > img {
+            height: 40px;
+            width: auto;
+            
+            &:hover {opacity: .7;}
+        }
+    }
+}
+
 .mvHeaderSns{
-    height: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -429,39 +450,21 @@ body.is-fix {
         -webkit-transition: all .1s;
         transition: all .1s;
         
-        &:not(:last-child){
-            margin-right: 1rem;
+        &>img{
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
         }
         
-        &:hover{
-            opacity: .7;
-        }
-    }
-}
-.mvHeaderLogo{
-    &>a{
-        display: inline-block;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        
-        & > img {
-            height: 40px;
-            width: auto;
-            
-            &:hover {
-                opacity: .7;
-            }
-        }
+        &:hover{opacity: .7;}
     }
 }
 
+
+
 .mvHeaderLang{
     &__lnk{
-        width: 11rem;
+        width: 9rem;
         height: 3rem;
-        padding: 0 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -471,15 +474,14 @@ body.is-fix {
         justify-content: center;
         background-color: $color-t1;
         color: $color-w1 !important;
+        font-size: 1.4rem;
         font-weight: bold;
         letter-spacing: .15rem;
         text-transform: uppercase;
         -webkit-transition: all .1s;
         transition: all .1s;
         
-        &:hover{
-            opacity: .7;
-        }
+        &:hover{opacity: .7;}
     }
 }
 
@@ -488,6 +490,20 @@ body.is-fix {
     .mvHeader{
         padding-right: 0;
         padding-left: 0;
+    }
+    
+    .mvHeaderSns{        
+        &__lnk{
+            &>img{
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                margin-right: 1rem;
+            }
+        }
+    }
+    
+    .mvHeaderLang{
+        font-size: 1.6rem;
     }
 }
 
@@ -550,14 +566,14 @@ body.is-fix {
 -------------------------------------------------- */
 .mvCopy{
     position: absolute;
-    top:65%;
-    right:-5%;
+    top:85%;
+    right:-6%;
     transform: translate(-50%,-50%);
     height: 500px;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     color: $color-w1;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px #ffc0cb;
     font-family: 'Noto Serif JP';
@@ -585,7 +601,8 @@ body.is-fix {
     position: absolute;
     top:50%;
     left:50%;
-    transform: translate(-50%,-50%) scale(0.7);
+    transform: translate(-50%,-50%) scale(0.6);
+    
 }
 
 @media (min-width: $bp-sm){

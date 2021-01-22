@@ -32,7 +32,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.75;
     width: 100%;
-    font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 body *,
@@ -64,7 +64,8 @@ $container-p:1.5rem;
 
 // /*  BlakePoint
 // -------------------------------------------------- */
-$bp-ss: 31.25em;   // 500px
+// $bp-ss: 31.25em;   // 500px
+$bp-ss: 23.4375em;   // 375px
 $bp-sm: 37.5em;    // 600px
 $bp-md: 56.25em;   // 900px
 $bp-lg: 68.75em;   // 1100px
@@ -105,34 +106,4 @@ a:focus {
 
 li img, li a, li a img {
     vertical-align: bottom;
-}
-
-/*  font family
--------------------------------------------------- */
-@font-face {
-    font-family: 'Noto Sans Japanese';
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/NotoSansJP-Regular.woff2) format("woff2"), url(../fonts/NotoSansJP-Regular.woff) format("woff"), url(../fonts/NotoSansJP-Regular.otf) format("opentype");
-}
-
-@font-face {
-    font-family: 'Noto Sans Japanese';
-    font-style: normal;
-    font-weight: 500;
-    src: url(../fonts/NotoSansJP-Medium.woff2) format("woff2"), url(../fonts/NotoSansJP-Medium.woff) format("woff"), url(../fonts/NotoSansJP-Medium.otf) format("opentype");
-}
-
-@font-face {
-    font-family: 'Noto Sans Japanese';
-    font-style: normal;
-    font-weight: 700;
-    src: url(../fonts/NotoSansJP-Bold.woff2) format("woff2"), url(../fonts/NotoSansJP-Bold.woff) format("woff"), url(../fonts/NotoSansJP-Bold.otf) format("opentype");
-}
-
-@font-face {
-    font-family: 'Noto Sans Japanese';
-    font-style: normal;
-    font-weight: 900;
-    src: url(../fonts/NotoSansJP-Black.woff2) format("woff2"), url(../fonts/NotoSansJP-Black.woff) format("woff"), url(../fonts/NotoSansJP-Black.otf) format("opentype");
 }

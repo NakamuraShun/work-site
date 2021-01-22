@@ -44,7 +44,7 @@ _typography.scss
     text-align: center;
     
     & > [class*="hdg-"] {
-        font-weight:900;
+        font-weight:700;
         line-height: 1.4;
     }
 }
@@ -64,8 +64,16 @@ _typography.scss
     text-align: left;
     
     & > [class*="hdg-"] {
-        font-weight:bold;
-        line-height: 1.1;
+        font-weight:600;
+        line-height: 1.3;
+    }
+}
+
+@media (min-width: $bp-sm) {
+    .ttl-lvl3 {
+        &  br {
+            display: none;
+        }
     }
 }
 
@@ -91,9 +99,11 @@ _typography.scss
 
 .ttl-lvl4--footer{
     & > [class*="hdg-"] {
+        width: 100%;
+        font-weight: 600;
+        letter-spacing: 1px;
         line-height: 2.5;
         border-bottom: 4px dotted $color-g1;
-        width: 100%;
     }
 }
 
@@ -106,7 +116,8 @@ _typography.scss
     margin-bottom: 1rem;
     padding:1rem 0;
     padding-left: 2rem;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
     background-color: $color-g2;
     border-radius: 2px;
     
@@ -131,7 +142,7 @@ _typography.scss
 .hdg-1 {font-size: 3.5rem;}
 .hdg-2 {font-size: 3.0rem;}
 .hdg-3 {font-size: 2.5rem;}
-.hdg-4 {font-size: 1.4rem;}
+.hdg-4 {font-size: 1.6rem;}
 
 @media (min-width: $bp-md) {
     .hdg-0 {font-size: 4.5rem;}
