@@ -18,9 +18,9 @@ _card.scss
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
     height: calc(100% - 15px);
-    background-color: $color-w1;
+    background-color: #fff;
     border: 5px solid;
     border-color: $color-g1;
     -webkit-transition: all .2s;
@@ -59,7 +59,7 @@ _card.scss
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        padding: 1rem;
+        padding: 10px;
     }
     
     &__ttl {            
@@ -70,7 +70,7 @@ _card.scss
     }
     
     &__icon {
-        margin-top: 1rem;  
+        margin-top: 10px;  
         color: $color-g3;
         & span{color: #fe4a49;font-weight: bold;}
     }
@@ -79,7 +79,7 @@ _card.scss
         position: absolute;
         top:0;
         left:0;
-        width: 8rem;
+        width: 80px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -88,8 +88,8 @@ _card.scss
         align-items: center;
         justify-content: center;
         line-height: 2.4;
-        letter-spacing: .4rem;
-        color: $color-w1;
+        letter-spacing: 1.5px;
+        color: #fff;
         background: rgba(0,0,0,.6);
     }
     
@@ -111,7 +111,7 @@ _card.scss
 @media (min-width: $bp-lg) {  
     .crd-typeA {
         &--column{
-            margin: 0 1rem;
+            margin: 0 10px;
         }
     }
 }
@@ -121,8 +121,8 @@ _card.scss
 -------------------------------------------------- */
 .crd-external {
     color: $color-b1;
-    min-width: 30rem;
-    height: 16rem;
+    min-width: 300px;
+    height: 160px;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,8 +133,8 @@ _card.scss
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 1.5rem;
-    background-color: $color-w1;
+    margin-bottom: 15px;
+    background-color: #fff;
     border: 1px solid $color-g1;
     
     &__img {
@@ -159,7 +159,7 @@ _card.scss
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        padding: 1.5rem;
+        padding: 15px;
     }
     
     &__ttl {
@@ -168,8 +168,8 @@ _card.scss
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding-bottom: .3rem;
-        margin-bottom: .5rem;
+        padding-bottom: 3px;
+        margin-bottom: 5px;
         border-bottom: 1px solid currentColor;
         
         & span {
@@ -194,8 +194,8 @@ _card.scss
         }
         
         &__ttl {
-            padding-bottom: .5rem;
-            margin-bottom: 1rem;
+            padding-bottom: 5px;
+            margin-bottom: 1px;
         }
         
         &__txt {

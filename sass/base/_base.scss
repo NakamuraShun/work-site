@@ -17,6 +17,14 @@ $color-t1 : #1fa6c3;
 /* sub-color */
 $color-s1 : #f0ae58;
 
+/*  BlakePoint
+// -------------------------------------------------- */
+$bp-ss: 23.4375em;   // 375px
+$bp-sm: 37.5em;    // 600px
+$bp-md: 56.25em;   // 900px
+$bp-lg: 68.75em;   // 1100px
+$bp-xl: 75em;      // 1200px
+
 /*  html
 -------------------------------------------------- */
 html{
@@ -29,10 +37,16 @@ body {
     background-color: $color-w1;
     color: $color-b1;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.75;
     width: 100%;
     font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+@media (min-width: $bp-ss) {  
+    body {
+        font-size: 1.6rem;
+    }
 }
 
 body *,
@@ -48,28 +62,10 @@ body .is-fix {
     height: 100%;
 }
 
-
-/*
-@media (min-width: 1000px) {
-    body.is-fix {
-        position: static;
-    }
-}
-*/
-
 /* Container Padding
 -------------------------------------------------- */
-$container-p:1.5rem;
+$container-p:15px;
 
-
-// /*  BlakePoint
-// -------------------------------------------------- */
-// $bp-ss: 31.25em;   // 500px
-$bp-ss: 23.4375em;   // 375px
-$bp-sm: 37.5em;    // 600px
-$bp-md: 56.25em;   // 900px
-$bp-lg: 68.75em;   // 1100px
-$bp-xl: 75em;      // 1200px
 
 
 /*  a

@@ -14,7 +14,7 @@ _header.scss
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-color: $color-w1;
+    background-color: #fff;
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.50);
     box-shadow: 0 0 15px rgba(0,0,0,0.50);
     
@@ -172,7 +172,7 @@ body.is-fix {
 .gNavSP {
     width: 100%;
     height: 100%;
-    background-color: $color-w1;
+    background-color: #fff;
     
     &__item {
         position: relative;
@@ -242,8 +242,8 @@ body.is-fix {
             height: 100%;
             margin-right: auto;
             margin-left: auto;
-            padding-right: $container-p;
-            padding-left: $container-p;
+            padding-right: 1;
+            padding-left: 15px;
             position: relative;
         }
     }
@@ -305,7 +305,7 @@ body.is-fix {
     width: 49px;
     height: 60px;
     text-align: center;
-    font-size: 24px;
+    font-size: 2.4rem;
     text-decoration: none;
     vertical-align: middle;
     display: flex;
@@ -322,7 +322,7 @@ body.is-fix {
 
 .markMenu{
     width: 100%;
-    height: 2rem;
+    height: 20px;
     position: relative;
     
     &__middle,
@@ -394,9 +394,9 @@ body.is-fix {
 /* mvHeader
 -------------------------------------------------- */
 .mvHeader{
-    height: 6rem;
-    padding-right: $container-p;
-    padding-left: $container-p;
+    height: 60px;
+    padding-right: 15px;
+    padding-left: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -463,8 +463,8 @@ body.is-fix {
 
 .mvHeaderLang{
     &__lnk{
-        width: 9rem;
-        height: 3rem;
+        width: 90px;
+        height: 30px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -473,10 +473,10 @@ body.is-fix {
         align-items: center;
         justify-content: center;
         background-color: $color-t1;
-        color: $color-w1 !important;
+        color: #fff !important;
         font-size: 1.4rem;
         font-weight: bold;
-        letter-spacing: .15rem;
+        letter-spacing: .1.5;
         text-transform: uppercase;
         -webkit-transition: all .1s;
         transition: all .1s;
@@ -497,7 +497,7 @@ body.is-fix {
             &>img{
                 -webkit-transform: scale(1);
                 transform: scale(1);
-                margin-right: 1rem;
+                margin-right: 10px;
             }
         }
     }
@@ -572,7 +572,7 @@ body.is-fix {
     height: 500px;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    color: $color-w1;
+    color: #fff;
     font-size: 2.1rem;
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px #ffc0cb;
@@ -583,7 +583,7 @@ body.is-fix {
     .mvCopy{
         top:50%;
         right:-3%;
-        font-size: 3.0rem;
+        font-size: 3rem;
     }
 }
 

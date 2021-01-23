@@ -62,8 +62,16 @@ _page.scss
         
         & span {
             color: $color-s1;
-            font-size: 2.0rem;
+            font-size: 2rem;
             font-weight: 500;
+        }
+    }
+}
+
+@media (min-width: $bp-sm) {
+    .acsessBox {
+        &  br {
+            display: none;
         }
     }
 }
@@ -71,7 +79,7 @@ _page.scss
 /*  spotTags
 -------------------------------------------------- */
 .spotTags{
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     
     & a {
         color: $color-b1;
@@ -87,7 +95,7 @@ _page.scss
         border: 2px solid;
         border-color: $color-g1;
         border-radius: 5px;
-        margin-bottom: 1.5rem;
+        margin-bottom: 15px;
         -webkit-transition: all .1s;
         transition: all .1s;
         
@@ -170,6 +178,7 @@ _page.scss
         background-position: center center;
         background-color: $color-b1;
         background-image: url(../../images/historyBnrContent-bg.png);
+        font-family: 'Noto Serif JP';
         -webkit-transition: all .4s;
         transition: all .4s;
     }
@@ -208,7 +217,7 @@ _page.scss
 @media (min-width: $bp-md) {
     .historyBnr {
         &__txt{
-            padding: 0 3rem;
+            padding: 0 30px;
         }
         
         &__imgWrap {
@@ -241,7 +250,7 @@ _page.scss
         margin-bottom: 1rem;
         
         & li button:before{
-            margin-top: 1rem;
+            margin-top: 10px;
             font-size: 1.5rem;
         }
         

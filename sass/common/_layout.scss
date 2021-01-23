@@ -11,10 +11,10 @@ _layout.scss
 
 /*  ***Wrap
 -------------------------------------------------- */
-[class*="Wrap"] {padding: 5rem 0;}
+[class*="Wrap"] {padding: 50px 0;}
 
-@media (min-width: $bp-md) {[class*="Wrap"] {padding: 5rem 0;}}
-@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 5rem 0;}}
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: 50px 0;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 50px 0;}}
 
 /*  .l-container
 -------------------------------------------------- */
@@ -49,14 +49,20 @@ _layout.scss
     color: $color-w1;
     
     .row>[class*=col-]:not(:last-child){
-        margin-bottom: 4rem;
+        margin-bottom: 40px;
     }
+    
+    .l-container{
+        position: relative;
+    }
+    
+    
     
     .kanagawaIllust{
         position: absolute;
         width: 50%;
-        right: -10rem;
-        bottom: -15rem;
+        right: -50px;
+        bottom: -160px;
     }
 }
 
@@ -65,11 +71,7 @@ _layout.scss
     #h-FEATURE .introductionWrap{
         
         .row>[class*=col-]:not(:last-child){
-            margin-bottom: 0rem;
-        }
-        
-        .l-container{
-            position: relative;
+            margin-bottom: 00px;
         }
         
         .wrap-btn{
@@ -77,10 +79,22 @@ _layout.scss
         }
         
         .kanagawaIllust{
-            position: absolute;
             width: auto;
-            right: -19rem;
-            bottom: -24rem;
+            right: -190px;
+            top: 140px;
+        }
+    }
+}
+
+
+@media (min-width: $bp-md) {
+    
+    #h-FEATURE .introductionWrap{
+        
+        .kanagawaIllust{
+            width: auto;
+            right: -190px;
+            bottom: -240px;
         }
     }
 }
@@ -103,7 +117,7 @@ _layout.scss
     .girlsIllust{
         position: absolute;
         left:0;
-        bottom: -10rem;
+        bottom: -100px;
     }
 }
 
@@ -118,7 +132,7 @@ _layout.scss
         .girlsIllust{
             position: absolute;
             left:0;
-            bottom: -8rem;
+            bottom: -80px;
         }
         
     }
@@ -134,7 +148,7 @@ _layout.scss
     & .l-container--tag-cat {
         margin-right: auto;
         margin-left: auto;
-        max-width: 70rem;
+        max-width: 700px;
         position: relative;
     }
 }
@@ -148,7 +162,7 @@ _layout.scss
     }
     
     & .l-container{
-        padding: 0 4rem;
+        padding: 0 40px;
     }
 }
 
@@ -172,19 +186,19 @@ _layout.scss
         
         & .logoBg{
             width: 100%;
-            height: 55rem;
+            height: 550px;
             background-repeat: no-repeat;
             background-position: center center;
             position: absolute;
-            top:-10rem;
+            top:-100px;
             
             &--hojo{
-                left:-50rem;
+                left:-500px;
                 background-image: url(../../images/hojo-bg.png);
             }
             
             &--odawarashi{
-                left:50rem;
+                left:500px;
                 background-image: url(../../images/odawara-bg.png);
             }
         }
@@ -196,7 +210,7 @@ _layout.scss
 #h-COLUMN {
     & .h-columnWrap{
         background-color: $color-t1;
-        color: $color-w1;
+        color: #fff;
     }
 } 
 

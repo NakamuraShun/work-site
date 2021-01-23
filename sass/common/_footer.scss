@@ -5,19 +5,19 @@ _footer.scss
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 60px;
+    padding-right: 60px;
     max-width: 1100px;
     
     & .row>[class*=col-]:not(:last-child){
-        margin-bottom: 3rem;
+        margin-bottom: 30px;
     }
 }
 
 /* gototop
 -------------------------------------------------- */
 .pagetop{
-    color: #333;
+    color: $color-b1;
     background-color: #fff;
     border-top: 1px solid rgba(184, 180, 180, 0.6);
     
@@ -33,7 +33,6 @@ _footer.scss
         align-items: center;
         width: 100%;
         padding: 15px;
-        font-size: 1.6rem;
         text-align: center;
         -webkit-transition: all .3s;
         transition: all .3s;
@@ -60,7 +59,7 @@ _footer.scss
             align-items: center;
             
             & span {
-                margin-right: .5rem;
+                margin-right: 0.5px;
                 color: $color-t1;
                 font-weight: bold;
             }
@@ -78,21 +77,19 @@ _footer.scss
         
         &__content{
             & ul li {
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
             } 
         }
         
         &__content:not(:last-child){
-            margin-right: 2rem;
+            margin-right: 20px;
         }
         
         &__lnk > span {
-            margin-right: .5rem;
+            margin-right: 0.5px;
             color: $color-t1;
             font-weight: bold;
         }
-        
-        
     }
 }
 
@@ -100,8 +97,8 @@ _footer.scss
 @media (min-width: $bp-md){
     .footerWrap{
         .footerContainer{
-            padding-right: $container-p;
-            padding-left: $container-p;
+            padding-right: 15px;
+            padding-left: 15px;
             
             & .row>[class*=col-]:not(:last-child){
                 margin-bottom: 0;
@@ -110,7 +107,7 @@ _footer.scss
         
         .footerSitemap {
             &__content:not(:last-child){
-                margin-right: 3rem;
+                margin-right: 30px;
             }
         } 
     }
@@ -120,13 +117,13 @@ _footer.scss
 -------------------------------------------------- */
 .copyWrap{
     background-color: $color-t1; 
-    color: $color-w1;
+    color: #fff;
     padding:0;
     font-size: 1.4rem;
     
     
     .copyBody{
-        padding: 1rem 0;
+        padding: 10px 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -142,8 +139,8 @@ _footer.scss
         display: flex;
         
         &__itm > a {
-            padding:0 1rem;
-            color: $color-w1;
+            padding:0 10px;
+            color: #fff;
             text-decoration: underline;
             
             &:hover{
