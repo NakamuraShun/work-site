@@ -1,7 +1,7 @@
 {
     "name": "nakamura",
     "version": "1.0.0",
-    "description": "odawara-site",
+    "description": "research-site",
     "main": "index.js",
     "scripts": {
         "dev-compile:css": "sass sass/main.scss css/style.css --style expanded --watch | postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
