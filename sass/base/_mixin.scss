@@ -1,0 +1,234 @@
+/*
+_mixin.scss
+*******************************************************************************************************************/
+
+/*======================================================================
+FLEX
+======================================================================*/
+/*  display:
+-------------------------------------------------- */
+/* flex */
+@mixin --fx{
+    display: -webkit-box;
+    display: -webkit-flex; //Android2.3~
+    display: -ms-flexbox; //IE9~
+    display: flex;
+}
+
+/* inline-flex */
+@mixin --infx{
+    display: -webkit-box;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+/*  flex-wrap:
+-------------------------------------------------- */
+/* wrap */
+@mixin --fxwrap{
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+/*  flex-direction:
+-------------------------------------------------- */
+/* row */
+@mixin --fxdir-row{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+/* column */
+@mixin --fxdir-col{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* row-reverse */
+@mixin --fxdir-row--rev{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+/* column-reverse */
+@mixin --fxdir-col--rev{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+/*  align-items:
+-------------------------------------------------- */
+/* flex-start */
+@mixin --fxain-start{
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+/* flex-end */
+@mixin --fxain-end{
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+/* center */
+@mixin --fxain-center{
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*  justify-content:
+-------------------------------------------------- */
+/* flex-start */
+@mixin --fxjty-start{
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+/* flex-end */
+@mixin --fxjty-end{
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+/* center */
+@mixin --fxjty-center{
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+/* space-between */
+@mixin --fxjty-between{
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+/* space-around */
+@mixin --fxjty-around{
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+/* -----------------------------------------------
+/* [Practicality Rule set]
+-------------------------------------------------- */
+/*  fxrow-**
+-------------------------------------------------- */
+@mixin fxrow-ac-jc{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-center;
+}
+
+@mixin infxrow-ac-jc{
+    @include --infx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-center;
+}
+
+@mixin fxrow-ac-js{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-start;
+}
+
+@mixin fxrow-ac-jsb{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-between;
+}
+
+/*  fxcol-**
+-------------------------------------------------- */
+@mixin fxcol-ac-jc{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-center;
+}
+
+@mixin fxcol-jc{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxjty-center;
+}
+
+
+/*======================================================================
+POSITION
+======================================================================*/
+/* -----------------------------------------------
+/* [Practicality Rule set]
+-------------------------------------------------- */
+/* center */
+@mixin po--c{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*======================================================================
+BACK-GROUND
+======================================================================*/
+/* -----------------------------------------------
+/* [Practicality Rule set]
+-------------------------------------------------- */
+/* cover */
+@mixin bg--cv{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #111;
+}
+
+/* background-image */
+@mixin bgimg--cv($imagePath){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #111;
+    background-image: url($imagePath);
+}
+
+/*======================================================================
+TRANSITION
+======================================================================*/
+/* -----------------------------------------------
+/* [Practicality Rule set]
+-------------------------------------------------- */
+/* transition */
+@mixin transition($count){
+    -webkit-transition: all $count;
+    transition: all $count;
+}
+
+/* transform */
+@mixin transform-sc($num){
+    -webkit-transform: scaleX($num); 
+    -ms-transform: scaleX($num);
+    transform: scaleX($num);
+}

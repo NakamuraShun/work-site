@@ -6,7 +6,6 @@ _header.scss
 -------------------------------------------------- */
 .l-header{
     z-index: 200;
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,8 +22,6 @@ _header.scss
         margin: 0 auto;
         padding-right: 15px;
         padding-left: 15px;
-        display: flex;
-        justify-content: space-between;
     }
 }
 
@@ -47,6 +44,9 @@ body.is-fix .l-nav {
 }
 
 @media (min-width: $bp-md){
+    .l-header{
+        height: 130px;
+    }
     .l-nav {
         position: static;
     }
@@ -73,27 +73,20 @@ body.is-fix .l-nav {
 
 /* logoPC
 -------------------------------------------------- */
-.logoPC {
-    opacity: 0;
-    visibility: hidden;
+.logo {
 }
 
 @media (min-width: $bp-md){ 
-    .logoPC {
-        opacity: 1;
-        visibility: visible;
+    .logo {
+        margin-right: auto;
         
         & > a > img {
-            height: 40px;
+            height: 35px;
             width: auto;
-            
-            &:hover {
-                opacity: .7;
-            }
+            &:hover {opacity: .7;}
         }
     }
 }
-
 
 /* globalNavSP
 -------------------------------------------------- */
@@ -231,27 +224,14 @@ body.is-fix {
     visibility: hidden;
 }
 
-@media (min-width: $bp-md){ 
+@media (min-width: $bp-md){
+    
     .globalNavPC {
         opacity: 1;
         visibility: visible;
         height: 100%;
-        
-        &__content{
-            max-width: 1100px;
-            height: 100%;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: 1;
-            padding-left: 15px;
-            position: relative;
-        }
     }
-}
-
-/* gNavPC
--------------------------------------------------- */
-@media (min-width: $bp-md){
+    
     .gNavPC {
         width: 100%;
         height: 100%;
@@ -291,7 +271,165 @@ body.is-fix {
             }
         }
     }
+    
+    .gNavPcSub{
+        height: 65px;
+        @include fxrow-ac-jsb;
+        
+        .gNavPcSubInfo{
+            width: 300px;
+            height: 30px;
+            margin-left: 25px;
+            padding: 0 10px;
+            background-color: $color-g1;
+            border: 1px solid $color-g2;
+            border-radius: 5px;
+            @include fxrow-ac-jsb;
+            
+            &__itm {
+                @include fxrow-ac-jc;
+            }
+            
+            &__lnk{
+                font-size: 1.2rem;     
+                & span{ padding-right: 5px; }
+                &:hover{ border-bottom: 1px solid $color-b1; }
+            }
+        }
+        
+        &--scroll{
+            display: none;
+        }
+    }
+    
+    .gNavPcMain{
+        height: 65px;
+        @include fxrow-ac-jsb;
+        
+        &__itm {
+            @include fxrow-ac-jc;
+        }
+        
+        &__lnk{
+            font-size: 1.8rem;
+            font-weight: 500;
+            
+            & span{
+                padding-left: 6px;
+                font-size: 1.2rem;
+                font-weight: 900;
+                color: $color-b1;
+            }
+            
+            &::after{
+                content: "";
+                display:block;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 3px;
+                background-color: $color-t1;
+                border-radius: 5px;
+                @include transform-sc(0);
+                @include transition(.15s);
+            }
+            
+            &:hover::after{
+                @include transform-sc(1);
+            }
+        }
+    }
+    
 }
+
+
+/* megaMenu
+-------------------------------------------------- */
+.megaMenu{
+    .megaMenuWrap{
+        margin: 0 -15px;
+        color: #fff !important;
+        background-color: rgba(0, 0, 0, .9);
+    }
+}
+
+.MegaNav{
+    &__topBtn{
+        a{
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            @include transition(.15s);
+            
+            &:hover{
+                background-color: #fff;
+                color: $color-t1;
+            }
+        }
+        
+        span{
+            margin-left: 10px;
+            color:$color-t1;
+        }
+    }
+    
+    &__searchBox{
+        margin-top: 30px;
+        width: 100%;
+        a{color: #fff};
+        
+        thead{
+            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        tbody{
+            margin-top: 10px;
+        }
+
+        th{
+        }
+        
+        td{
+            padding-bottom: 10px;
+        }
+    }
+}
+
+
+
+/* searchBox
+-------------------------------------------------- */
+.searchBox{
+    @include fxrow-ac-jc;
+    
+    &__searchInput{
+        width: 180px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: $color-g1;
+        border-radius: 5px 0px 0px 5px;
+        border-color: $color-g2;
+        border-width: 2px;
+    }
+    
+    &__searchSubmit{
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin-left: -5px;
+        border: none;
+        color: #fff;
+        background-color: $color-t1;
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+
+
 
 
 

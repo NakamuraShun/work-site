@@ -1,30 +1,26 @@
 $(function ()
 {
-
-/* scroll globalNav
+    
+/* scrollResize globalNav
 -------------------------------------------------------------------- */
-    var scrollPoint_pc = 300;
-    var scrollPoint_sp = 80;
-    var blakePoint_md = 900;
+    
+    /*
 
-    $(window).on('load resize', function ()
+SPナビ実装後に再調整 heightの調整必要あり?
+
+    $(window).on('scroll', function ()
     {
-        $(window).scroll(function ()
+        let scrollTopDis = $(window).scrollTop();
+        if (scrollTopDis > 200)
         {
-            //PC
-            if ($(window).width() > blakePoint_md)
-            {
-                if ($(this).scrollTop() > scrollPoint_pc)
-                { $('.js-scrollNavPC').fadeIn(); } else { $('.js-scrollNavPC').fadeOut(); }
-            }
-            //SP
-            else
-            {
-                if ($(this).scrollTop() > scrollPoint_sp)
-                { $('.js-scrollNavSP').fadeIn(); } else { $('.js-scrollNavSP').fadeOut(); }
-            }
-        });
+            $(".gNavPcSub").addClass("gNavPcSub--scroll");
+        } else
+        {
+            $(".gNavPcSub").removeClass("gNavPcSub--scroll");
+        }
     });
+
+    */
 
 /* slick.js
 -------------------------------------------------------------------- */

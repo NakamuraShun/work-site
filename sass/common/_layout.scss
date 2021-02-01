@@ -41,12 +41,17 @@ _layout.scss
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
+/* #h-QUISTION
+-------------------------------------------------- */
+#h-QUISTION .quistionWrap{
+    color: #fff;
+    background-color: #b40015;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23940213' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 /* #h-FEATURE
 -------------------------------------------------- */
 #h-FEATURE .introductionWrap{
-    
-    background-color: $color-t1; 
-    color: $color-w1;
     
     .row>[class*=col-]:not(:last-child){
         margin-bottom: 40px;
@@ -56,14 +61,6 @@ _layout.scss
         position: relative;
     }
     
-    
-    
-    .kanagawaIllust{
-        position: absolute;
-        width: 50%;
-        right: -50px;
-        bottom: -160px;
-    }
 }
 
 @media (min-width: $bp-md) {
@@ -71,17 +68,11 @@ _layout.scss
     #h-FEATURE .introductionWrap{
         
         .row>[class*=col-]:not(:last-child){
-            margin-bottom: 00px;
+            margin-bottom: 0px;
         }
         
         .wrap-btn{
             justify-content: flex-start;
-        }
-        
-        .kanagawaIllust{
-            width: auto;
-            right: -190px;
-            top: 140px;
         }
     }
 }
@@ -89,87 +80,52 @@ _layout.scss
 
 @media (min-width: $bp-md) {
     
-    #h-FEATURE .introductionWrap{
-        
-        .kanagawaIllust{
-            width: auto;
-            right: -190px;
-            bottom: -240px;
-        }
-    }
+    
 }
 
 
 #h-FEATURE .acsessWrap {
     background-color: $color-g2;
     
-    .kanagawaMap{
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .girlsIllust{
-        position: absolute;
-        left:0;
-        bottom: -100px;
-    }
 }
 
 @media (min-width: $bp-md) {
     
     #h-FEATURE .acsessWrap {
-        
         .row{
             flex-direction: row-reverse; 
         }
-        
-        .girlsIllust{
-            position: absolute;
-            left:0;
-            bottom: -80px;
-        }
-        
     }
 }
 
-
-/* #h-LOCATION
+/* #h-CONTACT
 -------------------------------------------------- */
-#h-LOCATION {
-    & .h-locaitonWrap {
-    }
-    
-    & .l-container--tag-cat {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 700px;
-        position: relative;
-    }
+#h-CONTACT .contactWrap{
+    color: #fff;
+    background-color: #b40015;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23940213' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* #h-NEWS
+/* #h-PLAN
 -------------------------------------------------- */
-#h-NEWS {
-    & .h-newsWrap{
-        font-size: 1.4rem;
-        background-color: $color-g2; 
-    }
-    
-    & .l-container{
-        padding: 0 40px;
-    }
+#h-PLAN .h-planWrap{
+    background-color: $color-g1;
+}
+
+/* #h-SEMINAR
+-------------------------------------------------- */
+#h-SEMINAR {@include bgimg--cv("../../images/seminar--bg.jpg");}
+
+#h-SEMINAR .h-seminarWrap{
+    color: #fff;
+    background-color: rgba(180, 48, 48, 0.692);
+    height: inherit;
 }
 
 /* #h-HISTORY
 -------------------------------------------------- */
 #h-HISTORY {
-    & *{color: $color-w1;}
+    & *{color: #fff;}
     
     .row{
         margin-right: 0;

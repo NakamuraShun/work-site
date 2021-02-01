@@ -28,7 +28,7 @@ _page.scss
 .acsessBox {
     display: flex;
     padding: 2rem 0;
-    background-color: $color-w1;
+    background-color: #fff;
     border-radius: 3px;
     
     &:not(:last-child){
@@ -107,7 +107,7 @@ _page.scss
 
 .spotTag-active{
     & a{
-        color: $color-w1;
+        color: #fff;
         background-color: #fe4a49;   
         border-color: $color-g1;
     }
@@ -130,7 +130,7 @@ _page.scss
         
         &--catNews,
         &--catEvent {
-            color: $color-w1;
+            color: #fff;
             padding: .3rem .7rem;
             border-radius: 2px;
         }
