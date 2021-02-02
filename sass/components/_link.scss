@@ -30,12 +30,12 @@ _link.scss
         height: 3px;
         background-color: $color-t1;
         border-radius: 5px;
-        @include transform-sc(0);
+        @include transform-scX(0);
         @include transition(.15s);
     }
     
     &:hover::after{
-        @include transform-sc(1);
+        @include transform-scX(1);
     }
     
     & [class*="ti-"] {
@@ -155,14 +155,12 @@ _link.scss
     transform: perspective(1px) translateZ(0);
     @include transition(.1s);
     
-    
     &:hover{
-        opacity: .75;
+        opacity: .8;
+        @include transform-trY(1px);
     }
     
     &:active{
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);
         border-bottom: none;
     }
 }
@@ -205,10 +203,18 @@ _link.scss
     background-color: #fff;
     border: 4px solid $color-t1;
     
-    &:active{
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);
+    &:hover{
+        color: #fff !important;
+        background-color: $color-t1;
+    }
+}
+
+@media (min-width: $bp-md){
+    .btnPrim--white {
+        color: $color-t1 !important;
+        background-color: #fff;
         border: 4px solid $color-t1;
+        margin-bottom: 10px;
     }
 }
 

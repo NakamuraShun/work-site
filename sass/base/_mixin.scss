@@ -140,6 +140,13 @@ FLEX
     @include --fxjty-center;
 }
 
+@mixin fxrow-ac-je{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-end;
+}
+
 @mixin infxrow-ac-jc{
     @include --infx;
     @include --fxdir-row;
@@ -188,6 +195,27 @@ FLEX
     @include --fxjty-center;
 }
 
+@mixin fxcol-ac-jsb{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-between;
+}
+
+@mixin fxcol-as-jsb{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-start;
+    @include --fxjty-between;
+}
+
+@mixin fxcol-ae-jsb{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-end;
+    @include --fxjty-between;
+}
+
 
 /*======================================================================
 POSITION
@@ -196,7 +224,7 @@ POSITION
 /* [Practicality Rule set]
 -------------------------------------------------- */
 /* center */
-@mixin po--c{
+@mixin po--ac{
     position: absolute;
     top:50%;
     left:50%;
@@ -239,8 +267,14 @@ TRANSITION
 }
 
 /* transform */
-@mixin transform-sc($num){
+@mixin transform-scX($num){
     -webkit-transform: scaleX($num); 
     -ms-transform: scaleX($num);
     transform: scaleX($num);
+}
+
+@mixin transform-trY($px){
+    -webkit-transform: translateY($px); 
+    -ms-transform: translateY($px);
+    transform: translateY($px);
 }

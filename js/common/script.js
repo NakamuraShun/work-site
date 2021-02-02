@@ -24,15 +24,6 @@ SPナビ実装後に再調整 heightの調整必要あり?
 
 /* slick.js
 -------------------------------------------------------------------- */
-    $(".mvSlide").slick({
-        arrows: false,
-        dots: false,
-        fade: true,
-        autoplay: true,
-        autoplaySpeed: 2000, //1枚の画像の表示時間 (2秒後にスライド開始)
-        speed: 1000, //次のスライドに切り替わるまでの秒数 (短いと必然的にスライド速度が上がる)
-    });
-
     $('.columnSlide').slick({
         dots: true,
         infinite: true, //ループ

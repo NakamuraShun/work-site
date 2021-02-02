@@ -31,27 +31,33 @@ _header.scss
     }
 }
 
-/* logoSP
+/* logo
 -------------------------------------------------- */
-.logoSP {
+.logo {
     z-index: 200;
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 5px;
     width: 100px;
     height: 100%;
-    margin-right: auto;
     @include fxrow-ac;
     
-    a > img {
+    &__img{
         height: 20px;
         width: auto;
         @include fxrow-ac;
     }
 }
 
-@media (min-width: $bp-md){ 
-    .logoSP {display: none;}
+@media (min-width: $bp-md){
+    .logo {
+        top: -30px;
+        left: 30px;
+        
+        &__img{
+            height: 25px;
+        }
+    }
 }
 
 /* hamburger
@@ -223,7 +229,6 @@ body.is-fix {
 }
 
 
-
 .gNavSP {
     width: 100%;
     height: 100%;
@@ -327,17 +332,7 @@ body.is-fix {
     
     .gNavPcSub{
         height: 65px;
-        @include fxrow-ac-jsb;
-        
-        .logoPC {
-            margin-right: auto;
-            
-            & > a > img {
-                height: 35px;
-                width: auto;
-                &:hover {opacity: .7;}
-            }
-        }
+        @include fxrow-ac-je;
         
         .gNavPcSubInfo{
             width: 300px;
@@ -396,12 +391,12 @@ body.is-fix {
                 height: 3px;
                 background-color: $color-t1;
                 border-radius: 5px;
-                @include transform-sc(0);
+                @include transform-scX(0);
                 @include transition(.15s);
             }
             
             &:hover::after{
-                @include transform-sc(1);
+                @include transform-scX(1);
             }
             
             &:hover span{
@@ -420,9 +415,10 @@ body.is-fix {
     width: 100%;
     
     .megaMenuWrap{
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
         color: #fff !important;
         background-color: rgba(0, 0, 0, .9);
-        border-radius: 0 0 7px 7px;
     }
     
     .l-container{
@@ -483,7 +479,6 @@ body.is-fix {
 }
 
 
-
 /* searchBox
 -------------------------------------------------- */
 .searchBox{
@@ -511,237 +506,89 @@ body.is-fix {
     }
 }
 
-
-
-
-
-
-
-/* -----------------------------------------------
-/* 2-3. mv
--------------------------------------------------- */
 /* #l-MV
 -------------------------------------------------- */
 .h-mvWrap{
-    padding-top: 0 !important; //l-headerの高さに応じて変更
-    padding-bottom: 0 !important; //l-headerの高さに応じて変更
+    padding-top: 110px !important; //l-headerの高さに応じて変更
+    padding-bottom: 50px !important; //l-headerの高さに応じて変更
+    @include bgimg--cv("../images/mv.jpg");
 }
 
-.mv-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%;
-    position: relative;
-}
-
-@media (min-width: $bp-lg){
-    .mv-container {        
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-}
-
-/* mvHeader
--------------------------------------------------- */
-.mvHeader{
-    height: 60px;
-    padding-right: 15px;
-    padding-left: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    justify-content: space-between;
-    position: relative; 
-}
-
-.mvSlideMain{
-    position: relative;
-}
-
-.mvHeaderLogo{
-    &>a{
-        display: inline-block;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        
-        & > img {
-            height: 40px;
-            width: auto;
-            
-            &:hover {opacity: .7;}
-        }
-    }
-}
-
-.mvHeaderSns{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.mvBody{
+    height: 300px;
+    padding: 15px;
+    background-color:rgba(255, 255, 255, 0.85);
     
-    &__lnk{
-        display: inline-block;
+    .row{
         height: 100%;
-        width: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
-        -webkit-transition: all .1s;
-        transition: all .1s;
-        
-        &>img{
-            -webkit-transform: scale(.8);
-            transform: scale(.8);
-        }
-        
-        &:hover{opacity: .7;}
-    }
-}
-
-
-
-.mvHeaderLang{
-    &__lnk{
-        width: 90px;
-        height: 30px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
-        background-color: $color-t1;
-        color: #fff !important;
-        font-size: 1.4rem;
-        font-weight: bold;
-        letter-spacing: .1.5;
-        text-transform: uppercase;
-        -webkit-transition: all .1s;
-        transition: all .1s;
-        
-        &:hover{opacity: .7;}
-    }
-}
-
-
-@media (min-width: $bp-lg){
-    .mvHeader{
-        padding-right: 0;
-        padding-left: 0;
     }
     
-    .mvHeaderSns{        
-        &__lnk{
-            &>img{
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                margin-right: 10px;
-            }
+    [class*=col-] {
+        height: 100%;
+    }
+    
+    .mvContent{
+        height: 100%;
+        text-align: center;
+        @include fxcol-ac-jsb;
+        
+        &__copyMain{
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        &__copySub{
+            font-size: 1.4rem;
         }
     }
     
-    .mvHeaderLang{
-        font-size: 1.6rem;
-    }
-}
-
-
-/* mvSlide
--------------------------------------------------- */
-.mvSlide{
-    &__itm{
-        width: 100%;
-        min-height: 300px;
-        height: 50vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        
-        &--01{background-image: url(../images/mv--01.jpg);}
-        &--02{background-image: url(../images/mv--02.jpg);}
-        &--03{background-image: url(../images/mv--03.jpg);}
-    }
-    
-    /* img spase */
-    .slick-slide img {
-        width: 100%;
-    }
-    
-    .slick-dots{
-        & li button:before{
-            font-size: 1.5rem; // size
-            opacity: 1; //default 0.25
-            color: grey;
-        }
-        
-        & li.slick-active button:before{
-            color: $color-t1;
-        }
-    } 
-    
-    .slick-prev:before,
-    .slick-next:before {
-        color: white;
-        background-color: grey;
-    }
-}
-
-@media (min-width: $bp-sm){
-    .mvSlide{
-        &__itm{
-            width: 100%;
-            min-height: 550px;
-            height: 75vh;
-            
-            &--01{background-image: url(../images/mv--01.jpg);}
-            &--02{background-image: url(../images/mv--02.jpg);}
-            &--03{background-image: url(../images/mv--03.jpg);}
-        }
-    }
-}
-
-/* mvCopy
--------------------------------------------------- */
-.mvCopy{
-    position: absolute;
-    top:85%;
-    right:-6%;
-    transform: translate(-50%,-50%);
-    height: 500px;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    color: #fff;
-    font-size: 2.1rem;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 2px #ffc0cb;
-    font-family: 'Noto Serif JP';
-}
-
-@media (min-width: $bp-sm){
-    .mvCopy{
-        top:50%;
-        right:-3%;
-        font-size: 3rem;
+    .mvPhoto{
+        display: none;
     }
 }
 
 @media (min-width: $bp-md){
-    .mvCopy{
-        top:50%;
-        right:10%;
-        font-size: 3.5rem;
+    .h-mvWrap{
+        padding-top: 130px !important;
+        padding-bottom: 0px !important;
+        background: none;
+    }
+    
+    .mvBody{
+        height: 360px;
+        
+        .mvContent{
+            text-align: left;
+            @include fxcol-as-jsb;
+            
+            &__copyMain{
+                margin-top: 20px;
+                font-size: 4rem;
+                font-weight: 600;
+                letter-spacing: 3px;
+                line-height: 1.3;
+            }
+            
+            &__copySub{
+                font-size: 1.6rem;
+            }
+        }
+        
+        .mvPhoto{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            opacity: .9;
+            @include fxrow-ac-jc;
+            
+            &__img{
+                @include bgimg--cv("../images/mv.jpg");
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 }
-

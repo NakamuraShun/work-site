@@ -104,3 +104,11 @@ _typography.scss
     .hdg-3 {font-size: 2.2rem;}
     .hdg-4 {font-size: 1.8rem;}
 }
+
+/* -----------------------------------------------
+/* markBg  [markBg-***]
+-------------------------------------------------- */
+.markBg--yellow{
+    background-color: $color-s1;
+    font-weight: 500;
+}
