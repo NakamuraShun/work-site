@@ -25,6 +25,108 @@ _header.scss
     }
 }
 
+@media (min-width: $bp-md){
+    .l-header{
+        height: 130px;
+    }
+}
+
+/* logoSP
+-------------------------------------------------- */
+.logoSP {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 100px;
+    height: 100%;
+    margin-right: auto;
+    @include fxrow-ac;
+    
+    a > img {
+        height: 20px;
+        width: auto;
+        @include fxrow-ac;
+    }
+}
+
+@media (min-width: $bp-md){ 
+    .logoSP {display: none;}
+}
+
+/* hamburger
+-------------------------------------------------- */
+.hamburger{
+    z-index: 200;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    width: 50px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.4rem;
+    text-decoration: none;
+    border: 2px solid $color-t1;
+    @include fxrow-ac-jc;
+    @include transition(0.3s);
+}
+
+.mark{
+    margin-top: 3px;
+}
+
+.markMenu{
+    width: 100%;
+    height: 20px;
+    position: relative;
+    
+    &__middle,
+    &__top,
+    &__bottom {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -12px;
+        width: 24px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: $color-t1;
+        -webkit-transition-duration: .1s;
+        transition-duration: .1s;
+    }
+}
+
+.markMenu__top{margin-top: -9px;}
+.markMenu__middle{margin-top: -2px;}
+.markMenu__bottom{margin-top: 5px;}
+
+.mark.is-active {
+    .markMenu__top {
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .markMenu__middle {
+        -webkit-transition: opacity .25s;
+        transition: opacity .25s;
+        opacity: 0;
+    }
+    .markMenu__bottom {
+        -webkit-transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+@media (min-width: $bp-md){
+    .hamburger{display: none;}
+}
+
+
+/* globalNav
+-------------------------------------------------- */
 .globalNav{
     width: 100%;
 }
@@ -44,47 +146,8 @@ body.is-fix .l-nav {
 }
 
 @media (min-width: $bp-md){
-    .l-header{
-        height: 130px;
-    }
     .l-nav {
         position: static;
-    }
-}
-
-/* logoSP
--------------------------------------------------- */
-.logoSP {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    
-    & > a > img {
-        height: 40px;
-        width: auto; 
-    }
-}
-
-@media (min-width: $bp-md){ 
-    .logoSP {
-        display: none;
-    }
-}
-
-/* logoPC
--------------------------------------------------- */
-.logo {
-}
-
-@media (min-width: $bp-md){ 
-    .logo {
-        margin-right: auto;
-        
-        & > a > img {
-            height: 35px;
-            width: auto;
-            &:hover {opacity: .7;}
-        }
     }
 }
 
@@ -95,9 +158,8 @@ body.is-fix .l-nav {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;  
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    @include fxrow-je;
     
     &__content{
         opacity: 0;
@@ -160,59 +222,90 @@ body.is-fix {
     }
 }
 
-/* gNavSP
--------------------------------------------------- */
+
+
 .gNavSP {
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    
-    &__item {
+    background-color: #fff;    
+}
+
+.gNavSpMain{
+    &__itm {
         position: relative;
         border-top: 1px solid #e5e6e6;
+        &:last-child{border-bottom: 1px solid #e5e6e6;}
     }
     
-    &__lnk--main
+    &__lnk
     {
-        display: flex;
-        align-items: center;
-        height: 60px;
+        @include fxrow-ac;
+        height: 45px;
         padding-left: 15px;
         color: $color-t1 !important;
-        font-size: 1.8rem;
-        font-weight: bold;
+        font-size: 1.5rem;
+        font-weight: 400;
         letter-spacing: 1px;
+    }
+    
+    &__lnk--toggle::before {
+        @include fxrow-ac-jc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "\e61a";
+        font-family: 'themify';
+        font-size: 1.1rem;
+        height: 45px;
+        width: 45px;
+        background-color: #dadada;
+    }
+    
+    &__lnk--toggle.is-active::before {
+        content: "\e622";
+        background: #eee;
+    }
+    
+    .slideMenu {
+        display: none;
+    }
+    
+    .toggleNav {
+        background-color: #f5f5f5;
+        
+        &__itm {
+            border-top: 1px dashed #bdbdbd;
+        }
+        
+        &__lnk{
+            @include fxrow-ac;
+            font-size: 1.2rem;
+            height: 45px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@media (min-width: $bp-md){
+    .gNavSP {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
 
-@media (min-width: $bp-md){
-    .gNavSP {
-        background-color: transparent;
-        
-        &__main{
-            height: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        &__item {
-            border-top: none;
-        }
-        
-        &__lnk--main
-        {
-            height: auto;
-            color: $color-b1;
-            font-size: 1.8rem;
-            font-weight: bold;
-            padding-left: 0;
-        }
+.gNavSpSubInfo{
+    @include fxrow-ac;
+    @include --fxwrap;
+    padding: 20px 15px;
+    
+    &__itm{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+    &__lnk{
+        font-size: 1.2rem;
     }
 }
 
@@ -235,6 +328,16 @@ body.is-fix {
     .gNavPcSub{
         height: 65px;
         @include fxrow-ac-jsb;
+        
+        .logoPC {
+            margin-right: auto;
+            
+            & > a > img {
+                height: 35px;
+                width: auto;
+                &:hover {opacity: .7;}
+            }
+        }
         
         .gNavPcSubInfo{
             width: 300px;
@@ -263,18 +366,21 @@ body.is-fix {
     }
     
     .gNavPcMain{
+        position: relative;
         height: 65px;
         @include fxrow-ac-jsb;
         
         &__itm {
+            height: 65px;
             @include fxrow-ac-jc;
         }
         
         &__lnk{
+            display: block;
             font-size: 1.8rem;
             font-weight: 500;
             
-            & span{
+            span{
                 padding-left: 6px;
                 font-size: 1.2rem;
                 font-weight: 900;
@@ -297,19 +403,30 @@ body.is-fix {
             &:hover::after{
                 @include transform-sc(1);
             }
+            
+            &:hover span{
+                color: $color-t1;
+            }
         }
     }
     
 }
 
-
-/* megaMenu
--------------------------------------------------- */
 .megaMenu{
+    display: none;
+    position: absolute; // from .gNavPcMain
+    top:100%;
+    left:0;
+    width: 100%;
+    
     .megaMenuWrap{
-        margin: 0 -15px;
         color: #fff !important;
         background-color: rgba(0, 0, 0, .9);
+        border-radius: 0 0 7px 7px;
+    }
+    
+    .l-container{
+        max-width: 900px;
     }
 }
 
@@ -342,9 +459,12 @@ body.is-fix {
         width: 100%;
         a{color: #fff};
         
+        table:not(:last-child){
+            margin-bottom: 30px;
+        }
+        
         thead{
             border-bottom: 1px solid #fff;
-            margin-bottom: 10px;
         }
         
         tbody{
@@ -352,10 +472,12 @@ body.is-fix {
         }
         
         th{
+            padding-bottom: 10px;
         }
         
         td{
-            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 40px;
         }
     }
 }
@@ -393,76 +515,6 @@ body.is-fix {
 
 
 
-/* l-mark
--------------------------------------------------- */
-.l-mark{
-    z-index: 200;
-    cursor: pointer;
-    overflow: hidden;
-    position: absolute;
-    width: 49px;
-    height: 60px;
-    text-align: center;
-    font-size: 2.4rem;
-    text-decoration: none;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 0;
-    right: 5px;
-    transition: 0.3s;
-}
-
-.mark{
-    margin-top: 3px;
-}
-
-.markMenu{
-    width: 100%;
-    height: 20px;
-    position: relative;
-    
-    &__middle,
-    &__top,
-    &__bottom {
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -12px;
-        width: 24px;
-        height: 3px;
-        background-color: $color-t1;
-        -webkit-transition-duration: .1s;
-        transition-duration: .1s;
-    }
-}
-
-.markMenu__top{margin-top: -9px;}
-.markMenu__middle{margin-top: -2px;}
-.markMenu__bottom{margin-top: 5px;}
-
-.mark.is-active {
-    .markMenu__top {
-        -webkit-transform: rotate(45deg) translate(5px, 5px);
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .markMenu__middle {
-        -webkit-transition: opacity .25s;
-        transition: opacity .25s;
-        opacity: 0;
-    }
-    .markMenu__bottom {
-        -webkit-transform: rotate(-45deg) translate(5px, -5px);
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
-
-
-@media (min-width: $bp-md){
-    .l-mark{display: none;}
-}
 
 
 /* -----------------------------------------------
@@ -693,18 +745,3 @@ body.is-fix {
     }
 }
 
-/* mvLogo
--------------------------------------------------- */
-.mvLogo{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0.6);
-    
-}
-
-@media (min-width: $bp-sm){
-    .mvLogo{
-        transform: translate(-50%,-50%) scale(1.0);
-    }
-}

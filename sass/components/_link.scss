@@ -134,6 +134,7 @@ _link.scss
 -------------------------------------------------- */
 
 .btnPrim--header,
+.btnPrim--headerSP,
 .btnPrim--white,
 .btnPrim--thema,
 .btnPrim--plan-red,
@@ -173,6 +174,29 @@ _link.scss
     color: $color-b1 !important;
     background-color: $color-s1;
     border-color: #d39906;
+    
+    &SP{
+        min-width: 60px;
+        height: 60px; 
+    }
+}
+
+.btnPrim--headerSP {
+    z-index: 200;
+    position: absolute;
+    top: 8px;
+    right: 80px;
+    width: 160px;
+    height: 45px;
+    font-size: 1.4rem;
+    color: $color-b1 !important;
+    background-color: $color-s1;
+    border-color: #d39906;
+}
+@media (min-width: $bp-md){
+    .btnPrim--headerSP {
+        display: none;
+    }
 }
 
 /* white */

@@ -70,6 +70,20 @@ SPナビ実装後に再調整 heightの調整必要あり?
     });
 
 
+    /* open mega Menu
+    -------------------------------------------------------------------- */
+    $(".js-megaNavTrigger").on({
+        'mouseenter': function ()
+        {
+            $(this).find(".megaMenu").stop().slideDown(200);
+        },
+        'mouseleave': function ()
+        {
+            $(this).find(".megaMenu").stop().slideUp(200);
+        }
+    });
+
+
     /* humberger menu
 -------------------------------------------------------------------- */
     function addFixed()
@@ -88,8 +102,8 @@ SPナビ実装後に再調整 heightの調整必要あり?
         window.scrollTo(0, scrollpos);
     }
 
-    // l-mark click
-    $('.l-mark').on('click', function ()
+    // hamburger click
+    $('.hamburger').on('click', function ()
     {
         if (!$('body').is('.is-fix'))
         {
@@ -115,17 +129,15 @@ SPナビ実装後に再調整 heightの調整必要あり?
 
 /* Navigation
 -------------------------------------------------------------------- */
-  /*
-    //sp
-    $('.js-subNavTrigger').on('click', function ()
+    $('.js-toggleNavTrigger').on('click', function ()
     {
         $(this).toggleClass('is-active');
-        $(this).next().stop(true, false).slideToggle(300);
+        $(this).next().stop().slideToggle(300);
 
         return false;
 
     });
-    */
+
 
 
     //pc
@@ -161,44 +173,6 @@ SPナビ実装後に再調整 heightの調整必要あり?
     
 
 
-/* spot filtering
--------------------------------------------------------------------- */
-    $(".js-spotFiltering").click(function ()
-    {
-
-        //tags
-        $(".js-spotFiltering").each(function ()
-        {
-            if ($(this).hasClass("spotTag-active"))
-            {
-                $(this).removeClass("spotTag-active");
-            }
-        });
-        $(this).addClass("spotTag-active");
-
-        //クリックしたtag取得
-        let searchTag = $(this).attr("value");
-
-        //各itemを非表示 → 条件判定 → 表示
-        $(".js-spotTarget").each(function ()
-        {
-            $(this).animate(
-                //① ゆっくり透過してから隠す
-                { "opacity": 0 }, 200, function ()
-                {
-                    $(this).hide();
-                    //② 判定してからゆっくり要素を表示
-                    if ($(this).hasClass(searchTag) || searchTag == "recommend")
-                    {
-                        $(this).show();
-                        $(this).animate({ "opacity": 1 }, 200);
-                    }
-                });
-        });
-
-        return false;
-
-    });
 
 /* ScrollTop
 -------------------------------------------------------------------- */

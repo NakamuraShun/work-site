@@ -49,33 +49,81 @@
 <header class="g-header">
     <div class="l-header">
         <div class="header__content">
-
+            <!-- SP block (position) -->
             <div class="logoSP">
                 <a href="#"><img src="./images/logo.png" alt="logo"></a>
             </div>
-
+            <div class="btnPrim--headerSP">
+                <a href="#">無料相談・資料請求</a>
+            </div>
+            <div class="hamburger">
+                <div class="mark">
+                    <div class="markMenu">
+                        <i class="markMenu__top"></i>
+                        <i class="markMenu__middle"></i>
+                        <i class="markMenu__bottom"></i>
+                        <div class="markBg"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- SP&PC Nav (block) -->
             <nav class="globalNav">
                 <div class="l-nav">
                     <div class="globalNavSP">
                         <div class="globalNavSP__content">
                             <div class="gNavSP">
-                                <ul class="gNavSP__main">
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">小田原の魅力</a></li>
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">アクセス</a></li>
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">観光スポット</a></li>
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">お知らせ</a></li>
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">お役立ちコラム</a></li>
-                                    <li class="gNavSP__item"><a href="" class="gNavSP__lnk--main">小田原の歴史</a></li>
+                                <ul class="gNavSpMain">
+                                    <li class="gNavSpMain__itm">
+                                        <form method="get" action="#" class="searchBox gNavSpMain__lnk">
+                                            <input class="searchBox__searchInput" type="text" placeholder="キーワードを入力">
+                                            <input class="searchBox__searchSubmit fas" type="submit" value="&#xf002;">
+                                        </form>
+                                    </li>
+                                    <li class="gNavSpMain__itm"><a href="#" class="gNavSpMain__lnk">弊社の特長</a></li>
+                                    <li class="gNavSpMain__itm"><a href="#" class="gNavSpMain__lnk">導入事例</a></li>
+                                    <li class="gNavSpMain__itm"><a href="#" class="gNavSpMain__lnk">プラン一覧</a></li>
+                                    <li class="gNavSpMain__itm"><a href="#" class="gNavSpMain__lnk">無料セミナー</a></li>
+                                    <li class="gNavSpMain__itm">
+                                        <span class="gNavSpMain__lnk gNavSpMain__lnk--toggle js-toggleNavTrigger">目的から探す</span>
+                                        <nav class="slideMenu">
+                                            <ul class="toggleNav">
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">市場機会の発見</a></li>
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">市場規模の把握</a></li>
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">コンセプト開発</a></li>
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">4Pの構築・実施</a></li>
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">マーケティング検証</a></li>
+                                            </ul>
+                                        </nav>
+                                    </li>
+                                    <li class="gNavSpMain__itm">
+                                        <span class="gNavSpMain__lnk gNavSpMain__lnk--toggle js-toggleNavTrigger">リサーチ手法から探す</span>
+                                        <nav class="slideMenu">
+                                            <ul class="toggleNav">
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">定量調査</a></li>
+                                                <li class="toggleNav__itm"><a href="" class="toggleNav__lnk">定質調査</a></li>
+                                            </ul>
+                                        </nav>
+                                    </li>
+                                </ul>
+                                <ul class="gNavSpSub">
+                                    <li class="gNavSpSub__itm">
+                                        <ul class="gNavSpSubInfo">
+                                            <li class="gNavSpSubInfo__itm"><a href="#" class="gNavSpSubInfo__lnk lnk-txt--thema">お知らせ<span class="ti-angle-right"></span></a></li>
+                                            <li class="gNavSpSubInfo__itm"><a href="#" class="gNavSpSubInfo__lnk lnk-txt--thema">企業情報<span class="ti-angle-right"></span></a></li>
+                                            <li class="gNavSpSubInfo__itm"><a href="#" class="gNavSpSubInfo__lnk lnk-txt--thema">自主調査レポート<span class="ti-angle-right"></span></a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="globalNavSP__bg"></div>
                     </div>
+
                     <div class="globalNavPC">
                         <div class="l-container">
                             <div class="gNavPC">
                                 <ul class="gNavPcSub">
-                                    <li class="gNavPcSub__itm logo">
+                                    <li class="gNavPcSub__itm logoPC">
                                         <a href="" class="gNavPcSub__lnk--sub">
                                             <img src="./images/logo.png" alt="logo">
                                         </a>
@@ -99,7 +147,56 @@
                                     <li class="gNavPcMain__itm"><a href="#" class="gNavPcMain__lnk">導入事例</a></li>
                                     <li class="gNavPcMain__itm"><a href="#" class="gNavPcMain__lnk">プラン一覧</a></li>
                                     <li class="gNavPcMain__itm"><a href="#" class="gNavPcMain__lnk">無料セミナー</a></li>
-                                    <li class="gNavPcMain__itm"><a href="#" class="gNavPcMain__lnk">目的と手法から探す<span class="ti-angle-down"></span></a></li>
+                                    <li class="gNavPcMain__itm js-megaNavTrigger">
+                                        <a href="#" class="gNavPcMain__lnk js-megaNavTrigger">目的と手法から探す<span class="ti-angle-down"></span></a>
+                                        <nav class="megaMenu">
+                                            <div class="megaMenuWrap">
+                                                <div class="l-container">
+                                                    <div class="MegaNav">
+                                                        <div class="MegaNav__topBtn">
+                                                            <a href="#">目的と手法から探すトップ<span class="ti-arrow-circle-right"></span></a>
+                                                        </div>
+                                                        <div class="MegaNav__searchBox">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>目的から探す</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="#" class="lnk-txt--thema">市場機会の発見<span class="ti-angle-right"></span></a>
+                                                                        </td>
+                                                                        <td><a href="#" class="lnk-txt--thema">市場規模の把握<span class="ti-angle-right"></span></a>
+                                                                        </td>
+                                                                        <td><a href="#" class="lnk-txt--thema">コンセプト開発<span class="ti-angle-right"></span></a>
+                                                                        </td>
+                                                                        <td><a href="#" class="lnk-txt--thema">4Pの構築・実施<span class="ti-angle-right"></span></a>
+                                                                        </td>
+                                                                        <td><a href="#" class="lnk-txt--thema">マーケティング検証<span class="ti-angle-right"></span></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>リサーチ手法から探す</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="#" class="lnk-txt--thema">定量調査<span class="ti-angle-right"></span></a></td>
+                                                                        <td><a href="#" class="lnk-txt--thema">定質調査<span class="ti-angle-right"></span></a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </li>
                                     <li class="gNavPcMain__itm btnPrim--header"><a href="#">無料相談・資料請求</a></li>
                                 </ul>
                             </div>
@@ -107,48 +204,6 @@
                     </div>
                 </div>
             </nav>
-
-            <nav class="megaMenu">
-                <div class="megaMenuWrap">
-                    <div class="l-container">
-                        <div class="MegaNav">
-                            <div class="MegaNav__topBtn">
-                                <a href="#">目的と手法から探すトップ<span class="ti-arrow-circle-right"></span></a>
-                            </div>
-                            <div class="MegaNav__searchBox">
-                                <table>
-                                <thead>
-                                  <tr>
-                                    <th><a href="#">目的から探す</a></th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                      <td><a href="#" class="lnk-txt--thema"><span class="ti-angle-right"></span>市場機会の発見</a></td>
-                                      <td><a href="#" class="lnk-txt--thema"><span class="ti-angle-right"></span>市場規模の把握</a></td>
-                                      <td><a href="#" class="lnk-txt--thema"><span class="ti-angle-right"></span>コンセプト開発</a></td>
-                                      <td><a href="#" class="lnk-txt--thema"><span class="ti-angle-right"></span>4Pの構築・実施</a></td>
-                                      <td><a href="#" class="lnk-txt--thema"><span class="ti-angle-right"></span>マーケティング検証</a></td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                            </div>
-                            <div class="MegaNav__searchBox"></div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="l-mark">
-                <div class="mark">
-                    <div class="markMenu">
-                        <i class="markMenu__top"></i>
-                        <i class="markMenu__middle"></i>
-                        <i class="markMenu__bottom"></i>
-                        <div class="markBg"></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </header>
