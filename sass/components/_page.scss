@@ -62,241 +62,373 @@ _page.scss
 }
 
 
-/*  pointTxt
+/*  point--1,point--2
 -------------------------------------------------- */
-.point{
+.point--1,
+.point--2{
     position: relative;
+    padding: 30px 0;
+    background-color: $color-g1;
     
     .pointBody{
-        z-index: 1; 
-    }
-    
-    .pointBg{
-        position: absolute;
-        top: 315px;
-        left: 0px;
-        width: 100%;
-        height: 575px;
-        background-color: $color-g1;
-        border-radius: 0px;
-    }
-}
-
-@media (min-width: $bp-md) {
-    .point{
-        .pointBg{
-            top: 110px;
-            left: 230px;
-            width: 1500px;
-            height: 355px;
-            border-radius: 10px;
-        }
-    }
-}
-
-
-.pointTxt{
-    &__ttl{
-        margin-bottom: 20px;
+        @include fxcol-ac-jc;
         
-        h2{
-            font-size: 3rem;
-            line-height: 1.3;
-            font-weight: 500;
-        }
-        
-        &::before{
-            content: "POINT 1";
-            color: $color-t1;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
     }
     
-    &__lead{
-        font-size: 2rem;
-        font-weight: 500;
-        margin-bottom: 20px;
-    }
-    
-    .wrap-btn{
-        display: none;    
-    }  
-}
-
-@media (min-width: $bp-md) {  
     .pointTxt{
         &__ttl{
+            margin-bottom: 20px;
+            
             h2{
-                font-size: 4rem;
+                font-size: 3rem;
+                line-height: 1.3;
+                font-weight: 500;
+            }
+            
+            &::before{
+                content: "";
+                color: $color-t1;
+                font-size: 1.4rem;
+                font-weight: 600;
             }
         }
         
         &__lead{
-            font-size: 2.2rem;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
         }
         
         .wrap-btn{
-            @include fxrow-js;
-        } 
-    }
-}
-
-
-.pointIllust {
-    @include fxcol-ac-jc;
-    margin-top: 25px;
-    
-    .step{
-        @include fxcol-ac-jc;
-        padding: 15px;
-        width: 100%;
-        max-width: 500px;
-        background-color: #fff;
-        border: 2px solid $color-g2;
-        border-radius: 5px;
-        
-        &__num{
-            padding: 5px 10px;
-            color: #fff;
-            background-color: #333;
-            border-radius: 3px;
-            text-transform: uppercase;
-        }
-        
-        &__illust{
-            padding: 5px 0;
-        }
-        
-        &__ttl{
-            text-align: center;
-            font-size: 1.6rem;
-            font-weight: 500;
-        }
-        
-        &__txt{
-            font-size: 1.2rem;
-        }
-    }
-    
-    .stepArr{padding: 10px 0;}
-}
-
-
-@media (min-width: $bp-md) {  
-    .pointIllust {
-        margin-top: 140px;
-        
-        & + .wrap-btn{
             display: none;    
-        } 
+        }  
+    }
+}
+
+/* point--1 */
+.point--1{
+    .pointTxt{
+        &__ttl{
+            &::before{content: "POINT 1";}
+        }
+    }
+    
+    .pointIllust {
+        @include fxcol-ac-jc;
+        margin-top:25px;
+        margin-bottom:25px;
         
         .step{
-            @include fxrow-ac-jsb;
+            @include fxcol-ac-jc;
+            padding: 15px;
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            border: 2px solid $color-g2;
+            border-radius: 5px;
             
-            &__illust{
-                padding: 0;
+            &__num{
+                padding: 5px 10px;
+                color: #fff;
+                background-color: #333;
+                border-radius: 3px;
+                text-transform: uppercase;
             }
             
-            &__content{
-                width: 250px; 
+            &__illust{
+                padding: 5px 0;
             }
             
             &__ttl{
-                text-align: left;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+            
+            &__txt{
+                font-size: 1.2rem;
+            }
+        }
+        
+        .stepArr{padding: 10px 0;}
+    }
+}
+
+/* point--2 */
+.point--2{
+    .pointTxt{
+        &__ttl{
+            &::before{content: "POINT 2";}
+        }
+    }
+    
+    .pointIllust{
+        max-width: 315px;
+        margin:25px 0;
+        
+        .analysis{
+            position: relative;
+            @include fxcol-ac-jsb;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 180px;
+            background-color: #fff;
+            border: 2px solid $color-g2;
+            border-radius: 5px;
+            
+            &__num{
+                text-align: center;
+                padding: 5px 10px;
+                font-size: 1rem;
+                color: #fff;
+                background-color: $color-t1;
+                border-radius: 3px;
+            }
+            
+            &__illust{
+                padding: 8px 0;
+            }
+            
+            &__txt{
+                font-size: 1.2rem;
+                span{color: $color-t1}
+            }
+            
+            &__arr--first,
+            &__arr--second{
+                position: absolute;
+                bottom:-50px;
+                @include fxrow-ac-jsb;
+                @include transform-ro(90deg);
+                
+                .arrLine{
+                    border-top: 3px dotted $color-t1;
+                    width: 70px;
+                } 
+                
+                [class*="ti-"]{
+                    color: $color-t1;
+                }
+            }
+            
+            &__arr--first{left:61px;}
+            &__arr--second{left:171px;}
+            
+        }
+        
+        .phaseBox{
+            @include fxrow-ac-jsb;
+            
+            .phase{
+                @include fxcol-ac-jsb;
+                padding: 15px;
+                max-width: 33.333%;
+                height: 180px;
+                background-color: #fff;
+                border: 2px solid $color-g2;
+                border-radius: 5px;
+                
+                &__num{
+                    text-align: center;
+                    font-size: 1rem;
+                    padding: 5px 10px;
+                    color: #fff;
+                    background-color: #333;
+                    border-radius: 3px;
+                }
+            }
+            
+            .stepArr{
+                width: 15px;
+                @include transform-ro(-90deg);
+            }
+        }
+        
+    }
+}
+
+@media (min-width: $bp-md) {  
+    .point--1,
+    .point--2{
+        background: none;
+        
+        .pointBody{
+            z-index: 1;
+        }
+        
+        .pointTxt{
+            &__ttl{
+                h2{font-size: 4rem;}
+            }
+            
+            &__lead{
+                font-size: 2.2rem;
+            }
+            
+            .wrap-btn{
+                @include fxrow-js;
+            } 
+        }
+        
+        .pointIllust {
+            margin-top: 140px;
+            margin-bottom: 0px;
+            padding: 0;
+            height: auto;
+            
+            & + .wrap-btn{
+                display: none;    
+            } 
+        }
+    }
+    
+    /* point--1 */
+    .point--1{
+        .pointBg{
+            background-color: $color-g1;
+            border-radius: 10px;
+            width: 1500px;
+            height: 355px;
+            position: absolute;
+            top: 145px;
+            left: 230px;
+        }
+        
+        .pointIllust {
+            .step{
+                @include fxrow-ac-jsb;
+                
+                &__illust{padding: 0;}
+                
+                &__content{width: 250px;}
+                
+                &__ttl{text-align: left;}
             }
         }
     }
+    
+    /* point--2 */
+    .point--2{
+        @include --fxdir-row--rev;
+        
+        .pointBg{
+            background-color: $color-g1;
+            border-radius: 10px;
+            width: 1500px;
+            height: 355px;
+            position: absolute;
+            top: 145px;
+            right: 230px;
+        }
+        
+        .pointIllust{
+            max-width: 550px;
+            
+            .analysis{
+                position: relative;
+                @include fxrow-ac-jsb;
+                padding: 15px;
+                margin-bottom: 15px;
+                width: 100%;
+                height: 90px;
+                background-color: #fff;
+                border: 2px solid $color-g2;
+                border-radius: 5px;
+                
+                &__num{
+                    text-align: center;
+                    padding: 5px 10px;
+                    font-size: 1.2rem;
+                    width: 150px;
+                }
+                
+                &__illust{
+                    padding: 0 20px;
+                }
+                
+                &__arr--first{left:128px;}
+                &__arr--second{left:311px;}
+                
+            }
+            
+            .phaseBox{
+                @include fxrow-ac-jsb;
+                
+                .phase{
+                    @include fxcol-ac-jsb;
+                    padding: 15px;
+                    width: 100%;
+                    
+                    &__num{
+                        width: 100%;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            
+        }
+    }
 }
 
-/*  acsess
+
+/*  point--3
 -------------------------------------------------- */
-.acsessBox {
-    display: flex;
-    padding: 2rem 0;
-    background-color: #fff;
-    border-radius: 3px;
+.point--3{
+    padding: 30px 0;
+    background-color: $color-g1;
     
-    &:not(:last-child){
-        margin-bottom: 2rem;
+    [class*="col-"]{
+        margin-bottom: 20px;
     }
     
-    &__icon{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 0 2rem;
-        
-        & > i {
-            color: $color-b1;
-            font-size: 4rem;
+    .pointTxt{
+        &__ttl{
+            
+            h2{
+                &::before{
+                    content: "POINT 3";
+                    color: $color-t1;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+            }
         }
     }
     
-    &__txt{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
+    
+    .performance{
+        text-align: center;
+        color: $color-t1;
         
-        & span {
-            color: $color-s1;
-            font-size: 2rem;
-            font-weight: 500;
+        &__txt{
+            line-height: 1.1;
+            
+            span{
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+            
         }
     }
 }
 
-@media (min-width: $bp-sm) {
-    .acsessBox {
-        &  br {
-            display: none;
-        }
-    }
-}
-
-/*  spotTags
--------------------------------------------------- */
-.spotTags{
-    margin-bottom: 20px;
-    
-    & a {
-        color: $color-b1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        background-color: $color-g2;   
-        border: 2px solid;
-        border-color: $color-g1;
-        border-radius: 5px;
-        margin-bottom: 15px;
-        -webkit-transition: all .1s;
-        transition: all .1s;
+@media (min-width: $bp-md) { 
+    .point--3{
+        border-radius: 10px;
         
-        &:hover{
-            opacity: .8;
+        .performance{
+            
+            &__txt{
+                
+                span{
+                    font-size: 4.5rem;
+                    font-weight: 700;
+                }
+                
+            }
         }
     } 
-}
-
-.spotTag-active{
-    & a{
-        color: #fff;
-        background-color: #fe4a49;   
-        border-color: $color-g1;
-    }
 }
 
 
@@ -352,81 +484,6 @@ _page.scss
     }
 }
 
-
-/*  historyBnr
--------------------------------------------------- */
-.historyBnr {   
-    &__contentWrap{
-        position: relative;
-        overflow: hidden;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: $color-b1;
-        background-image: url(../../images/historyBnrContent-bg.png);
-        font-family: 'Noto Serif JP';
-        -webkit-transition: all .4s;
-        transition: all .4s;
-    }
-    
-    &__imgWrap {
-        position: relative;
-        overflow: hidden;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: $color-b1;
-        background-image: url(../../images/minaka.jpg);
-        /*padding-top: 33.3333%;*/
-        /* 3:1 */
-        padding-top: 40%; 
-        /* 5:2 */
-        /*padding-top: 50%;*/
-        /* 2:1 */
-        /*padding-top: 56.25%;*/
-        /* 16:9; */
-    }
-    
-    &__icon {
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-image: url(../../images/odawarashi-logo.png);
-    }
-}
-
-@media (min-width: $bp-md) {
-    .historyBnr {
-        &__txt{
-            padding: 0 30px;
-        }
-        
-        &__imgWrap {
-            padding-top: 0;
-        }
-        
-        &__icon {
-            background-image: url(../../images/hojo-logo.png);
-            -webkit-transition: all .1s;
-            transition: all .1s;
-        }
-        
-        &:hover &__icon{
-            background-image: url(../../images/odawarashi-logo.png);
-        }
-        
-        &:hover{
-            -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.15);
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
-            opacity: .85;
-        }
-    }
-}
 
 
 /*  columnSlide

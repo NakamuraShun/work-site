@@ -200,12 +200,12 @@ FLEX
     @include --fxain-center;
     @include --fxjty-center;
 }
-
 @mixin fxcol-jc{
     @include --fx;
     @include --fxdir-col;
     @include --fxjty-center;
 }
+
 
 @mixin fxcol-ac-jsb{
     @include --fx;
@@ -213,6 +213,19 @@ FLEX
     @include --fxain-center;
     @include --fxjty-between;
 }
+@mixin fxcol-ac-js{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-start;
+}
+@mixin fxcol-ac-je{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-end;
+}
+
 
 @mixin fxcol-as-jsb{
     @include --fx;
@@ -220,7 +233,6 @@ FLEX
     @include --fxain-start;
     @include --fxjty-between;
 }
-
 @mixin fxcol-ae-jsb{
     @include --fx;
     @include --fxdir-col;
