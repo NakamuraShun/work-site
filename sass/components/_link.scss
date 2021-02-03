@@ -110,16 +110,7 @@ _link.scss
 /*  wrap-btn
 -------------------------------------------------- */
 .wrap-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    @include fxrow-jc;
     width: 100%;
     margin-top: 30px;
 }
@@ -187,7 +178,6 @@ _link.scss
     width: 160px;
     height: 45px;
     font-size: 1.4rem;
-    color: $color-b1 !important;
     background-color: $color-s1;
     border-color: #d39906;
 }
@@ -219,10 +209,11 @@ _link.scss
 }
 
 /* thema */
-.btnPrim--thema {  
-    color: #fff !important;
+.btnPrim--thema {
     background-color: $color-t1;
     border-color: #65010d;
+    
+    a {color: #fff !important;}
 }
 
 /* contact */

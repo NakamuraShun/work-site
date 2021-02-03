@@ -5,21 +5,207 @@ _page.scss
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
-
-/*  youtube
+/*  speech
 -------------------------------------------------- */
-.youtube {
-    z-index: 10;
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
+.speech{
+    font-size: 1.6rem;
+    @include fxcol-ac-jc;
     
-    & iframe {
+    &__ttl{
+        padding: 10px;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        border-radius: 2rem;
+        border: 2px solid #fff;
+        position: relative;
+        @include fxrow-ac-jc;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 三角マークの形成 */
+            width: 0;
+            border-top: 10px solid #fff;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent; 
+        }
+    }
+    
+    [class*=col-]{
+        margin-bottom: 25px;
+    }
+    
+    [class*=ti-]{
+        color: $color-s1;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: $bp-md) {  
+    .speech{
+        font-size: 1.8rem;
+        
+        &__ttl{
+            &::after{
+                top: 67px;
+            }
+        }
+    }
+    
+    [class*=col-]{
+        margin-bottom: 10px;
+    }
+}
+
+
+/*  pointTxt
+-------------------------------------------------- */
+.point{
+    position: relative;
+    
+    .pointBody{
+        z-index: 1; 
+    }
+    
+    .pointBg{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 315px;
+        left: 0px;
         width: 100%;
-        height: 100%;
+        height: 575px;
+        background-color: $color-g1;
+        border-radius: 0px;
+    }
+}
+
+@media (min-width: $bp-md) {
+    .point{
+        .pointBg{
+            top: 110px;
+            left: 230px;
+            width: 1500px;
+            height: 355px;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+.pointTxt{
+    &__ttl{
+        margin-bottom: 20px;
+        
+        h2{
+            font-size: 3rem;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+        
+        &::before{
+            content: "POINT 1";
+            color: $color-t1;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+    
+    &__lead{
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    .wrap-btn{
+        display: none;    
+    }  
+}
+
+@media (min-width: $bp-md) {  
+    .pointTxt{
+        &__ttl{
+            h2{
+                font-size: 4rem;
+            }
+        }
+        
+        &__lead{
+            font-size: 2.2rem;
+        }
+        
+        .wrap-btn{
+            @include fxrow-js;
+        } 
+    }
+}
+
+
+.pointIllust {
+    @include fxcol-ac-jc;
+    margin-top: 25px;
+    
+    .step{
+        @include fxcol-ac-jc;
+        padding: 15px;
+        width: 100%;
+        max-width: 500px;
+        background-color: #fff;
+        border: 2px solid $color-g2;
+        border-radius: 5px;
+        
+        &__num{
+            padding: 5px 10px;
+            color: #fff;
+            background-color: #333;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        
+        &__illust{
+            padding: 5px 0;
+        }
+        
+        &__ttl{
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        
+        &__txt{
+            font-size: 1.2rem;
+        }
+    }
+    
+    .stepArr{padding: 10px 0;}
+}
+
+
+@media (min-width: $bp-md) {  
+    .pointIllust {
+        margin-top: 140px;
+        
+        & + .wrap-btn{
+            display: none;    
+        } 
+        
+        .step{
+            @include fxrow-ac-jsb;
+            
+            &__illust{
+                padding: 0;
+            }
+            
+            &__content{
+                width: 250px; 
+            }
+            
+            &__ttl{
+                text-align: left;
+            }
+        }
     }
 }
 

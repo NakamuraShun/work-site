@@ -195,9 +195,6 @@ table {
   border-collapse: collapse;
 }
 
-/*
-_utillity.scss
-*******************************************************************************************************************/
 /*!
 * row (l-containerのpadding相殺)
 */
@@ -834,218 +831,6 @@ _utillity.scss
     max-width: 100%;
   }
 }
-/*!
-
-* margin
-*/
-.u-mt0 {
-  margin-top: 0 !important;
-}
-
-.u-mr0 {
-  margin-right: 0 !important;
-}
-
-.u-mb0 {
-  margin-bottom: 0 !important;
-}
-
-.u-ml0 {
-  margin-left: 0 !important;
-}
-
-.u-mt5 {
-  margin-top: 5px !important;
-}
-
-.u-mr5 {
-  margin-right: 5px !important;
-}
-
-.u-mb5 {
-  margin-bottom: 5px !important;
-}
-
-.u-ml5 {
-  margin-left: 5px !important;
-}
-
-.u-mt10 {
-  margin-top: 10px !important;
-}
-
-.u-mr10 {
-  margin-right: 10px !important;
-}
-
-.u-mb10 {
-  margin-bottom: 10px !important;
-}
-
-.u-ml10 {
-  margin-left: 10px !important;
-}
-
-.u-mt15 {
-  margin-top: 15px !important;
-}
-
-.u-mr15 {
-  margin-right: 15px !important;
-}
-
-.u-mb15 {
-  margin-bottom: 15px !important;
-}
-
-.u-ml15 {
-  margin-left: 15px !important;
-}
-
-.u-mt20 {
-  margin-top: 20px !important;
-}
-
-.u-mr20 {
-  margin-right: 20px !important;
-}
-
-.u-mb20 {
-  margin-bottom: 20px !important;
-}
-
-.u-ml20 {
-  margin-left: 20px !important;
-}
-
-.u-mt25 {
-  margin-top: 25px !important;
-}
-
-.u-mr25 {
-  margin-right: 25px !important;
-}
-
-.u-mb25 {
-  margin-bottom: 25px !important;
-}
-
-.u-ml25 {
-  margin-left: 25px !important;
-}
-
-.u-mt30 {
-  margin-top: 30px !important;
-}
-
-.u-mr30 {
-  margin-right: 30px !important;
-}
-
-.u-mb30 {
-  margin-bottom: 30px !important;
-}
-
-.u-ml30 {
-  margin-left: 30px !important;
-}
-
-.u-mt35 {
-  margin-top: 35px !important;
-}
-
-.u-mr35 {
-  margin-right: 35px !important;
-}
-
-.u-mb35 {
-  margin-bottom: 35px !important;
-}
-
-.u-ml35 {
-  margin-left: 35px !important;
-}
-
-.u-mt40 {
-  margin-top: 40px !important;
-}
-
-.u-mr40 {
-  margin-right: 40px !important;
-}
-
-.u-mb40 {
-  margin-bottom: 40px !important;
-}
-
-.u-ml40 {
-  margin-left: 40px !important;
-}
-
-.u-mt45 {
-  margin-top: 45px !important;
-}
-
-.u-mr45 {
-  margin-right: 45px !important;
-}
-
-.u-mb45 {
-  margin-bottom: 45px !important;
-}
-
-.u-ml45 {
-  margin-left: 45px !important;
-}
-
-.u-mt50 {
-  margin-top: 50px !important;
-}
-
-.u-mr50 {
-  margin-right: 50px !important;
-}
-
-.u-mb50 {
-  margin-bottom: 50px !important;
-}
-
-.u-ml50 {
-  margin-left: 50px !important;
-}
-
-.u-mt55 {
-  margin-top: 55px !important;
-}
-
-.u-mr55 {
-  margin-right: 55px !important;
-}
-
-.u-mb55 {
-  margin-bottom: 55px !important;
-}
-
-.u-ml55 {
-  margin-left: 55px !important;
-}
-
-.u-mt60 {
-  margin-top: 60px !important;
-}
-
-.u-mr60 {
-  margin-right: 60px !important;
-}
-
-.u-mb60 {
-  margin-bottom: 60px !important;
-}
-
-.u-ml60 {
-  margin-left: 60px !important;
-}
-
 .u-ta-l {
   text-align: left !important;
 }
@@ -1291,6 +1076,9 @@ _utillity.scss
   }
 }
 /*
+_utillity.scss
+*******************************************************************************************************************/
+/*
 _mixin.scss
 *******************************************************************************************************************/
 /*======================================================================
@@ -1404,35 +1192,38 @@ _layout.scss
 /* #h-QUISTION
 -------------------------------------------------- */
 #h-QUISTION .quistionWrap {
+  position: relative;
   color: #fff;
   background-color: #b40015;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23940213' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+#h-QUISTION .quistionWrap::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #b40015;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23940213' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* #h-FEATURE
 -------------------------------------------------- */
 #h-FEATURE .introductionWrap .row > [class*=col-]:not(:last-child) {
-  margin-bottom: 40px;
-}
-#h-FEATURE .introductionWrap .l-container {
-  position: relative;
+  margin-top: 90px;
 }
 
 @media (min-width: 56.25em) {
   #h-FEATURE .introductionWrap .row > [class*=col-]:not(:last-child) {
-    margin-bottom: 0px;
+    margin-top: 0px;
   }
   #h-FEATURE .introductionWrap .wrap-btn {
     justify-content: flex-start;
-  }
-}
-#h-FEATURE .acsessWrap {
-  background-color: #e9e9e9;
-}
-
-@media (min-width: 56.25em) {
-  #h-FEATURE .acsessWrap .row {
-    flex-direction: row-reverse;
   }
 }
 /* #h-CONTACT
@@ -1802,7 +1593,7 @@ body.is-fix .globalNavSP__bg {
   align-items: center;
   height: 45px;
   padding-left: 15px;
-  color: #b40015 !important;
+  color: #333 !important;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -1829,6 +1620,7 @@ body.is-fix .globalNavSP__bg {
   top: 0;
   right: 0;
   content: "";
+  color: #b40015;
   font-family: "themify";
   font-size: 1.1rem;
   height: 45px;
@@ -2438,23 +2230,15 @@ _typography.scss
 /* -----------------------------------------------
 /* Paragraph  [prg-***]
 -------------------------------------------------- */
-[class*=prg-] {
-  padding: 7.5px 0;
-}
-
-[class*=prg-] p + p {
-  margin-top: 7.5px;
-}
-
 .prg-xl {
   font-size: 1.8rem;
-  line-height: 1.2;
+  line-height: 2;
+  font-weight: 500;
 }
 
 .prg-l {
   font-size: 1.6rem;
-  line-height: 1.5;
-  font-weight: 500;
+  line-height: 1.8;
 }
 
 .prg-m {
@@ -2477,23 +2261,14 @@ _typography.scss
 }
 
 @media (min-width: 56.25em) {
-  [class*=prg-] {
-    padding: 15px 0;
-  }
-
-  [class*=prg-] p + p {
-    margin-top: 15px;
-  }
-
   .prg-xl {
     font-size: 2rem;
-    line-height: 1.2;
+    line-height: 2;
   }
 
   .prg-l {
     font-size: 1.8rem;
-    line-height: 1.2;
-    font-weight: 600;
+    line-height: 1.8;
   }
 
   .prg-m {
@@ -2516,23 +2291,23 @@ _typography.scss
     display: none;
   }
 }
-/* effect */
-.prg-bg--subColor {
+/* -----------------------------------------------
+/* decoration
+-------------------------------------------------- */
+.markBg--yellow {
   background-color: #f9b301;
+  font-weight: 500;
 }
 
-.prg-line--whiteColor {
+.ul-white {
+  padding-bottom: 5px;
   border-bottom: 1px solid #fff;
 }
-.prg-line--subColor {
-  border-bottom: 2px solid #f9b301;
+
+.ul-yellow {
+  border-bottom: 3px solid #f9b301;
 }
 
-@media (min-width: 56.25em) {
-  .prg-line--subColor {
-    border-bottom: 3px solid #f9b301;
-  }
-}
 /* -----------------------------------------------
 /* Title    [ttl-***]
 -------------------------------------------------- */
@@ -2575,6 +2350,7 @@ _typography.scss
 @media (min-width: 56.25em) {
   .hdg-2 {
     font-size: 4.5rem;
+    line-height: 1.75;
   }
 
   .hdg-3 {
@@ -2585,14 +2361,6 @@ _typography.scss
     font-size: 1.8rem;
   }
 }
-/* -----------------------------------------------
-/* markBg  [markBg-***]
--------------------------------------------------- */
-.markBg--yellow {
-  background-color: #f9b301;
-  font-weight: 500;
-}
-
 /*
 _link.scss
 *******************************************************************************************************************/
@@ -2712,13 +2480,16 @@ _link.scss
 -------------------------------------------------- */
 .wrap-btn {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
@@ -2814,7 +2585,6 @@ _link.scss
   width: 160px;
   height: 45px;
   font-size: 1.4rem;
-  color: #333 !important;
   background-color: #f9b301;
   border-color: #d39906;
 }
@@ -2845,9 +2615,11 @@ _link.scss
 }
 /* thema */
 .btnPrim--thema {
-  color: #fff !important;
   background-color: #b40015;
   border-color: #65010d;
+}
+.btnPrim--thema a {
+  color: #fff !important;
 }
 
 /* contact */
@@ -3073,22 +2845,262 @@ _page.scss
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
-/*  youtube
+/*  speech
 -------------------------------------------------- */
-.youtube {
-  z-index: 10;
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+.speech {
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
-.youtube iframe {
+.speech__ttl {
+  padding: 10px;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  border-radius: 2rem;
+  border: 2px solid #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.speech__ttl::after {
+  content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 三角マークの形成 */
+  width: 0;
+  border-top: 10px solid #fff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.speech [class*=col-] {
+  margin-bottom: 25px;
+}
+.speech [class*=ti-] {
+  color: #f9b301;
+  font-weight: 700;
+  margin-right: 10px;
 }
 
+@media (min-width: 56.25em) {
+  .speech {
+    font-size: 1.8rem;
+  }
+  .speech__ttl::after {
+    top: 67px;
+  }
+
+  [class*=col-] {
+    margin-bottom: 10px;
+  }
+}
+/*  pointTxt
+-------------------------------------------------- */
+.point {
+  position: relative;
+}
+.point .pointBody {
+  z-index: 1;
+}
+.point .pointBg {
+  position: absolute;
+  top: 315px;
+  left: 0px;
+  width: 100%;
+  height: 575px;
+  background-color: #f4f4f4;
+  border-radius: 0px;
+}
+
+@media (min-width: 56.25em) {
+  .point .pointBg {
+    top: 110px;
+    left: 230px;
+    width: 1500px;
+    height: 355px;
+    border-radius: 10px;
+  }
+}
+.pointTxt__ttl {
+  margin-bottom: 20px;
+}
+.pointTxt__ttl h2 {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.pointTxt__ttl::before {
+  content: "POINT 1";
+  color: #b40015;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.pointTxt__lead {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.pointTxt .wrap-btn {
+  display: none;
+}
+
+@media (min-width: 56.25em) {
+  .pointTxt__ttl h2 {
+    font-size: 4rem;
+  }
+  .pointTxt__lead {
+    font-size: 2.2rem;
+  }
+  .pointTxt .wrap-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+.pointIllust {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.pointIllust .step {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border: 2px solid #e9e9e9;
+  border-radius: 5px;
+}
+.pointIllust .step__num {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.pointIllust .step__illust {
+  padding: 5px 0;
+}
+.pointIllust .step__ttl {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.pointIllust .step__txt {
+  font-size: 1.2rem;
+}
+.pointIllust .stepArr {
+  padding: 10px 0;
+}
+
+@media (min-width: 56.25em) {
+  .pointIllust {
+    margin-top: 140px;
+  }
+  .pointIllust + .wrap-btn {
+    display: none;
+  }
+  .pointIllust .step {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .pointIllust .step__illust {
+    padding: 0;
+  }
+  .pointIllust .step__content {
+    width: 250px;
+  }
+  .pointIllust .step__ttl {
+    text-align: left;
+  }
+}
 /*  acsess
 -------------------------------------------------- */
 .acsessBox {

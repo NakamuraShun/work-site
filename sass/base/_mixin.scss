@@ -174,10 +174,22 @@ FLEX
     @include --fxain-center;
 }
 
+@mixin fxrow-js{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxjty-start;
+}
+
 @mixin fxrow-je{
     @include --fx;
     @include --fxdir-row;
     @include --fxjty-end;
+}
+
+@mixin fxrow-jc{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxjty-center;
 }
 
 /*  fxcol-**
@@ -277,4 +289,10 @@ TRANSITION
     -webkit-transform: translateY($px); 
     -ms-transform: translateY($px);
     transform: translateY($px);
+}
+
+@mixin transform-ro($deg){
+    -webkit-transform: rotate($deg); 
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
 }
