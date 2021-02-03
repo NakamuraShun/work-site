@@ -76,6 +76,7 @@ _header.scss
     font-size: 2.4rem;
     text-decoration: none;
     border: 2px solid $color-t1;
+    border-radius: 5px;
     @include fxrow-ac-jc;
     @include transition(0.3s);
 }
@@ -518,6 +519,7 @@ body.is-fix {
 .mvBody{
     height: 300px;
     padding: 15px;
+    border-radius: 10px;
     background-color:rgba(255, 255, 255, 0.85);
     
     .row{
