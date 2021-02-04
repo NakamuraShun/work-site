@@ -432,94 +432,149 @@ _page.scss
 }
 
 
-/*  news
+/*  contact
 -------------------------------------------------- */
-.news{
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
+.contact{
+    @include fxcol-ac-jc;
+    text-align: center;
     
-    
-    
-    &__info {
-        margin-top: 1.5rem;
+    &__ttl {
+        font-size: 2.0rem;
+        font-weight: 500;
+        margin-bottom: 20px;
         
-        &--catNews,
-        &--catEvent {
-            color: #fff;
-            padding: .3rem .7rem;
-            border-radius: 2px;
-        }
-        
-        &--catNews{background-color: #533E98;}
-        &--catEvent {background-color: #68A142;}
-        
-        &--day {
-            margin-left: 1rem;
-            color: $color-g3;
+        span{
+            color: $color-s1;
+            font-weight: 700;
+            letter-spacing: 3px;
         }
     }
     
-    &__txt {
-        text-decoration: underline;
-        & > a {color: $color-b1;} 
+    &__tel {
+        p{
+            font-size: 1.6rem;
+        }
         
-        &:hover{
-            text-decoration: none;
-            & > a {color: $color-t1;} 
+        a{
+            font-size: 3rem;
+            font-weight: 500;
+            color: #fff;
+            border-bottom: 2px solid #fff;
         }
     } 
 }
 
 @media (min-width: $bp-md) {
-    .news{
-        &__info {
-            margin-top: 0;
+    .contact{
+        @include fxroww-ac;
+        
+        &__ttl {
+            width: 100%;
+            font-size: 3.0rem;
+            margin-bottom: 0;
+            
+            br{display: none;}
         }
-        &__txt {
-            margin-top: .5rem;
-        } 
-    }
+        
+        &__tel {
+            width: 50%;
+            
+            p{
+                font-size: 1.8rem;
+            }
+            
+            a{
+                font-size: 4rem;
+            }
+        }
+        
+        .wrap-btn{
+            width: 50%;
+        }
+    } 
 }
 
 
 
-/*  columnSlide
+/*  caseSlide
 -------------------------------------------------- */
-.columnSlide{ 
-    .slick-dots{
-        margin-bottom: 1rem;
-        
-        & li button:before{
-            margin-top: 10px;
-            font-size: 1.5rem;
-        }
-        
-        & li.slick-active button:before{
-            color: $color-s1;
-        }
-    } 
+.caseSlide{ 
+    
+    li{
+        padding: 0 7.5px;
+    }
     
     .slick-prev,
     .slick-next {
         z-index: 5;
-        -webkit-transform: scale(2.5);
-        transform: scale(2.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
         
         &:hover{
             opacity: .8;
         }
-        
+    }
+    
+    .slick-prev:before,
+    .slick-next:before {
+        color: $color-t1;
+        opacity: 1;
     }
     
     .slick-prev {left: -15px;}
     .slick-next {right: -15px;}
     
-    .slick-prev:before,
-    .slick-next:before {
-        color: $color-s1;
-        opacity: 1;
+    //スライド底辺からの距離
+    .slick-dots{
+        margin: 50px 0 0;
+        
+        //dots サイズと大きさ、デザイン
+        & li button:before{
+            color: $color-b1;
+        }
+        
+        & li.slick-active button:before{
+            color: $color-t1;
+        }
+    } 
+}
+
+
+@media (min-width: $bp-md) {
+    .caseSlide{ 
+        
+        .slick-prev,
+        .slick-next {
+            -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+        }
+        
+        //スライド底辺からの距離
+        .slick-dots{
+            margin: 50px 0 0;
+            
+            //dots 同士の距離
+            li{
+                width: 80px;
+            }
+            
+            //dots サイズと大きさ、デザイン
+            & li button:before{
+                content: "";
+                width: 80px;
+                height: 5px;
+                background-color: $color-b1;
+                border-radius: 10px;
+            }
+            
+            & li.slick-active button:before{
+                content: "";
+                background-color: $color-t1;
+                
+            }
+        } 
     }
 }
+
+/*  plan
+-------------------------------------------------- */

@@ -212,8 +212,7 @@ _link.scss
 .btnPrim--thema {
     background-color: $color-t1;
     border-color: #65010d;
-    
-    a {color: #fff !important;}
+    color: #fff !important;
 }
 
 /* contact */
@@ -229,13 +228,15 @@ _link.scss
 /* plan */
 .btnPrim--plan { 
     &-red{
-        min-width: 325px;
+        width: 100%;
+        height: 40px;
         color: #fff !important;
         background-color: $color-t1;
         border-color: #65010d;
     }
     
     &-grey{
+        width: 100%;
         height: 40px;
         color: #fff !important;
         background-color: #404040;

@@ -24,18 +24,18 @@ SPナビ実装後に再調整 heightの調整必要あり?
 
 /* slick.js
 -------------------------------------------------------------------- */
-    $('.columnSlide').slick({
+    $('.caseSlide').slick({
         dots: true,
         infinite: true, //ループ
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         responsive: [
             {
                 breakpoint: 1000,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
