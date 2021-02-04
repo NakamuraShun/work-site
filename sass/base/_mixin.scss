@@ -199,8 +199,20 @@ FLEX
     @include --fxjty-center;
 }
 
+@mixin fxrow-as-jsb{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-start;
+    @include --fxjty-between;
+}
+
 /*  fxcol-**
 -------------------------------------------------- */
+@mixin fxcol{
+    @include --fx;
+    @include --fxdir-col;
+}
+
 @mixin fxcol-ac-jc{
     @include --fx;
     @include --fxdir-col;

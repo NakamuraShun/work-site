@@ -118,51 +118,21 @@ _layout.scss
     height: inherit;
 }
 
-/* #h-HISTORY
+/* #h-PURPOSE
 -------------------------------------------------- */
-#h-HISTORY {
-    & *{color: #fff;}
-    
-    .row{
-        margin-right: 0;
-        margin-left: 0;
-    }
-    
+#h-PURPOSE .h-purposeWrap{
+    background-color: $color-g2;
 }
 
-@media (min-width: $bp-lg) {
-    #h-HISTORY {
-        & .ttl-lvl2 {
-            padding-top: 0;
-        }
-        
-        & .logoBg{
-            width: 100%;
-            height: 550px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            position: absolute;
-            top:-100px;
-            
-            &--hojo{
-                left:-500px;
-                background-image: url(../../images/hojo-bg.png);
-            }
-            
-            &--odawarashi{
-                left:500px;
-                background-image: url(../../images/odawara-bg.png);
-            }
-        }
-    }
+/* #h-METHOD
+-------------------------------------------------- */
+#h-METHOD .h-methodWrap{
+    background-color: $color-g2;
 }
 
-/* #h-COLUMN
----column------------------------------------------ */
-#h-COLUMN {
-    & .h-columnWrap{
-        background-color: $color-t1;
-        color: #fff;
-    }
+/* #h-NEWS
+--------------------------------------------------- */
+#h-NEWS .h-newsWrap{
+    
 } 
 
