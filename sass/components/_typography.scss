@@ -5,6 +5,7 @@ _typography.scss
 /* -----------------------------------------------
 /* Paragraph  [prg-***]
 -------------------------------------------------- */
+[class*="prg-"] {margin-bottom: 15px;}
 .prg-xl {font-size: 1.8rem;line-height: 2.0; font-weight: 500;}
 .prg-l {font-size: 1.6rem;line-height: 1.8;}
 .prg-m {font-size: 1.4rem;line-height: 1.8;}
@@ -16,6 +17,7 @@ _typography.scss
 }
 
 @media (min-width: $bp-md) {
+    [class*="prg-"] {margin-bottom: 20px;}
     .prg-xl {font-size: 2.0rem; line-height: 2.0;}
     .prg-l  {font-size: 1.8rem; line-height: 1.8;}
     .prg-m  {font-size: 1.5rem; line-height: 1.8;}
@@ -62,18 +64,29 @@ _typography.scss
 
 @media (min-width: $bp-md) {
     .ttl-lvl2 {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
 /* ttl-lvl3
 -------------------------------------------------- */
+.ttl-lvl3 {
+    padding-top: 0;
+    margin-bottom: 20px;
+    border-left: 8px solid $color-t1;
+    
+    & > [class*="hdg-"] {
+        font-weight:700;
+        padding-left: 5px;
+        line-height: 1.1;
+        letter-spacing: 1.5px;
+    }
+}
 
-
-/* ttl-lvl4
--------------------------------------------------- */
-
+@media (min-width: $bp-md) {
+    
+}
 
 
 /* -----------------------------------------------
@@ -81,14 +94,14 @@ _typography.scss
 -------------------------------------------------- */
 // .hdg-0 {font-size: 4.0rem;}
 // .hdg-1 {font-size: 3.5rem;}
-.hdg-2 {font-size: 4.0rem;}
+.hdg-2 {font-size: 3.0rem;}
 .hdg-3 {font-size: 2.0rem;}
 .hdg-4 {font-size: 1.6rem;}
 
 @media (min-width: $bp-md) {
     // .hdg-0 {font-size: 4.5rem;}
     // .hdg-1 {font-size: 4.0rem;}
-    .hdg-2 {font-size: 4.5rem; line-height: 1.75;}
+    .hdg-2 {font-size: 3.5rem; line-height: 1.75;}
     .hdg-3 {font-size: 2.2rem;}
     .hdg-4 {font-size: 1.8rem;}
 }

@@ -10,6 +10,7 @@ _link.scss
 .lnk-txt--thema,
 .lnk-txt--subNav,
 .lnk-txt--mainNav,
+.lnk-txt--megaNav,
 .lnk-txt--footer {
     display: inline-block;
     color: inherit;
@@ -58,48 +59,15 @@ _link.scss
     }
 }
 
+.lnk-txt--megaNav{
+    color: #fff !important;
+    span{color: $color-t1 !important;}
+}
+
 /* thema */
 .lnk-txt--thema{
     color: $color-t1 !important;
-}
-
-/* black */
-.lnk-txt--black{
-    color: $color-b1;
-    
-    &:hover{
-        border-bottom: 1px solid currentColor;
-    }
-}
-
-/* tel */
-.lnk-txt--tel{
-    color: #fff;
-    
-    &:hover{
-        opacity: .7;
-    }
-}
-
-/* tag */
-.lnk-txt--methodTag{
-    padding: 5px 10px;
-    color: $color-b1;
-    border: 2px solid currentColor;
-    border-radius: 5px;
-}
-
-/* footer */
-.lnk-txt--footer{
-    display: inline-block;
-    color: #fff;
-    margin-left: 0;
-    
-    & span {
-        margin-right: .5rem;
-        color: $color-t1;
-        font-weight: bold;
-    }
+    margin-bottom: 5px;
 }
 
 
@@ -217,7 +185,7 @@ _link.scss
 
 /* contact */
 .btnPrim--contact {
-    min-width: 345px;
+    width: 100%;
     height: 70px; 
     font-size: 2.8rem;
     color: $color-b1 !important;

@@ -313,6 +313,10 @@ body.is-fix {
     
     &__lnk{
         font-size: 1.2rem;
+        
+        span {
+            color: $color-t1;
+        }
     }
 }
 

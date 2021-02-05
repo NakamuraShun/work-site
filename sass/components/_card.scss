@@ -24,7 +24,9 @@ _card.scss
         padding: 5px 0;
         text-align: center;
         color: #fff;
-        background-color: #d2600c;
+        font-size: 1.6rem;
+        background-color: #f14d00;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c94203' fill-opacity='0.74' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     }
     
     &__img {
@@ -61,6 +63,9 @@ _card.scss
 
 @media (min-width: $bp-md) {  
     .crd-case {
+        &__header{
+            font-size: 1.8rem;
+        }
         
         &__img {
             padding-top: 40%;
@@ -127,8 +132,14 @@ _card.scss
         margin-bottom: 15px;
         
         span{
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
+        }
+    }
+    
+    &__txt{
+        &:not(:last-child){
+            margin-bottom: 10px;
         }
     }
     
@@ -137,6 +148,7 @@ _card.scss
         padding: 5px 0;
         margin-bottom: 15px;
         text-align: center;
+        border-radius: 3px;
         background-color: $color-g2;
     }
     
@@ -152,67 +164,13 @@ _card.scss
 
 @media (min-width: $bp-md) {  
     .crd-plan {
-        overflow: hidden;
-        @include fxcol-jc;
-        position: relative;
-        margin-bottom: 15px;
-        height: calc(100% - 15px);
-        border: 3px solid;
-        border-color: $color-g2;
-        border-radius: 10px;
-        background-color: #fff;
-        
         &__header{
-            padding: 5px 0;
-            text-align: center;
             font-size: 1.8rem;
-            color: #fff;
-            background-color: $color-b1;
-        }
-        
-        &__content {
-            padding: 15px;
-        }
-        
-        &__intro{
-            margin-bottom: 15px;
-            
-            span{
-                font-weight: 700;
-            }
         }
         
         &__price{
-            text-align: center;
-            margin-bottom: 15px;
-            
             span{
                 font-size: 4rem;
-                font-weight: 700;
-            }
-        }
-        
-        &__ttl {         
-            width: 100%;
-            padding: 5px 0;
-            margin-bottom: 15px;
-            text-align: center;
-            background-color: $color-g2;
-            border-radius: 3px;
-        }
-        
-        &__txt{
-            &:not(:last-child){
-                margin-bottom: 10px;
-            }
-        }
-        
-        &__footer {
-            padding: 15px;
-            border-top: 2px dotted $color-g2;
-            
-            .wrap-btn{
-                margin: 10px 0;
             }
         }
     }
@@ -322,4 +280,118 @@ _card.scss
             }
         }
     } 
+}
+
+
+/* crd-purpose
+-------------------------------------------------- */
+.crd-purpose{
+    @include fxrow-ac-jsb;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border-top: 4px solid $color-g0;
+    position: relative;
+    @include transition(.12s);
+    
+    &::after{
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 1px;
+        height: 70%;
+        border-right: 2px dotted $color-g0;
+    }
+    
+    &__content{
+        margin-right: auto;
+    }
+    
+    &__icon{
+        margin-right: 20px;
+        @include transform-sc(1.3);
+    }
+    
+    &__arr{
+        color: $color-t1;
+        @include transform-sc(1.3);
+    }
+    
+    &__ttl{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    
+    &__txt{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: $bp-md) { 
+    .crd-purpose{
+        &__content{
+            margin-right: 0;
+        }
+        
+        &__icon{
+            margin-right: 0;
+            @include transform-sc(1.2);
+        }
+        
+        &__arr{
+            @include transform-sc(1.2);
+        }
+        
+        &__ttl{
+            font-size: 1.8rem;
+        }
+        
+        &:hover{
+            border-top: 4px solid $color-t1;
+        }
+        &:hover &__ttl{
+            color:  $color-t1;
+        }
+    }
+}
+
+/* crd-method
+-------------------------------------------------- */
+.crd-method{
+    height: calc(100% - 15px);
+    padding: 15px 15px 20px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    &__list{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        @include fxrow;
+        @include --fxwrap;
+    }
+    
+    &__itm{
+        margin-left: 10px;
+        border: 2px solid $color-b1;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    &__lnk{
+        padding: 5px 10px;
+    }   
+}
+
+@media (min-width: $bp-md) {
+    .crd-method{
+        &__itm{ 
+            @include transition(.1s);
+            
+            &:hover{
+                background-color: $color-t1;
+                border-color: $color-t1;
+                & >a {color: #fff;}
+            }
+        }
+    }
 }

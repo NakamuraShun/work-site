@@ -21,46 +21,7 @@ SPナビ実装後に再調整 heightの調整必要あり?
     });
 
     */
-
-/* slick.js
--------------------------------------------------------------------- */
-    $('.caseSlide').slick({
-        dots: true,
-        infinite: true, //ループ
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-
-
+    
     /* open mega Menu
     -------------------------------------------------------------------- */
     $(".js-megaNavTrigger").on({
@@ -130,39 +91,43 @@ SPナビ実装後に再調整 heightの調整必要あり?
     });
 
 
-
-    //pc
-// $('.gNav__lnk--main,.gNav__txt--item,.gNav__lnk--item,.sNav__txt--item,.sNav__lnk--item').parent().on('mouseenter', function ()
-//         {
-//             $(this).addClass('is-active');
-//         }).on('mouseleave', function ()
-//         {
-//             $(this).removeClass('is-active');
-//         });
-
-//         $('.js-subNavTrigger').parent('.sNav__item').on('mouseenter', function ()
-//         {
-//             $(this).children('.subNav--child').slideDown(300);
-//         }).on('mouseleave', function ()
-//         {
-//             $(this).children('.subNav--child').stop(true, false).slideUp(300);
-//         });
-
-//         $('.js-subNavTrigger').parent('.gNav__item').on('mouseenter', function ()
-//         {
-//             $(this).children('.subNav').slideDown(300);
-//         }).on('mouseleave', function ()
-//         {
-//             $(this).children('.subNav').stop(true, false).slideUp(300);
-//         });
-    
-//  $('.gNav__lnk--main,.gNav__txt--item,.gNav__lnk--item,.sNav__txt--item,.sNav__lnk--item').parent().off('mouseenter mouseleave');
-//         $('.js-subNavTrigger').parent('.sNav__item').off('mouseenter mouseleave');
-//         $('.js-subNavTrigger').parent('.gNav__item').off('mouseenter mouseleave');
-//         $('.js-subNavTrigger').next().removeAttr('style');
-//         $('.js-subNavTrigger').removeClass('is-active');
-    
-
+    /* slick.js
+    -------------------------------------------------------------------- */
+    $('.caseSlide').slick({
+        dots: true,
+        infinite: true, //ループ
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 
 
 /* ScrollTop

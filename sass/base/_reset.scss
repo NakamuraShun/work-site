@@ -60,6 +60,7 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
     line-height: 1.54;
+    font-weight: normal;
 }
 
 p {}
@@ -272,11 +273,6 @@ input[type='text'],input[type='search'],input[type='tel'],input[type='url'],inpu
     -webkit-appearance: none;
     box-sizing: border-box;
     vertical-align: top;
-}
-
-input[type='text'],input[type='search'],input[type='tel'],input[type='url'],input[type='email'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='date'],input[type='month'],input[type='week'],input[type='time'],input[type='number'],input[type='file'],textarea,select {
-    width: 100%;
-    height: 2em;
 }
 
 input[type='image'] {
