@@ -544,10 +544,10 @@ body.is-fix {
     
     .mvContent{
         height: 100%;
-        text-align: center;
         @include fxcol-ac-jsb;
         
         &__copyMain{
+            text-align: center;
             font-size: 3rem;
             font-weight: 600;
             line-height: 1.3;
@@ -574,10 +574,10 @@ body.is-fix {
         height: 360px;
         
         .mvContent{
-            text-align: left;
             @include fxcol-as-jsb;
             
             &__copyMain{
+                text-align: left;
                 margin-top: 20px;
                 font-size: 4rem;
                 font-weight: 600;
