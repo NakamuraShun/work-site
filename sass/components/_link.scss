@@ -4,6 +4,46 @@ _link.scss
 /* -----------------------------------------------
 /* Link      [lnk-***] 
 -------------------------------------------------- */
+/* mvBtn
+-------------------------------------------------- */
+.mvbtnContainer{
+    @include fxrow;
+    @include --fxwrap;
+    
+    div{
+        width: 33%;
+        padding-top: 10px;
+    }
+    div:not(:last-child){
+        padding-right: 10px;
+    }
+    div:first-child{
+        width: 100%;
+    }
+}
+
+.mvBtn--design,
+.mvBtn--programming,
+.mvBtn--direction,
+.mvBtn--blog{
+    display: inline-block;
+    @include fxrow-ac-jsb;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff !important;
+    
+    &:hover{opacity: .8;}
+}
+
+.mvBtn--design{
+    background-color: $color-design;
+    padding: 30px 15px;
+}
+.mvBtn--programming{background-color: $color-programming;}
+.mvBtn--direction{background-color: $color-direction;}
+.mvBtn--blog{background-color: $color-blog;}
+
+
 
 /* .lnk-txt--**
 -------------------------------------------------- */
@@ -92,12 +132,10 @@ _link.scss
 /*  btn-type
 -------------------------------------------------- */
 
-.btnPrim--header,
-.btnPrim--headerSP,
 .btnPrim--white,
 .btnPrim--thema,
-.btnPrim--plan-red,
-.btnPrim--plan-grey,
+.btnPrim--design-red,
+.btnPrim--design-grey,
 .btnPrim--contact {
     @include infxrow-ac-jc;
     -webkit-user-select: none;
@@ -124,36 +162,7 @@ _link.scss
     }
 }
 
-/* header */
-.btnPrim--header {
-    min-width: 200px;
-    height: 48px; 
-    color: $color-b1 !important;
-    background-color: $color-s1;
-    border-color: #d39906;
-    
-    &SP{
-        min-width: 60px;
-        height: 60px; 
-    }
-}
 
-.btnPrim--headerSP {
-    z-index: 200;
-    position: absolute;
-    top: 8px;
-    right: 80px;
-    width: 160px;
-    height: 45px;
-    font-size: 1.4rem;
-    background-color: $color-s1;
-    border-color: #d39906;
-}
-@media (min-width: $bp-md){
-    .btnPrim--headerSP {
-        display: none;
-    }
-}
 
 /* white */
 .btnPrim--white {
@@ -193,8 +202,8 @@ _link.scss
     border-color: #d39906;
 }
 
-/* plan */
-.btnPrim--plan { 
+/* design */
+.btnPrim--design { 
     &-red{
         width: 100%;
         height: 40px;

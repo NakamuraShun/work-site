@@ -14,7 +14,12 @@ $color-g3 : #c8c8c8;  //最後に消す
 /* thema */
 $color-t1 : #b40015;
 /* sub */
-$color-s1 : #f9b301;
+$color-s1 : #ffca3a;
+
+$color-design : #ff595e;
+$color-programming : #ffca3a;
+$color-direction : #1982c4;
+$color-blog : #8ac926;
 
 /*  BlakePoint
 // -------------------------------------------------- */
@@ -34,7 +39,7 @@ html{
 /*  body
 -------------------------------------------------- */
 body {
-    background-color: #fff;
+    background-color: #f4f4f4;
     color: $color-b1;
     font-weight: 400;
     font-size: 1.4rem;
@@ -45,7 +50,7 @@ body {
 
 @media (min-width: $bp-sm) {  
     body {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 

@@ -27,38 +27,10 @@ _header.scss
 
 @media (min-width: $bp-md){
     .l-header{
-        height: 130px;
+        height: 65px;
     }
 }
 
-/* logo
--------------------------------------------------- */
-.logo {
-    z-index: 200;
-    position: absolute;
-    top: 30px;
-    left: 5px;
-    width: 100px;
-    height: 100%;
-    @include fxrow-ac;
-    
-    &__img{
-        height: 20px;
-        width: auto;
-        @include fxrow-ac;
-    }
-}
-
-@media (min-width: $bp-md){
-    .logo {
-        top: -30px;
-        left: 30px;
-        
-        &__img{
-            height: 25px;
-        }
-    }
-}
 
 /* hamburger
 -------------------------------------------------- */
@@ -75,7 +47,6 @@ _header.scss
     vertical-align: middle;
     font-size: 2.4rem;
     text-decoration: none;
-    border: 2px solid $color-t1;
     border-radius: 5px;
     @include fxrow-ac-jc;
     @include transition(0.3s);
@@ -101,7 +72,7 @@ _header.scss
         width: 24px;
         height: 3px;
         border-radius: 10px;
-        background-color: $color-t1;
+        background-color: $color-b1;
         -webkit-transition-duration: .1s;
         transition-duration: .1s;
     }
@@ -253,70 +224,12 @@ body.is-fix {
         font-weight: 400;
         letter-spacing: 1px;
     }
-    
-    &__lnk--toggle::before {
-        @include fxrow-ac-jc;
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "\e61a";
-        color: $color-t1;
-        font-family: 'themify';
-        font-size: 1.1rem;
-        height: 45px;
-        width: 45px;
-        background-color: #dadada;
-    }
-    
-    &__lnk--toggle.is-active::before {
-        content: "\e622";
-        background: #eee;
-    }
-    
-    .slideMenu {
-        display: none;
-    }
-    
-    .toggleNav {
-        background-color: #f5f5f5;
-        
-        &__itm {
-            border-top: 1px dashed #bdbdbd;
-        }
-        
-        &__lnk{
-            @include fxrow-ac;
-            font-size: 1.2rem;
-            height: 45px;
-            padding-left: 15px;
-        }
-    }
 }
 
 @media (min-width: $bp-md){
     .gNavSP {
         opacity: 0;
         visibility: hidden;
-    }
-}
-
-
-.gNavSpSubInfo{
-    @include fxrow-ac;
-    @include --fxwrap;
-    padding: 20px 15px;
-    
-    &__itm{
-        width: 50%;
-        margin-bottom: 10px;
-    }
-    
-    &__lnk{
-        font-size: 1.2rem;
-        
-        span {
-            color: $color-t1;
-        }
     }
 }
 
@@ -336,39 +249,9 @@ body.is-fix {
         height: 100%;
     }
     
-    .gNavPcSub{
-        height: 65px;
-        @include fxrow-ac-je;
-        
-        .gNavPcSubInfo{
-            width: 300px;
-            height: 30px;
-            margin-left: 25px;
-            padding: 0 10px;
-            background-color: $color-g1;
-            border: 1px solid $color-g2;
-            border-radius: 5px;
-            @include fxrow-ac-jsb;
-            
-            &__itm {
-                @include fxrow-ac-jc;
-            }
-            
-            &__lnk{
-                font-size: 1.2rem;     
-                & span{ padding-right: 5px; }
-                &:hover{ border-bottom: 1px solid $color-b1; }
-            }
-        }
-        
-        &--scroll{
-            display: none;
-        }
-    }
-    
     .gNavPcMain{
         position: relative;
-        height: 65px;
+        height: 100%;
         @include fxrow-ac-jsb;
         
         &__itm {
@@ -395,7 +278,7 @@ body.is-fix {
                 left:0;
                 width: 100%;
                 height: 3px;
-                background-color: $color-t1;
+                background-color: $color-b1;
                 border-radius: 5px;
                 @include transform-scX(0);
                 @include transition(.15s);
@@ -404,211 +287,58 @@ body.is-fix {
             &:hover::after{
                 @include transform-scX(1);
             }
-            
-            &:hover span{
-                color: $color-t1;
-            }
         }
     }
     
-}
-
-.megaMenu{
-    display: none;
-    position: absolute; // from .gNavPcMain
-    top:100%;
-    left:0;
-    width: 100%;
-    
-    .megaMenuWrap{
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        color: #fff !important;
-        background-color: rgba(0, 0, 0, .9);
-    }
-    
-    .l-container{
-        max-width: 900px;
-    }
-}
-
-.MegaNav{
-    &__topBtn{
-        a{
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 1.8rem;
-            font-weight: 500;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            color: #fff;
-            @include transition(.15s);
-            
-            &:hover{
-                background-color: #fff;
-                color: $color-t1;
-            }
-        }
-        
-        span{
-            margin-left: 10px;
-            color:$color-t1;
-        }
-    }
-    
-    &__searchBox{
-        margin-top: 30px;
-        width: 100%;
-        a{color: #fff};
-        
-        table:not(:last-child){
-            margin-bottom: 30px;
-        }
-        
-        thead{
-            border-bottom: 1px solid #fff;
-        }
-        
-        tbody{
-            margin-top: 10px;
-        }
-        
-        th{
-            padding-bottom: 10px;
-        }
-        
-        td{
-            padding-top: 10px;
-            padding-right: 40px;
-        }
-    }
-}
-
-
-/* searchBox
--------------------------------------------------- */
-.searchBox{
-    @include fxrow-ac-jc;
-    
-    &__searchInput{
-        width: 180px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: $color-g1;
-        border-radius: 5px 0px 0px 5px;
-        border-color: $color-g2;
-        border-width: 2px;
-    }
-    
-    &__searchSubmit{
-        cursor: pointer;
-        width: 50px;
-        height: 30px;
-        margin-left: -5px;
-        border: none;
-        color: #fff;
-        background-color: $color-t1;
-        border-radius: 0px 5px 5px 0px;
-    }
-}
-
-@media (min-width: $bp-md){
-    .searchBox{
-        &__searchSubmit{
-            width: 30px;
-        }
-    }
 }
 
 /* #l-MV
 -------------------------------------------------- */
 .h-mvWrap{
     padding-top: 110px !important; //l-headerの高さに応じて変更
-    padding-bottom: 50px !important; //l-headerの高さに応じて変更
-    @include bgimg--cv("../images/mv.jpg");
+    padding-bottom: 20px !important; //l-headerの高さに応じて変更
 }
 
 .mvBody{
-    height: 300px;
+    height: 100%;
     padding: 15px;
-    border-radius: 10px;
-    background-color:rgba(255, 255, 255, 0.85);
     
-    .row{
-        height: 100%;
-    }
-    
-    [class*=col-] {
-        height: 100%;
-    }
     
     .mvContent{
         height: 100%;
-        @include fxcol-ac-jsb;
+        text-align: center;
         
         &__copyMain{
-            text-align: center;
+            padding-bottom: 15px;
             font-size: 3rem;
             font-weight: 600;
             line-height: 1.3;
         }
-        
-        &__copySub{
-            font-size: 1.4rem;
-        }
-    }
-    
-    .mvPhoto{
-        display: none;
     }
 }
 
 @media (min-width: $bp-md){
     .h-mvWrap{
-        padding-top: 130px !important;
-        padding-bottom: 0px !important;
-        background: none;
+        padding-top: 120px !important;
     }
     
     .mvBody{
-        height: 360px;
         
         .mvContent{
-            @include fxcol-as-jsb;
+            text-align: left;
             
             &__copyMain{
-                text-align: left;
-                margin-top: 20px;
                 font-size: 4rem;
                 font-weight: 600;
                 letter-spacing: 3px;
                 line-height: 1.3;
             }
-            
-            &__copySub{
-                font-size: 1.6rem;
-            }
         }
         
         .mvPhoto{
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            opacity: .9;
             @include fxrow-ac-jc;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
             
-            &__img{
-                @include bgimg--cv("../images/mv.jpg");
-                height: 100%;
-                width: 100%;
-            }
-        }
-        
-        .wrap-btn{
-            margin-top: 0;
-            justify-content: flex-start;
         }
     }
 }

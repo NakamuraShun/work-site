@@ -11,10 +11,10 @@ _layout.scss
 
 /*  ***Wrap
 -------------------------------------------------- */
-[class*="Wrap"] {padding: 50px 0;}
+[class*="Wrap"] {padding: 20px 0;}
 
-@media (min-width: $bp-md) {[class*="Wrap"] {padding: 50px 0;}}
-@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 50px 0;}}
+@media (min-width: $bp-md) {[class*="Wrap"] {padding: 20px 0;}}
+@media (min-width: $bp-lg) {[class*="Wrap"] {padding: 20px 0;}}
 
 /*  .l-container
 -------------------------------------------------- */
@@ -41,86 +41,10 @@ _layout.scss
 /* -----------------------------------------------
 /* topPage     [h-***]
 -------------------------------------------------- */
-/* #h-QUISTION
+/* #h-WORK-DETAILS
 -------------------------------------------------- */
-#h-QUISTION .quistionWrap{
-    position: relative;
-    padding: 35px 0 !important;
-    color: #fff;
-    background-color: #b40015;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    
-    &::after{
-        content: "";
-        position: absolute;
-        bottom:-15px;
-        left:50%;
-        margin-left: -15px;
-        width: 30px;
-        height: 30px;
-        background-color: #b40015;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-        @include transform-ro(45deg);
-        
+#h-WORK-DETAILS .h-workdetailsWrap{
+    .row{
+        @include --fxain-start;
     }
 }
-
-/* #h-FEATURE
--------------------------------------------------- */
-#h-FEATURE .introductionWrap{
-    padding: 0 0 !important;
-}
-
-#h-FEATURE .pointWrap{
-    padding: 25px 0 !important;
-}
-
-@media (min-width: $bp-md) {
-    
-    #h-FEATURE .introductionWrap{
-        
-        .wrap-btn{justify-content: flex-start;}
-    }
-}
-
-/* #h-CONTACT
--------------------------------------------------- */
-#h-CONTACT .contactWrap{
-    padding:25px 0 !important;
-    color: #fff;
-    background-color: #b40015;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23922222' fill-opacity='0.75' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-    
-    .l-container{
-        max-width: 800px;
-    }
-}
-
-/* #h-PLAN
--------------------------------------------------- */
-#h-PLAN .h-planWrap{
-    background-color: $color-g1;
-}
-
-/* #h-SEMINAR
--------------------------------------------------- */
-#h-SEMINAR {@include bgimg--cv("../../images/seminar--bg.jpg");}
-
-#h-SEMINAR .h-seminarWrap{
-    color: #fff;
-    background-color: rgba(180, 48, 48, 0.692);
-    height: inherit;
-}
-
-/* #h-PURPOSE
--------------------------------------------------- */
-#h-PURPOSE .h-purposeWrap{
-    background-color: $color-g2;
-}
-
-/* #h-METHOD
--------------------------------------------------- */
-#h-METHOD .h-methodWrap{
-    background-color: $color-g2;
-}
-

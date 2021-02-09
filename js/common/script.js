@@ -139,6 +139,48 @@ SPナビ実装後に再調整 heightの調整必要あり?
     });
 
 
+
+    /* direction filtering
+    -------------------------------------------------------------------- */
+    $(".js-directionFiltering").click(function ()
+    {
+
+        //tags
+        $(".js-directionFiltering").each(function ()
+        {
+            if ($(this).hasClass("directionTag-active"))
+            {
+                $(this).removeClass("directionTag-active");
+            }
+        });
+        $(this).addClass("directionTag-active");
+
+        //クリックしたtag取得
+        let searchTag = $(this).attr("value");
+
+        //各itemを非表示 → 条件判定 → 表示
+        $(".js-directionTarget").each(function ()
+        {
+            $(this).animate(
+                //① ゆっくり透過してから隠す
+                { "opacity": 0 }, 200, function ()
+            {
+                $(this).hide();
+                //② 判定してからゆっくり要素を表示
+                if ($(this).hasClass(searchTag) || searchTag == "all")
+                {
+                    $(this).show();
+                    $(this).animate({ "opacity": 1 }, 200);
+                }
+            });
+        });
+
+        return false;
+
+    });
+
+
+
 /* :hover invalid, when use touchdevise
 -------------------------------------------------------------------- */
     var touch = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;

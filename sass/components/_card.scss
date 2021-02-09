@@ -5,97 +5,9 @@ _card.scss
 /* Card      [crd-***]
 -------------------------------------------------- */
 
-/* crd-case
+/* crd-design
 -------------------------------------------------- */
-.crd-case {
-    overflow: hidden;
-    @include fxcol-jc;
-    position: relative;
-    margin-bottom: 15px;
-    height: calc(100% - 15px);
-    border: 3px solid;
-    border-color: $color-g2;
-    border-radius: 10px;
-    color: $color-b1;
-    background-color: #fff;
-    @include transition(.2s);
-    
-    &__header{
-        padding: 5px 0;
-        text-align: center;
-        color: #fff;
-        font-size: 1.6rem;
-        background-color: #f14d00;
-        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c94203' fill-opacity='0.74' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    }
-    
-    &__img {
-        position: relative;
-        overflow: hidden;
-        padding-top: 56.25%;
-    }
-    
-    &__photo{
-        @include po--ac;
-        width: 100%;
-        height: 100%;
-        @include bg--cv;
-        @include transition(.3s);
-    }
-    
-    &__content {
-        @include fxcol-as-jsb;
-        height: 100%;
-        padding: 10px;
-    }
-    
-    &__ttl {         
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-    
-    &__lead {
-        padding: 10px 0;
-        font-size: 1.6rem;
-        font-weight: 500;
-    }
-}
-
-@media (min-width: $bp-md) {  
-    .crd-case {
-        &__header{
-            font-size: 1.8rem;
-        }
-        
-        &__img {
-            padding-top: 40%;
-        }
-        
-        &__lead {
-            font-size: 1.8rem;
-        }
-        
-        &:hover{
-            opacity: .8;
-            -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.25);
-            box-shadow: 0 0 20px rgba(0,0,0,0.25);
-        }
-        &:hover &__ttl,
-        &:hover &__lead{
-            color: $color-t1;
-        }
-        
-        &:hover &__photo{
-            width: 107%;
-            height: 107%;
-            @include transition(.3s)
-        }
-    }
-}
-
-/* crd-plan
--------------------------------------------------- */
-.crd-plan {
+.crd-design {
     overflow: hidden;
     @include fxcol-jc;
     position: relative;
@@ -119,37 +31,15 @@ _card.scss
         padding: 15px;
     }
     
-    &__intro{
-        margin-bottom: 15px;
+    &__image {
+        overflow: hidden;
+        max-height: 800px;
+        padding: 15px;
         
-        span{
-            font-weight: 700;
+        img{
+            width: 100%;
+            border: 2px solid $color-g1;
         }
-    }
-    
-    &__price{
-        text-align: center;
-        margin-bottom: 15px;
-        
-        span{
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-    }
-    
-    &__txt{
-        &:not(:last-child){
-            margin-bottom: 10px;
-        }
-    }
-    
-    &__ttl {         
-        width: 100%;
-        padding: 5px 0;
-        margin-bottom: 15px;
-        text-align: center;
-        border-radius: 3px;
-        background-color: $color-g2;
     }
     
     &__footer {
@@ -163,235 +53,145 @@ _card.scss
 }
 
 @media (min-width: $bp-md) {  
+    .crd-design {
+        &__header{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+/* crd-details
+-------------------------------------------------- */
+.crd-details {
+    overflow: hidden;
+    @include fxcol-jc;
+    position: relative;
+    margin-bottom: 15px;
+    height: calc(100% - 15px);
+    border: 3px solid;
+    border-color: $color-g2;
+    border-radius: 10px;
+    background-color: #fff;
+    
+    &__image {
+        overflow: hidden;
+        padding: 5px;
+        
+        img{
+            width: 100%;
+            border: 2px solid $color-g1;
+        }
+    }
+    
+    &__header{
+        padding: 5px 0;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #fff;
+        background-color: #373737;
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a1a1a' fill-opacity='0.97' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    &__footer {
+        padding: 15px;
+        border-top: 2px dotted $color-g2;
+        
+        .wrap-btn{
+            margin: 10px 0;
+        }
+    }
+    
+    &__content {
+        padding: 15px; 
+    }
+    
+    &__ttl {         
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 15px;
+        text-align: center;
+        border-radius: 3px;
+        background-color: $color-g2;
+    }
+    
+    &__txt{
+        p{
+            padding: 5px;
+        }
+        
+        [class*="col-"]{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: $bp-md) {  
     .crd-plan {
         &__header{
             font-size: 1.8rem;
         }
-        
-        &__price{
-            span{
-                font-size: 4rem;
-            }
-        }
     }
 }
 
-/* crd-seminar
+
+/* directionTag
 -------------------------------------------------- */
-.seminarList{
-    
-    .crd-seminar {
-        min-width: 100%;
-        height: 100%;
-        overflow: hidden;
-        @include fxrow-as-jsb;
-        position: relative;
-        margin-bottom: 15px;
-        border-radius: 5px; 
-        background-color: #fff;
-        @include transition(.2s);
-        
-        &__img {
-            width: 100px;
-            position: relative;
-            overflow: hidden;
-            
-            figure{
-                width: 100%;
-                padding-top: 100%;
-                @include bg--cv;
-            }
-        }
-        
-        &__content {
-            flex: 1;
-            padding: 2px 4px;
-        }
-        
-        &__status--will,
-        &__status--accept,
-        &__status--close,
-        &__status--done{
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: #fff;
-            padding: 1px 5px;
-            background-color: $color-b1;
-            border-radius: 5px;
-        }
-        
-        &__status--will{background-color: rgb(102, 6, 102);}
-        &__status--accept{background-color: #468a03;}
-        &__status--close{background-color: #db0000;}
-        &__status--done{background-color: #333}
-        
-        &__date {
-            display: inline-block;
-            font-size: 1rem;
-            color: #8c8c8c;
-        }
-        
-        &__ttl{
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        
-        &__txt{
-            font-size: 1.2rem;
-            line-height: 1.3;
-            margin-bottom: 5px;
-        }
-        
-        
-    }
-    
-}
-
-@media (min-width: $bp-md) { 
-    .seminarList{
-        @include fxcol;
-        @include --fxwrap;
-        max-height: 500px; 
-        
-        li{
-            width: 50%;
-            padding: 0 7.5px;
-        }
-        
-        .crd-seminar {
-            
-            &__img {
-                width: 140px;
-            }
-            
-            &__content {
-                padding: 10px;
-            }
-            
-            &__txt{
-                font-size: 1.5rem;
-            }
-            
-            &:hover{
-                color: $color-t1 !important;
-                text-decoration: underline !important;
-            }
-        }
-    } 
-}
-
-
-/* crd-purpose
--------------------------------------------------- */
-.crd-purpose{
-    @include fxrow-ac-jsb;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    border-top: 4px solid $color-g0;
-    position: relative;
-    @include transition(.12s);
-    
-    &::after{
-        content: "";
-        position: absolute;
-        top: 10px;
-        right: 0;
-        width: 1px;
-        height: 70%;
-        border-right: 2px dotted $color-g0;
-    }
-    
-    &__content{
-        margin-right: auto;
-    }
-    
-    &__icon{
-        margin-right: 20px;
-        @include transform-sc(1.3);
-    }
-    
-    &__arr{
-        color: $color-t1;
-        @include transform-sc(1.3);
-    }
-    
-    &__ttl{
-        font-size: 1.6rem;
-        font-weight: 500;
-    }
-    
-    &__txt{
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: $bp-md) { 
-    .crd-purpose{
-        &__content{
-            margin-right: 0;
-        }
-        
-        &__icon{
-            margin-right: 0;
-            @include transform-sc(1.2);
-        }
-        
-        &__arr{
-            @include transform-sc(1.2);
-        }
-        
-        &__ttl{
-            font-size: 1.8rem;
-        }
-        
-        &:hover{
-            border-top: 4px solid $color-t1;
-        }
-        &:hover &__ttl{
-            color:  $color-t1;
-        }
-    }
-}
-
-/* crd-method
--------------------------------------------------- */
-.crd-method{
-    height: calc(100% - 15px);
-    padding: 15px 15px 20px 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    
-    &__list{
-        margin-top: 15px;
-        margin-bottom: 15px;
-        @include fxrow;
-        @include --fxwrap;
-    }
-    
-    &__itm{
-        margin-left: 10px;
-        border: 2px solid $color-b1;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
+.directionTag{
+    @include fxrow;
+    @include --fxwrap;
+    margin-bottom: 20px;
     
     &__lnk{
         padding: 5px 10px;
-    }   
-}
-
-@media (min-width: $bp-md) {
-    .crd-method{
-        &__itm{ 
-            @include transition(.1s);
-            
-            &:hover{
-                background-color: $color-t1;
-                border-color: $color-t1;
-                & >a {color: #fff;}
-            }
+        color: blue !important;
+        
+        &:hover{
+            color: $color-t1 !important;
+            text-decoration: underline;
         }
     }
 }
+
+.directionTag-active{
+    color: $color-t1 !important;
+    font-weight: 700;
+}
+
+/* crd-direction
+-------------------------------------------------- */
+.crd-direction {
+    overflow: hidden;
+    @include fxcol;
+    position: relative;
+    margin-bottom: 15px;
+    padding: 5px;
+    height: calc(100% - 15px);
+    border: 2px solid;
+    border-color: $color-g2;
+    background-color: #fff;
+    
+    &__image {
+        overflow: hidden;
+        max-height: 400px;
+        
+        img{
+            width: 100%;
+            border: 1px solid $color-g1;
+        }
+    }
+    
+    &__ttl{
+        padding: 5px 10px;
+        color: blue !important;
+    }
+    
+    &:hover{
+        opacity: .9;
+        border-color: $color-t1;
+    }
+    &:hover &__ttl{
+        color: $color-t1 !important;
+        text-decoration: underline;
+    }
+}
+

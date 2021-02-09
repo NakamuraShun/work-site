@@ -224,6 +224,13 @@ FLEX
     @include --fxain-center;
     @include --fxjty-center;
 }
+@mixin fxcol-as-jc{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-start;
+    @include --fxjty-center;
+}
+
 @mixin fxcol-jc{
     @include --fx;
     @include --fxdir-col;
