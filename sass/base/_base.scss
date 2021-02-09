@@ -6,20 +6,17 @@ _base.scss
 -------------------------------------------------- */
 /* base */
 $color-b1 : #333;
-// $color-b1 : #494949;
 $color-g0 : #c4c4c4;
 $color-g1 : #f4f4f4;
 $color-g2 : #e9e9e9;
-$color-g3 : #c8c8c8;  //最後に消す
 /* thema */
 $color-t1 : #b40015;
-/* sub */
-$color-s1 : #ffca3a;
 
-$color-design : #ff595e;
-$color-programming : #ffca3a;
+$color-design : #ec1920e1;
+$color-programming : #b73aff;
 $color-direction : #1982c4;
-$color-blog : #8ac926;
+$color-blog : #55C502;
+$color-git : #2B3137;
 
 /*  BlakePoint
 // -------------------------------------------------- */
@@ -39,7 +36,7 @@ html{
 /*  body
 -------------------------------------------------- */
 body {
-    background-color: #f4f4f4;
+    background-color: #FCFCFC;
     color: $color-b1;
     font-weight: 400;
     font-size: 1.4rem;

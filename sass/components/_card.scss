@@ -9,7 +9,7 @@ _card.scss
 -------------------------------------------------- */
 .crd-design {
     overflow: hidden;
-    @include fxcol-jc;
+    @include fxcol;
     position: relative;
     margin-bottom: 15px;
     height: calc(100% - 15px);
@@ -24,11 +24,28 @@ _card.scss
         font-size: 1.6rem;
         color: #fff;
         background-color: #373737;
-        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a1a1a' fill-opacity='0.97' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     }
     
     &__content {
         padding: 15px;
+    }
+    
+    &__btn {
+        padding: 10px;
+        border-top: 2px dotted $color-g2;
+        
+        a{
+            display: inline-block;
+            margin: 10px 0;
+            margin-right: 30px;
+            color: blue; 
+            text-decoration: underline;
+            
+            &:hover{
+                color: $color-t1;
+                text-decoration: underline;
+            }
+        }
     }
     
     &__image {
@@ -39,15 +56,6 @@ _card.scss
         img{
             width: 100%;
             border: 2px solid $color-g1;
-        }
-    }
-    
-    &__footer {
-        padding: 15px;
-        border-top: 2px dotted $color-g2;
-        
-        .wrap-btn{
-            margin: 10px 0;
         }
     }
 }
@@ -64,7 +72,7 @@ _card.scss
 -------------------------------------------------- */
 .crd-details {
     overflow: hidden;
-    @include fxcol-jc;
+    @include fxcol;
     position: relative;
     margin-bottom: 15px;
     height: calc(100% - 15px);
@@ -72,6 +80,11 @@ _card.scss
     border-color: $color-g2;
     border-radius: 10px;
     background-color: #fff;
+    
+    a:hover{
+        opacity: .8;
+        border-color: $color-t1;
+    }
     
     &__image {
         overflow: hidden;
@@ -89,16 +102,6 @@ _card.scss
         font-size: 1.6rem;
         color: #fff;
         background-color: #373737;
-        background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a1a1a' fill-opacity='0.97' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    }
-    
-    &__footer {
-        padding: 15px;
-        border-top: 2px dotted $color-g2;
-        
-        .wrap-btn{
-            margin: 10px 0;
-        }
     }
     
     &__content {
@@ -172,7 +175,7 @@ _card.scss
     
     &__image {
         overflow: hidden;
-        max-height: 400px;
+        max-height: 300px;
         
         img{
             width: 100%;
@@ -186,7 +189,7 @@ _card.scss
     }
     
     &:hover{
-        opacity: .9;
+        opacity: .8;
         border-color: $color-t1;
     }
     &:hover &__ttl{
@@ -195,3 +198,51 @@ _card.scss
     }
 }
 
+/* crd-coding
+-------------------------------------------------- */
+.crd-coding {
+    overflow: hidden;
+    @include fxcol;
+    position: relative;
+    margin-bottom: 15px;
+    height: calc(100% - 15px);
+    border: 3px solid;
+    border-color: $color-g2;
+    border-radius: 10px;
+    background-color: #fff;
+    
+    &__header{
+        padding: 5px 0;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #fff;
+        background-color: #373737;
+    }
+    
+    &__content {
+        padding: 15px;
+        
+        p{
+            margin-bottom: 10px;
+        }
+        
+        a{
+            display: inline-block;
+            color: blue; 
+            text-decoration: underline;
+            
+            &:hover{
+                color: $color-t1;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-md) {  
+    .crd-design {
+        &__header{
+            font-size: 1.8rem;
+        }
+    }
+}

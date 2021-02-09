@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>デザイン&コーディング</title>
+    <title>レシピ登録サイト</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="format-detection" content="telephone=no">
@@ -130,13 +130,16 @@
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="mvContent">
-                                    <div class="mvContent__copyMain">デザイン&コーディング</div>
+                                    <div class="mvContent__copyMain">レシピ登録サイト</div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <div class="mvdescContainer">
-                                   デザインとコーディングをしたポートフォリオです。<br>レイアウト構成やデザインの意図は詳細ページをご覧いただけますと幸いです。
+                                    Node.jsとmongoDBで組んだレシピ登録サイトです。<br>プログラマー転職時のポートフォリオです。<br>(herokuのため表示に3秒ほどかかります)
                                 </div>
+                                <a href="https://glacial-temple-91497.herokuapp.com/" target="_blank">
+                                    <span class="ti-layers"></span> https://glacial-temple-91497.herokuapp.com/
+                                </a>                         
                             </div>
                         </div>
                     </div>
@@ -148,74 +151,87 @@
     <!-- -------- .l-mainContents --------  -->
     <div class="l-mainContents">
 
-        <section id="h-WORK">
-            <div class="h-workWrap">
+        <section id="h-WORK-DETAILS">
+            <div class="h-workdetailsWrap">
                 <div class="l-container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="crd-coding">
-                                <div class="crd-coding__header">
-                                    <h3>CSSのコーディングで気をつけている点</h3>
-                                </div>
-                                <div class="crd-coding__content">
-                                    <ul>
-                                        <li>・ssはBEM記法を意識し、コンポーネント単位でscssでファイルを分けて管理してます。</li>
-                                        <li>・「flex-**」のベンダープレフィックスが多いプロパティについてはmixinでまとめパターンを用意し１行で記述できるようにし、scssファイル内で記述漏れ防止と可読性アップを心がけてます。</li>
-                                        
-                                    
-                                    </ul>                                  
-                                    <p><b>Sassに関する個人Qiita記事</b></p>
-                                    <ul>
-                                        <li><a href="https://qiita.com/nakamurashun0621/items/b87c25943076bf59051c" target="_blank"><span class="ti-layers"></span> Sassコンパイル(とりあえずコンパイル編)</a></li>
-                                        <li><a href="https://qiita.com/nakamurashun0621/items/0e4907392de56ce7fea1" target="_blank"><span class="ti-layers"></span> Sassコンパイル(ベンダープレフィックス/圧縮編)</a></li>
-                                        <li><a href="https://qiita.com/nakamurashun0621/items/aaa16106ff4e043d7e0b" target="_blank"><span class="ti-layers"></span> コーディング規約</a></li>
-                                    </ul>
+                        <div class="col-12 col-md-4">
+                            <div class="crd-details">
+                                <div class="crd-details__image">
+                                    <a href="https://glacial-temple-91497.herokuapp.com/" target="_blank"><img src="./images/programming/recipe.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="crd-design">
-                                <div class="crd-design__header">
-                                    <h3>小田原市観光協会サイト</h3>
+                        <div class="col-12 col-md-8">
+                            <div class="crd-details">
+                                <div class="crd-details__header">
+                                    <h3>仕様書</h3>
                                 </div>
-                                <div class="crd-design__content">
-                                    一般社団法人 小田原市観光協会サイトのリニューアルを想定したサイトです。
-                                </div>
-                                <div class="crd-design__btn">
-                                        <a href="http://odawara.nonman.org/" target="_blank">
-                                            <span class="ti-layers"></span> 別タブでサイトを表示
-                                        </a>
-                                        <a href="./odawara.html">
-                                            提案内容とデザイン作成の意図こちら
-                                        </a>
-                                </div>
-                                <div class="crd-design__image">
-                                    <img src="./images/design/odawara-site.png" alt="">
+                                
+                                <div class="crd-details__info">
+                                    <div class="crd-details__content">
+                                        <div class="crd-details__ttl">機能</div>
+                                        <div class="crd-details__txt">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <p><b>ユーザー側</b></p>
+                                                    <ul>
+                                                        <li>・新規会員登録/ログイン機能</li>
+                                                        <li>・レシピの投稿/表示/編集/削除(CRUD機能)</li>
+                                                        <li>・お問い合わせフォーム機能</li>
+                                                        <li>・メルマガ登録</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <p><b>管理者側</b></p>
+                                                    <ul>
+                                                        <li>・すでにメルマガ登録済みのユーザーが新規会員登録した場合はidで紐付けがされます</li>
+                                                        <li>・ユーザーアカウント、レシピ、お問い合わせデータの削除</li>
+                                                        <li>・<a href="https://glacial-temple-91497.herokuapp.com/dashboard/" target="_blank" style="color: blue; text-decoration: underline;">
+                                                            <span class="ti-layers"></span> 管理画面</a>はこちらです</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <div class="crd-design">
-                                <div class="crd-design__header">
-                                    <h3>マーケティング会社サイト</h3>
-                                </div>                                
-                                <div class="crd-design__content">
-                                    架空のマーケティング会社のコーポレート兼販促サイトです。
+                                <div class="crd-details__time">
+                                    <div class="crd-details__content">
+                                        <div class="crd-details__ttl">使用技術</div>
+                                        <div class="crd-details__txt">
+                                            <div class="row">
+                                                <div class="col-12 col-md-4">
+                                                    <p><b>言語</b></p>
+                                                    <ul>
+                                                        <li>・Javascript (Node.js)</li>
+                                                        <li>・フレームワークはexpress</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <p><b>データベース</b></p>
+                                                    <ul>
+                                                        <li>・mongo DB</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <p><b>サーバー</b></p>
+                                                    <ul>
+                                                        <li>・Heroku</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="crd-design__btn">
-                                    <a href="http://research.nonman.org/" target="_blank">
-                                        <span class="ti-layers"></span> 別タブでサイトを表示
-                                    </a>
-                                    <a href="./research.html">
-                                        提案内容とデザイン作成の意図こちら
-                                    </a>
-                                </div>
-                                <div class="crd-design__image">
-                                    <img src="./images/design/research-site.png" alt="">
+                                
+                                <div class="crd-details__footer">
+                                    <div class="wrap-btn">
+                                        <a href="https://glacial-temple-91497.herokuapp.com/" target="_blank" class="btnPrim--design-red">
+                                            別タブでこのサイトを表示
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

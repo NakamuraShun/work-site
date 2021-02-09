@@ -32,19 +32,11 @@ _typography.scss
 /* -----------------------------------------------
 /* decoration
 -------------------------------------------------- */
-.markBg--yellow{
-    background-color: $color-s1;
-    font-weight: 500;
-}
-
 .ul-white{
     padding-bottom: 5px;
     border-bottom: 1px solid #fff;
 }
 
-.ul-yellow{
-    border-bottom: 3px solid $color-s1;
-}
 
 /* -----------------------------------------------
 /* Title    [ttl-***]
@@ -68,26 +60,6 @@ _typography.scss
         padding-bottom: 10px;
     }
 }
-
-/* ttl-lvl3
--------------------------------------------------- */
-.ttl-lvl3 {
-    padding-top: 0;
-    margin-bottom: 20px;
-    border-left: 8px solid $color-t1;
-    
-    & > [class*="hdg-"] {
-        font-weight:700;
-        padding-left: 5px;
-        line-height: 1.1;
-        letter-spacing: 1.5px;
-    }
-}
-
-@media (min-width: $bp-md) {
-    
-}
-
 
 /* -----------------------------------------------
 /* Headings  [hdg-***]
