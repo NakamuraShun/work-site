@@ -302,7 +302,7 @@ body.is-fix {
 .mvBody{
     height: 100%;
     padding: 15px;
-
+    
     .mvContent{
         height: 100%;
         text-align: center;
@@ -312,6 +312,26 @@ body.is-fix {
             font-size: 3rem;
             font-weight: 600;
             line-height: 1.3;
+        }
+        
+        th,td{
+            padding: 1px 20px;
+            
+            a{
+                display: inline-block;
+                color: blue; 
+                text-decoration: underline;
+                
+                &:hover{
+                    color: $color-t1;
+                    text-decoration: underline;
+                }
+            }
+        }
+        td{
+            color: red;
+            font-size: 1.6rem;
+            font-weight: 500;
         }
     }
     

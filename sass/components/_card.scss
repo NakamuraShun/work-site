@@ -30,6 +30,21 @@ _card.scss
         padding: 15px;
     }
     
+    &__pass {
+        padding: 15px;
+        border-top: 2px dotted $color-g2;
+        
+        th,td{
+            padding: 3px 20px;
+        }
+        td{
+            color: red;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        
+    }
+    
     &__btn {
         padding: 10px;
         border-top: 2px dotted $color-g2;
