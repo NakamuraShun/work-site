@@ -65,7 +65,7 @@ _card.scss
     
     &__image {
         overflow: hidden;
-        max-height: 800px;
+        max-height: 350px;
         padding: 15px;
         
         img{
@@ -79,6 +79,10 @@ _card.scss
     .crd-design {
         &__header{
             font-size: 1.8rem;
+        }
+        
+        &__image {
+            max-height: 800px;
         }
     }
 }
@@ -104,6 +108,7 @@ _card.scss
     &__image {
         overflow: hidden;
         padding: 5px;
+        height: 500px;
         
         img{
             width: 100%;
@@ -144,9 +149,9 @@ _card.scss
 }
 
 @media (min-width: $bp-md) {  
-    .crd-plan {
-        &__header{
-            font-size: 1.8rem;
+    .crd-details {
+        &__image {
+            height: 100%;
         }
     }
 }
@@ -258,40 +263,6 @@ _card.scss
     .crd-design {
         &__header{
             font-size: 1.8rem;
-        }
-    }
-}
-
-
-/* skillSet
--------------------------------------------------- */
-.skillSet{
-    padding: 15px 0;
-    
-    &__itm{
-        @include fxrow-ac-jc;
-    }
-    
-    &__icon{
-        &--photoshop{width: 60px;}
-        &--html{width: 45px;}
-        &--css{width: 45px;}
-        &--sass{width: 70px;}
-        &--jquery{width: 60px;}
-        &--nodeJs{width: 90px;}
-        &--mongoDb{width: 80px;}
-        &--express{width: 90px;}
-        &--github{width: 75px;}
-    }
-}
-
-@media (min-width: $bp-md) {  
-    .skillSet{
-        
-        &__itm{
-            img{
-                height: 70%;
-            }
         }
     }
 }

@@ -1846,6 +1846,63 @@ body.is-fix .globalNavSP__bg {
     margin-bottom: 200px;
   }
 }
+/* skillSet
+-------------------------------------------------- */
+.skillSet {
+  padding: 15px 0;
+}
+.skillSet__itm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.skillSet__icon--photoshop {
+  width: 60px;
+}
+.skillSet__icon--html {
+  width: 45px;
+}
+.skillSet__icon--css {
+  width: 45px;
+}
+.skillSet__icon--sass {
+  width: 70px;
+}
+.skillSet__icon--jquery {
+  width: 60px;
+}
+.skillSet__icon--nodeJs {
+  width: 90px;
+}
+.skillSet__icon--mongoDb {
+  width: 80px;
+}
+.skillSet__icon--express {
+  width: 90px;
+}
+.skillSet__icon--github {
+  width: 75px;
+}
+
+@media (min-width: 56.25em) {
+  .skillSet__itm img {
+    height: 70%;
+  }
+}
 /* components/ */
 /*
 _typography.scss
@@ -2279,7 +2336,7 @@ _card.scss
 }
 .crd-design__image {
   overflow: hidden;
-  max-height: 800px;
+  max-height: 350px;
   padding: 15px;
 }
 .crd-design__image img {
@@ -2290,6 +2347,9 @@ _card.scss
 @media (min-width: 56.25em) {
   .crd-design__header {
     font-size: 1.8rem;
+  }
+  .crd-design__image {
+    max-height: 800px;
   }
 }
 /* crd-details
@@ -2320,6 +2380,7 @@ _card.scss
 .crd-details__image {
   overflow: hidden;
   padding: 5px;
+  height: 500px;
 }
 .crd-details__image img {
   width: 100%;
@@ -2351,8 +2412,8 @@ _card.scss
 }
 
 @media (min-width: 56.25em) {
-  .crd-plan__header {
-    font-size: 1.8rem;
+  .crd-details__image {
+    height: 100%;
   }
 }
 /* directionTag
@@ -2475,63 +2536,6 @@ _card.scss
 @media (min-width: 56.25em) {
   .crd-design__header {
     font-size: 1.8rem;
-  }
-}
-/* skillSet
--------------------------------------------------- */
-.skillSet {
-  padding: 15px 0;
-}
-.skillSet__itm {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.skillSet__icon--photoshop {
-  width: 60px;
-}
-.skillSet__icon--html {
-  width: 45px;
-}
-.skillSet__icon--css {
-  width: 45px;
-}
-.skillSet__icon--sass {
-  width: 70px;
-}
-.skillSet__icon--jquery {
-  width: 60px;
-}
-.skillSet__icon--nodeJs {
-  width: 90px;
-}
-.skillSet__icon--mongoDb {
-  width: 80px;
-}
-.skillSet__icon--express {
-  width: 90px;
-}
-.skillSet__icon--github {
-  width: 75px;
-}
-
-@media (min-width: 56.25em) {
-  .skillSet__itm img {
-    height: 70%;
   }
 }
 

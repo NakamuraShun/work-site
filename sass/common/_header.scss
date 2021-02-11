@@ -381,3 +381,35 @@ body.is-fix {
         }
     }
 }
+
+/* skillSet
+-------------------------------------------------- */
+.skillSet{
+    padding: 15px 0;
+    
+    &__itm{
+        @include fxrow-ac-jc;
+    }
+    
+    &__icon{
+        &--photoshop{width: 60px;}
+        &--html{width: 45px;}
+        &--css{width: 45px;}
+        &--sass{width: 70px;}
+        &--jquery{width: 60px;}
+        &--nodeJs{width: 90px;}
+        &--mongoDb{width: 80px;}
+        &--express{width: 90px;}
+        &--github{width: 75px;}
+    }
+}
+
+@media (min-width: $bp-md) {  
+    .skillSet{  
+        &__itm{
+            img{
+                height: 70%;
+            }
+        }
+    }
+}
