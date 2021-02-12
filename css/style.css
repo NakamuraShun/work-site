@@ -1445,6 +1445,43 @@ _header.scss
     height: 65px;
   }
 }
+/* logo
+-------------------------------------------------- */
+.logo {
+  z-index: 200;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.logo__lnk {
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+@media (min-width: 56.25em) {
+  .logo {
+    display: none;
+  }
+}
 /* hamburger
 -------------------------------------------------- */
 .hamburger {
@@ -1850,8 +1887,7 @@ body.is-fix .globalNavSP__bg {
 -------------------------------------------------- */
 .skillSet {
   padding: 15px 0;
-}
-.skillSet__itm {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

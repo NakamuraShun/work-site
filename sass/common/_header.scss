@@ -32,6 +32,32 @@ _header.scss
 }
 
 
+/* logo
+-------------------------------------------------- */
+.logo{
+    z-index: 200;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    width: 100px;
+    height: 100%;
+    @include fxrow-ac-jc;
+    
+    &__lnk{
+        color: blue !important;
+        text-decoration: underline !important;
+    }
+}
+
+@media (min-width: $bp-md){
+    .logo{
+        display: none;
+    }
+    
+}
+
+
+
 /* hamburger
 -------------------------------------------------- */
 .hamburger{
@@ -386,10 +412,8 @@ body.is-fix {
 -------------------------------------------------- */
 .skillSet{
     padding: 15px 0;
-    
-    &__itm{
-        @include fxrow-ac-jc;
-    }
+    height: 100%;
+    @include fxrow-ac-jc;
     
     &__icon{
         &--photoshop{width: 60px;}
