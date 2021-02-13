@@ -415,6 +415,10 @@ body.is-fix {
     height: 100%;
     @include fxrow-ac-jc;
     
+    &__itm{
+        text-align: center;
+    }
+    
     &__icon{
         &--photoshop{width: 60px;}
         &--html{width: 45px;}
@@ -425,15 +429,15 @@ body.is-fix {
         &--mongoDb{width: 80px;}
         &--express{width: 90px;}
         &--github{width: 75px;}
+        &--mtg{width: 40px;}
+        &--suggest{width: 40px;}
+        &--wire{width: 35px;}
+        &--management{width: 40px;}
+        &--check{width: 40px;}
+        &--schedule{width: 35px;}
     }
-}
-
-@media (min-width: $bp-md) {  
-    .skillSet{  
-        &__itm{
-            img{
-                height: 70%;
-            }
-        }
+    
+    p{
+        font-size: 1.1rem;
     }
 }
