@@ -1921,6 +1921,9 @@ body.is-fix .globalNavSP__bg {
 .skillSet__icon--sass {
   width: 70px;
 }
+.skillSet__icon--javascript {
+  width: 50px;
+}
 .skillSet__icon--jquery {
   width: 60px;
 }
@@ -1933,9 +1936,6 @@ body.is-fix .globalNavSP__bg {
 .skillSet__icon--express {
   width: 90px;
 }
-.skillSet__icon--github {
-  width: 75px;
-}
 .skillSet__icon--php {
   width: 95px;
 }
@@ -1946,6 +1946,9 @@ body.is-fix .globalNavSP__bg {
   width: 90px;
 }
 .skillSet__icon--symfony {
+  width: 75px;
+}
+.skillSet__icon--github {
   width: 75px;
 }
 .skillSet__icon--mtg {
