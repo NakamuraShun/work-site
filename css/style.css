@@ -1821,6 +1821,16 @@ _typography.scss
     font-size: 1.8rem;
   }
 }
+
+.headline_large{
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 7px solid rgb(112, 112, 112);
+}
+
+
 /*
 _link.scss
 *******************************************************************************************************************/
@@ -1947,6 +1957,26 @@ _link.scss
 
 /*  btn-type
 -------------------------------------------------- */
+/* common */
+.btn-common {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	line-height: 1.5;
+	color: #333;
+	font-size: 1.7rem;
+	background-color: #defdc8;
+	border: 1px solid rgb(6, 145, 6);
+	border-radius: 8px;
+	box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+	transition: all .2s ease-in;
+}
+.btn-common:hover {
+	background-color: #fff;
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
 .btnPrim--thema,
 .btnPrim--design-red,
 .btnPrim--design-grey {
