@@ -1655,6 +1655,15 @@ body.is-fix .globalNavSP__bg {
 .skillSet__icon--symfony {
   width: 75px;
 }
+.skillSet__icon--cakephp {
+  width: 75px;
+}
+.skillSet__icon--vue {
+  width: 80px;
+}
+.skillSet__icon--gulp {
+  width: 42px;
+}
 .skillSet__icon--github {
   width: 75px;
 }
